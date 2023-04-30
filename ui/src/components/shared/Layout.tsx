@@ -15,7 +15,7 @@ function Layout({ className, children, ...props }: LayoutProps) {
       <div className='flex h-full w-full'>
         <Sidebar />
 
-        <main className='w-full min-w-full p-8'>{children}</main>
+        <main className='w-full flex justify-center'>{children}</main>
       </div>
     </div>
   );

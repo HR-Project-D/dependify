@@ -8,7 +8,7 @@ function Sidebar() {
   const path = useRouter().pathname;
 
   return (
-    <aside className='flex h-full w-96 flex-col justify-between border-r border-white-8 bg-gray-1'>
+    <aside className='flex h-full flex-col justify-between border-r border-white-8 bg-gray-1'>
       <ul className='flex flex-col gap-1.5 p-4'>
         <SidebarMenuItem href='/'>
           <IconGrid className={`${path === "/" ? "text-white" : "text-gray-10"} w-5`} />
