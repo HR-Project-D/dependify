@@ -136,6 +136,28 @@ export function CMDK() {
                 {activePage === "data sources" && <DataSources />}
                 {activePage === "themes" && <Theme onClose={onClose} />}
               </Command.List>
+
+              <footer cmdk-footer=''>
+                <div cmdk-footer-container=''>
+                  <div cmdk-shortcuts='' cmdk-footer-item=''>
+                    <kbd key='↑'>↑</kbd>
+                    <kbd key='↓'>↓</kbd>
+                    <label>Navigate</label>
+                  </div>
+                  <div cmdk-shortcuts='' cmdk-footer-item=''>
+                    <kbd key='⏎'>⏎</kbd>
+                    <label>Select</label>
+                  </div>
+                  <div cmdk-shortcuts='' cmdk-footer-item=''>
+                    <kbd key='←'>← </kbd>
+                    <label>Return</label>
+                  </div>
+                </div>
+                <div cmdk-shortcuts='' cmdk-footer-item=''>
+                  <kbd key='Esc'>Esc</kbd>
+                  <label>Close</label>
+                </div>
+              </footer>
             </Command>
           </motion.div>
         </motion.div>

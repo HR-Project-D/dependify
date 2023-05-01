@@ -132,7 +132,7 @@
 [cmdk-shortcuts] {
   display: flex;
   margin-left: auto;
-  gap: 8px;
+  gap: 6px;
 }
 
 [cmdk-shortcuts] kbd {
@@ -146,7 +146,28 @@
   justify-content: center;
   text-transform: uppercase;
 
-  @apply uppercase font-semibold dark:font-normal dark:text-white-56 dark:bg-white-5 bg-black-5 text-black-64;
+  @apply uppercase font-semibold dark:font-normal dark:text-white-56 dark:bg-white-8 bg-black-5 text-black-64;
+}
+
+[cmdk-shortcuts] label {
+  @apply text-xs dark:text-white-56 ml-0.5;
+}
+
+[cmdk-footer] {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+
+  @apply border-t border-white-8 mt-2 pt-4 pb-2 px-2 justify-between gap-5;
+}
+
+[cmdk-footer-container] {
+  @apply flex items-center gap-5;
+}
+
+[cmdk-footer-item] {
+  @apply flex items-center;
 }
 
 [cmdk-group]:not([hidden]) + [cmdk-group] {
