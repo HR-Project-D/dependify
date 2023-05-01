@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  @apply bg-gray-DARK text-white;
+  @apply dark:bg-gray-DARK bg-white dark:text-white text-gray-DARK;
 }
 
 ::selection {

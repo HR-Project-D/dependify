@@ -5,7 +5,7 @@ function DataSources() {
   return (
     <>
       <Item>
-        <GitHubIcon />
+        <GitHubIcon className="w-4 dark:fill-white fill-black" />
         Purple Unicorn
       </Item>
       <Item>

@@ -35,15 +35,15 @@ function Header() {
   }, []);
 
   return (
-    <header className='flex w-full items-center justify-between border-b border-white-10 px-5 py-1.5 text-sm text-white-48'>
+    <header className='flex w-full font-medium dark:font-normal items-center justify-between border-b border-black-10 px-5 py-1.5 text-sm text-black-64 dark:border-white-10 dark:text-white-48'>
       <h1 className=''>Dependify 0.1.0</h1>
-      <span className='rounded-md bg-white-8 px-3 py-0.5 text-white-56'>⌘+K</span>
+      <span className='rounded-md bg-black-5 px-3 py-0.5 text-black-72 dark:bg-white-8 dark:text-white-56'>⌘+K</span>
 
       <div className='flex items-center gap-4'>
         {/* <span className='rounded-md border border-white-8 bg-white-5 px-3.5 py-1.5 text-sm font-medium'>
           <IconDependify className='w-5 fill-primary-11' />
         </span> */}
-        {isOnline ? <IconWifi className='w-5 text-white-48' /> : <IconWifiOff className='w-5 text-white-48' />}
+        {isOnline ? <IconWifi className='w-5 dark:text-white-48 text-black-64' /> : <IconWifiOff className='w-5 dark:text-white-48 text-black-64' />}
         <span>{currentDate ? getFormattedDate(currentDate) : getFormattedDate(new Date())}</span>
       </div>
     </header>

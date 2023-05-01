@@ -1,17 +1,18 @@
 import { Command } from "cmdk";
-import { ProjectsIcon, PlusIcon, TeamsIcon, FeedbackIcon, DocsIcon, ContactIcon } from "../../Icons";
 import Item from "../CMDKItem";
+import { IconLogout, IconMonitor } from "../../Icons";
+import { ProjectsIcon, PlusIcon, TeamsIcon, DocsIcon, FeedbackIcon, ContactIcon } from "../Icons";
 
-function Home({ searchProjects }: { searchProjects: Function }) {
+type HomeProps = {
+  searchDataSources: Function;
+  searchThemes: Function;
+};
+
+function Home({ searchDataSources, searchThemes }: HomeProps) {
   return (
     <>
       <Command.Group heading='Data Sources'>
-        <Item
-          shortcut='⇧ D'
-          onSelect={() => {
-            searchProjects();
-          }}
-        >
+        <Item shortcut='⇧ D' onSelect={() => searchDataSources()}>
           <ProjectsIcon />
           Search Data Sources...
         </Item>
@@ -31,8 +32,8 @@ function Home({ searchProjects }: { searchProjects: Function }) {
         </Item>
       </Command.Group>
       <Command.Group heading='General'>
-        <Item>
-          <FeedbackIcon />
+        <Item onSelect={() => searchThemes()}>
+          <IconMonitor />
           Change Theme...
         </Item>
         <Item>
@@ -44,7 +45,7 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           Report an Issue
         </Item>
         <Item>
-          <ContactIcon />
+          <IconLogout />
           Sign Out
         </Item>
       </Command.Group>

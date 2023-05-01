@@ -3,6 +3,7 @@ import { Command } from "cmdk";
 import Home from "./pages/Home";
 import DataSources from "./pages/DataSources";
 import { AnimatePresence, motion } from "framer-motion";
+import Theme from "./pages/Theme";
 
 export function CMDK() {
   const ref = React.useRef<HTMLDivElement | null>(null);
@@ -22,13 +23,19 @@ export function CMDK() {
     });
   }, []);
 
+  function onClose() {
+    setInputValue("");
+    setOpen(false);
+    setPages(["home"]);
+  }
+
   function onKeyDown(e: React.KeyboardEvent) {
-    if(e.key === "Escape") {
+    if (e.key === "Escape") {
       setInputValue("");
       setOpen(false);
       setPages(["home"]);
     }
-    
+
     if (e.key === "Enter") {
       bounce();
     }
@@ -88,7 +95,7 @@ export function CMDK() {
     <AnimatePresence initial={false}>
       {open && (
         <motion.div
-          className='fixed z-[1001] overflow-hidden flex backdrop-blur-sm h-screen w-full items-start justify-center bg-black-48'
+          className='fixed z-[1001] flex h-screen w-full items-start justify-center overflow-hidden bg-black-48'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -100,7 +107,7 @@ export function CMDK() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.2 }}
-            className='flex h-full px-4 w-full items-start justify-center'
+            className='flex h-full w-full items-start justify-center px-4'
           >
             <Command label='Global Command Menu' ref={ref} onKeyDown={onKeyDown}>
               <div>
@@ -120,8 +127,14 @@ export function CMDK() {
               />
               <Command.List>
                 <Command.Empty>No results found.</Command.Empty>
-                {activePage === "home" && <Home searchProjects={() => setPages([...pages, "data sources"])} />}
+                {activePage === "home" && (
+                  <Home
+                    searchDataSources={() => setPages([...pages, "data sources"])}
+                    searchThemes={() => setPages([...pages, "themes"])}
+                  />
+                )}
                 {activePage === "data sources" && <DataSources />}
+                {activePage === "themes" && <Theme onClose={onClose} />}
               </Command.List>
             </Command>
           </motion.div>
