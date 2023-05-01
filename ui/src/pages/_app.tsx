@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [userState, userDispatch] = useReducer(userReducer, initialUserState);
 
   return (
-    <ThemeProvider attribute='class' disableTransitionOnChange defaultTheme='system'>
+    <ThemeProvider attribute='class' disableTransitionOnChange defaultTheme='dark'>
       <UserContext.Provider value={{ state: userState, dispatch: userDispatch }}>
         <Component {...pageProps} />
       </UserContext.Provider>

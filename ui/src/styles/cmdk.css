@@ -36,7 +36,7 @@
   overflow: hidden;
   transition: transform 300ms ease;
 
-  @apply dark:border bg-white dark:border-white-10 dark:bg-gray-1 bg-opacity-90 shadow-md;
+  @apply bg-white bg-opacity-90 shadow-md dark:border dark:border-white-10 dark:bg-gray-1;
 }
 
 [cmdk-list]::-webkit-scrollbar {
@@ -52,7 +52,7 @@
   border-bottom: 1px solid;
   border-radius: 0;
 
-  @apply border-black-10 dark:border-white-10 mb-4 bg-transparent text-lg text-black dark:text-white;
+  @apply mb-4 border-black-10 bg-transparent text-lg text-black dark:border-white-10 dark:text-white;
 }
 
 [cmdk-input]:focus,
@@ -67,7 +67,7 @@
 }
 
 [cmdk-input]::placeholder {
-  @apply dark:font-light text-black-32 dark:text-white-32;
+  @apply text-black-32 dark:font-light dark:text-white-32;
 }
 
 [cmdk-page-badge] {
@@ -79,7 +79,7 @@
   user-select: none;
   text-transform: capitalize;
 
-  @apply bg-black-8 dark:bg-white-8 px-2 py-0.5 dark:text-white-56 text-black-72 font-medium dark:font-normal;
+  @apply bg-black-8 px-2 py-0.5 font-medium text-black-72 dark:bg-white-8 dark:font-normal dark:text-white-56;
 }
 
 [cmdk-item] {
@@ -94,18 +94,18 @@
 }
 
 [cmdk-item][data-selected="true"] {
-  @apply dark:bg-white-8 bg-black-5 dark:text-white text-black;
+  @apply bg-black-5 text-black dark:bg-white-8 dark:text-white;
 }
 
 [cmdk-item][data-disabled="true"] {
   cursor: not-allowed;
-  @apply dark:text-white-32 text-black-32;
+  @apply text-black-32 dark:text-white-32;
 }
 
 [cmdk-item]:active {
   transition-property: background;
 
-  @apply dark:bg-white-8 bg-black-5;
+  @apply bg-black-5 dark:bg-white-8;
 }
 
 [cmdk-item] + [cmdk-item] {
@@ -146,11 +146,11 @@
   justify-content: center;
   text-transform: uppercase;
 
-  @apply uppercase font-semibold dark:font-normal dark:text-white-56 dark:bg-white-8 bg-black-5 text-black-64;
+  @apply bg-black-5 font-semibold uppercase text-black-64 dark:bg-white-8 dark:font-normal dark:text-white-56;
 }
 
 [cmdk-shortcuts] label {
-  @apply text-xs dark:text-white-56 ml-0.5;
+  @apply ml-0.5 text-xs dark:text-white-56 text-black-64 font-medium dark:font-normal;
 }
 
 [cmdk-footer] {
@@ -159,7 +159,7 @@
   gap: 20px;
   width: 100%;
 
-  @apply border-t border-white-8 mt-2 pt-4 pb-2 px-2 justify-between gap-5;
+  @apply mt-2 justify-between gap-5 border-t border-black-10 px-2 pb-2 pt-4 dark:border-white-10;
 }
 
 [cmdk-footer-container] {
@@ -175,7 +175,7 @@
 }
 
 [cmdk-group-heading] {
-  @apply mb-2 flex select-none items-center px-2 text-xs text-black-64 font-medium dark:text-white-56 dark:font-light;
+  @apply mb-2 flex select-none items-center px-2 text-xs font-medium text-black-64 dark:font-light dark:text-white-56;
 }
 
 [cmdk-empty] {
@@ -186,5 +186,5 @@
   height: 48px;
   white-space: pre-wrap;
 
-  @apply text-white-56 font-light;
+  @apply font-light text-white-56;
 }
