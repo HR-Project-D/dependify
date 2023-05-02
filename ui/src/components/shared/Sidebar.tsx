@@ -3,6 +3,8 @@ import React from "react";
 import { IconDatabase, IconGrid, IconNotification, IconSearch } from "./Icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useQuery } from "react-query";
+import { Button } from "../primitives/Button";
 
 function Sidebar() {
   const path = useRouter().pathname;

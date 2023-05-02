@@ -1,47 +1,55 @@
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva(["transition-all duration-300"], {
-  variants: {
-    intent: {
-      dark: [
-        "bg-primary-black",
-        "text-white",
-      ],
-      sand: [
-        "bg-sand-2",
-        "text-primary-black",
-      ],
-      turquoise: [
-        "bg-primary-turquoise",
-        "text-primary-black",
-      ],
-      white: [
-        "bg-white",
-        "text-primary-black",
-      ],
-      transparent: [
-        "bg-transparent",
-        "text-current",
-      ],
+const button = cva(
+  ["transition-all flex items-center h-fit active:shadow-inner active:translate-y-0.5 duration-200 border border-b-0"],
+  {
+    variants: {
+      intent: {
+        mauve: ["bg-gray-4 hover:bg-gray-5", "text-white", "border-white-10"],
+        primary: [
+          "bg-primary-8 hover:bg-primary-9",
+          "text-white",
+          "border-primary-11 hover:border-primary-11",
+        ],
+        white: [
+          "dark:bg-white bg-gray-4 hover:bg-gray-5 dark:hover:bg-white-80",
+          "dark:text-gray-DARK text-white",
+          "dark:border-white dark:hover:border-white-16 border-gray-4 hover:border-gray-5",
+        ],
+        lightGray: [
+          "bg-black-5 hover:bg-black-8 dark:bg-white-5 dark:hover:bg-white-8",
+          "text-gray-DARK dark:text-white",
+          "border-black-2 dark:border-white-2",
+        ],
+        mauveDark: [
+          "bg-gray-2 hover:bg-gray-3",
+          "text-white",
+          "border-white-10",
+        ],
+        noBG: ["dark:text-white-64 dark:hover:bg-white-5 hover:bg-black-5 text-black-64", "border-transparent"],
+      },
+      size: {
+        small: ["text-xs font-medium", "px-3 py-1.5", "gap-1.5"],
+        medium: ["text-sm font-medium", "px-3 py-1.5", "gap-2"],
+        large: ["text-sm font-medium", "px-3.5 py-2", "gap-2"],
+      },
+      rounded: {
+        full: "rounded-full",
+        default: "rounded-lg",
+      },
+      fullWidth: {
+        true: "w-full",
+        false: "w-fit",
+      },
     },
-    size: {
-      large: ["text-2xl", "py-5", "px-6"],
-      medium: ["text-xl", "py-4", "px-5"],
-      small: ["text-lg", "py-2.5", "px-4"],
-      extraSmall: ["text-base", "py-1.5", "px-3"],
+    defaultVariants: {
+      intent: "primary",
+      size: "medium",
+      fullWidth: false,
     },
-    fullWidth: {
-      true: "w-full",
-      false: "w-fit",
-    }
-  },
-  defaultVariants: {
-    intent: "dark",
-    size: "medium",
-    fullWidth: false,
-  },
-});
+  }
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -52,5 +60,11 @@ export const Button: React.FC<ButtonProps> = ({
   intent,
   size,
   fullWidth,
+  rounded,
   ...props
-}) => <button className={button({ intent, size, className, fullWidth })} {...props} />;
+}) => (
+  <button
+    className={button({ intent, size, rounded, className, fullWidth })}
+    {...props}
+  />
+);

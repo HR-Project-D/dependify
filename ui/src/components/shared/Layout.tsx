@@ -2,6 +2,7 @@ import React from "react";
 import { CMDK } from "./cmdk/CMDK";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import { Button } from "../primitives/Button";
 
 export interface LayoutProps extends React.ButtonHTMLAttributes<HTMLDivElement> {}
 
@@ -14,7 +15,7 @@ function Layout({ className, children, ...props }: LayoutProps) {
 
       <div className='flex h-full w-full'>
         <Sidebar />
-
+        
         <main className='w-full flex justify-center'>{children}</main>
       </div>
     </div>
