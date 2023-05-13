@@ -2,7 +2,9 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const button = cva(
-  ["transition-all flex items-center h-fit active:shadow-inner active:translate-y-0.5 duration-200 border border-b-0"],
+  [
+    "transition-all disabled:cursor-not-allowed flex items-center h-fit active:shadow-inner active:translate-y-0.5 duration-200 border border-b-0",
+  ],
   {
     variants: {
       intent: {
@@ -27,7 +29,10 @@ const button = cva(
           "text-white",
           "border-white-10",
         ],
-        noBG: ["dark:text-white-64 dark:hover:bg-white-5 hover:bg-black-5 text-black-64", "border-transparent"],
+        noBG: [
+          "dark:text-white-64 dark:hover:bg-white-5 hover:bg-black-5 text-black-64",
+          "border-transparent",
+        ],
       },
       size: {
         small: ["text-xs font-medium", "px-3 py-1.5", "gap-1.5"],
@@ -66,5 +71,7 @@ export const Button: React.FC<ButtonProps> = ({
   <button
     className={button({ intent, size, rounded, className, fullWidth })}
     {...props}
-  />
+  >
+    {props.children}
+  </button>
 );
