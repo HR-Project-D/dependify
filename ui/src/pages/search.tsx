@@ -9,7 +9,19 @@ import PageTitle from "@/components/shared/PageTitle";
 import { Formik, Form } from "formik";
 import { useState } from "react";
 
-type VersionType = "exact" | "range" | "below" | "above";
+const versionRegex = {
+  exact: /^[0-9]+\.[0-9]+\.[0-9]+$/,
+  range: /^[0-9]+\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+\.[0-9]+$/,
+  below: /^<=[0-9]+\.[0-9]+\.[0-9]+$/,
+  above: /^>=[0-9]+\.[0-9]+\.[0-9]+$/,
+};
+
+type VersionType = keyof typeof versionRegex;
+
+function validateVersion(version: string, type: VersionType) {
+  return versionRegex[type].test(version);
+}
+
 
 export default function Page() {
   const [searchResults, setSearchResults] = useState([]);
@@ -68,8 +80,10 @@ export default function Page() {
                         </InputLabel>
                         <SelectDropdown
                           defaultValue="all"
-                          icon={<IconDatabase className="w-4 transition-300 duration-all" />}
-                          onChange={(value) => {} }
+                          icon={
+                            <IconDatabase className="transition-300 duration-all w-4" />
+                          }
+                          onChange={(value) => {}}
                           options={dataSources}
                         />
                       </div>
@@ -88,7 +102,9 @@ export default function Page() {
                     </div>
                     <div className="flex w-full gap-5">
                       <div className="flex w-full flex-col gap-2">
-                        <InputLabel htmlFor="dependencyName">Version Type</InputLabel>
+                        <InputLabel htmlFor="dependencyName">
+                          Version Type
+                        </InputLabel>
                         <SelectDropdown
                           defaultValue="exact"
                           onChange={(value) =>
@@ -157,19 +173,4 @@ export default function Page() {
       </div>
     </Layout>
   );
-}
-
-function validateVersion(version: string, type: VersionType) {
-  switch (type) {
-    case "exact":
-      return version.match(/^[0-9]+\.[0-9]+\.[0-9]+$/);
-    case "range":
-      return version.match(/^[0-9]+\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+\.[0-9]+$/);
-    case "below":
-      return version.match(/^<=[0-9]+\.[0-9]+\.[0-9]+$/);
-    case "above":
-      return version.match(/^>=[0-9]+\.[0-9]+\.[0-9]+$/);
-    default:
-      return false;
-  }
 }
