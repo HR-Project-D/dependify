@@ -5,7 +5,10 @@ export type IconProps = {
 export function IconDependify({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 14 14">
-      <path d="M10.0833 3.08333L7.04167 6.125L3.95833 3.08333L7.04167 0L10.0833 3.08333ZM14 7L10.9583 10.0833L7.91667 7L10.9583 3.95833L14 7ZM6.16667 7L3.08333 10.0833L0 7L3.08333 3.95833L6.16667 7ZM10.0833 10.9583L7.04167 14L3.95833 10.9583L7.04167 7.875L10.0833 10.9583Z" />
+      <path
+        fill="currentColor"
+        d="M10.0833 3.08333L7.04167 6.125L3.95833 3.08333L7.04167 0L10.0833 3.08333ZM14 7L10.9583 10.0833L7.91667 7L10.9583 3.95833L14 7ZM6.16667 7L3.08333 10.0833L0 7L3.08333 3.95833L6.16667 7ZM10.0833 10.9583L7.04167 14L3.95833 10.9583L7.04167 7.875L10.0833 10.9583Z"
+      />
     </svg>
   );
 }
@@ -341,11 +344,7 @@ export function IconChevron({ className }: IconProps) {
 
 export function IconCheck({ className }: IconProps) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-    >
+    <svg className={className} viewBox="0 0 24 24" fill="none">
       <path
         d="M20 6L9 17L4 12"
         stroke="currentColor"

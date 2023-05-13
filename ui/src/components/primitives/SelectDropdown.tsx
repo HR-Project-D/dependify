@@ -64,7 +64,7 @@ function SelectItem({ children, value }: SelectItemProps) {
   return (
     <Select.Item
       value={value}
-      className="cursor-pointer flex justify-between items-center data-[state=checked]:bg-gray-4 rounded-lg px-4 py-2 transition-colors duration-300 hover:bg-gray-4 focus:outline-none"
+      className="cursor-pointer data-[state=checked]:text-white text-white-64 hover:text-white flex justify-between items-center data-[state=checked]:bg-gray-4 rounded-lg px-4 py-2 transition-colors duration-300 hover:bg-gray-4 focus:outline-none"
     >
       <Select.ItemText className="text-red-10 focus:outline-none">
         {children}

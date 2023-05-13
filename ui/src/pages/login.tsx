@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4">
       <header className="flex max-w-md flex-col items-center gap-12">
-        <IconDependify className="w-24 fill-gray-6" />
+        <IconDependify className="w-24 text-gray-6" />
         <div className="flex flex-col items-center gap-2 text-center">
           <h1 className="text-3xl font-semibold text-white">Welcome</h1>
 

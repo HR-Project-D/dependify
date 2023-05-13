@@ -47,7 +47,7 @@ export default function Page() {
           }}
         >
           <header className="flex max-w-md flex-col items-center gap-12">
-            <IconDependify className="w-24 fill-gray-6" />
+            <IconDependify className="w-24 text-gray-6" />
             <div className="flex flex-col items-center gap-2 text-center">
               <AnimatePresence mode="popLayout">
                 {steps.map(
