@@ -25,7 +25,7 @@ function EmptyState({ title, subtitle, icon, actions }: Props) {
         <div className="flex flex-row-reverse gap-3">
           {actions.map((action, index) => (
             <Button
-              key={action.text}
+              key={action.text + index}
               intent={index === 0 ? "primary" : "mauve"}
               size="medium"
               rounded="full"

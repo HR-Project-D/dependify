@@ -47,7 +47,7 @@ export function InputField({
   return (
     <>
       {disabled ? (
-        <div className="text-gray-900 relative flex w-full items-center drop-shadow-sm">
+        <div className="relative flex w-full items-center drop-shadow-sm">
           <div className={inputFieldIconStyle}>{icon}</div>
           <Field
             validate={validate}
@@ -60,7 +60,7 @@ export function InputField({
           ></Field>
         </div>
       ) : (
-        <div className="text-gray-900 relative flex w-full items-center drop-shadow-sm">
+        <div className="relative flex w-full items-center drop-shadow-sm">
           <div className={inputFieldIconStyle}>{icon}</div>
           <Field
             validate={validate}
