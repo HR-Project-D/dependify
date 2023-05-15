@@ -58,7 +58,7 @@ export default function Page() {
 
   return (
     <Layout>
-      <header className="flex h-fit w-full flex-col items-center border-b border-white-10 px-8 pt-8">
+      <header className="flex h-fit w-full flex-col items-center border-b border-black-10 dark:border-white-10 px-8 pt-8">
         <PageTitle
           title="Search"
           subtitle="Please follow the steps to configure the search and run it."
@@ -122,9 +122,9 @@ export default function Page() {
                   {...searchSectionAnimations}
                   className="w-full max-w-7xl"
                 >
-                  <div className="flex flex-col gap-4 rounded-xl border border-gray-5 bg-gray-1 p-6">
+                  <div className="flex flex-col gap-4 rounded-xl border dark:border-gray-5 bg-black-2 border-black-8 dark:bg-gray-1 p-6">
                     <h2 className="text-lg font-medium">Configure Search</h2>
-                    <hr className="border-gray-5" />
+                    <hr className="border-black-8 dark:border-gray-5" />
                     <Formik
                       initialValues={{
                         dependencyName: "",
@@ -191,7 +191,7 @@ export default function Page() {
                                 <InputField
                                   id="version"
                                   name="version"
-                                  validate={async (value) => {
+                                  validate={async (value: string) => {
                                     if (!validateVersion(value, searchType)) {
                                       return "Invalid version format";
                                     }
@@ -214,7 +214,7 @@ export default function Page() {
                               </div>
                             </div>
                           </div>
-                          <hr className="border-gray-5" />
+                          <hr className="dark:border-gray-5 border-black-8" />
                           <div className="flex gap-3">
                             <Button
                               disabled={isSubmitting}
@@ -259,14 +259,14 @@ export default function Page() {
                 <motion.div
                   key="results"
                   {...searchSectionAnimations}
-                  className="w-full max-w-7xl rounded-xl border border-gray-5"
+                  className="w-full max-w-7xl rounded-xl border border-black-10 dark:border-gray-5"
                 >
-                  <div className="flex w-full items-center justify-between rounded-t-xl border-b border-gray-5 bg-gray-1 px-6 py-4">
+                  <div className="flex w-full items-center justify-between rounded-t-xl border-b border-black-10 dark:border-gray-5 bg-black-5 dark:bg-gray-1 px-6 py-4">
                     <h3 className="text-sm font-medium">Search Summary</h3>
-                    <div className="flex items-center gap-3 text-sm text-white-64">
+                    <div className="flex items-center gap-3 text-sm dark:text-white-64 text-black-64">
                       23s
-                      <div className="w-fit rounded-full bg-primary-11 p-1">
-                        <IconCheck className="w-4 text-gray-DARK" />
+                      <div className="w-fit rounded-full bg-gray-DARK dark:bg-primary-11 p-1">
+                        <IconCheck className="w-4 text-white dark:text-gray-DARK" />
                       </div>
                     </div>
                   </div>

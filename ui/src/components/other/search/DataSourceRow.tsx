@@ -17,33 +17,33 @@ function DataSourceRow({
     <>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="first flex w-full items-center justify-between border-t border-gray-5 px-6 py-4 last:border-b-0 first-of-type:border-t-0"
+        className="first flex w-full items-center justify-between border-t border-black-8 dark:border-gray-5 px-6 py-4 last:border-b-0 first-of-type:border-t-0"
       >
         <div className="flex items-center gap-3 text-sm font-medium">
-          <IconChevron className="w-5" />
+          <IconChevron className={`w-5 -rotate-90  ${isOpen && "rotate-0"} duration-300 transition-all`} />
           <h4>{label}</h4>
         </div>
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white-8 text-xs font-medium text-white-64">
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black-8 dark:bg-white-8 text-xs font-medium text-black-64 dark:text-white-64">
           {results.length}
         </span>
       </button>
       <AnimatePresence initial={false}>
         {isOpen && (
           <ResizablePanel
-            className="w-full overflow-hidden border-t border-gray-5 first:border-t-0"
+            className="w-full overflow-hidden border-t border-black-8 dark:border-gray-5 first:border-t-0"
             key={label + "content"}
           >
             <div className="w-full py-4 pl-14 pr-6">
               <table className="w-full whitespace-nowrap text-left">
-                <tbody className="text-sm text-white-56">
+                <tbody className="text-sm text-black-56 dark:text-white-56">
                   {results.map((result, index) => (
                     <tr className="" key={result.version + index}>
                       <td className="w-0 py-1.5 pr-6">
-                        <span className="w-fit rounded-full bg-white-8 px-3 py-1 text-xs font-medium">
+                        <span className="w-fit rounded-full bg-black-8 dark:bg-white-8 px-3 py-1 text-xs font-medium">
                           {result.version}
                         </span>
                       </td>
-                      <td className="flex-1 font-medium text-white">
+                      <td className="flex-1 font-medium text-gray-DARK dark:text-white">
                         {result.label}
                       </td>
                       <td className="w-0 pr-6 text-right">

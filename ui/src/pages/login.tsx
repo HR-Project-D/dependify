@@ -8,7 +8,7 @@ export default function Page() {
   //const session = useSession();
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4">
+    <div className="dark bg-gray-DARK flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4">
       <header className="flex max-w-md flex-col items-center gap-12">
         <IconDependify className="w-24 text-gray-6" />
         <div className="flex flex-col items-center gap-2 text-center">

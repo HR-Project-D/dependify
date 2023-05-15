@@ -38,7 +38,7 @@ export default function Page() {
   ] as const;
 
   return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4">
+      <div className="dark bg-gray-DARK flex min-h-screen  w-full flex-col items-center justify-center gap-16 p-4">
         <MotionConfig
           transition={{
             type: "spring",
