@@ -16,16 +16,21 @@ import Layout from "@/components/shared/Layout";
 import PageTitle from "@/components/shared/PageTitle";
 import { APIResponseSearch } from "@/types/api/search";
 import { sampleSearchResults } from "@/utils/sampleSearchResponse";
-import { VersionType, validateVersion } from "@/utils/version";
+import {
+  VersionType,
+  assertVersionInput,
+  getVersionPlaceholder,
+  validateVersion,
+} from "@/utils/version";
+import { error } from "console";
 import { Formik, Form } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState, KeyboardEvent } from "react";
 
 export default function Page() {
   const [searchResults, setSearchResults] = useState<APIResponseSearch>();
-  const [searchQuery, setSearchQuery] = useState("");
   const [searchPhase, setSearchPhase] = useState("configure"); // configure, running, results
-  const [searchType, setSearchType] = useState<VersionType>("exact"); // exact, range, below, above
+  const [versionType, setVersionType] = useState<VersionType>("exact"); // exact, range, below, above
 
   //const [dataSources, setDataSources] = useState([]);
   const [dataSources, setDataSources] = useState([
@@ -37,9 +42,22 @@ export default function Page() {
 
   function resetSearch() {
     setSearchResults(undefined);
-    setSearchQuery("");
     setSearchPhase("configure");
-    setSearchType("exact");
+    setVersionType("exact");
+  }
+
+  function handleKeyDownVersion(
+    currentValue: string,
+    event: KeyboardEvent<HTMLInputElement>,
+    setter: (field: string, value: any, shouldValidate?: boolean) => void
+  ) {
+    const action = assertVersionInput(event, currentValue, versionType);
+
+    if (action === "remove") {
+      setter("version", currentValue.slice(0, -1));
+    } else if (action === "add") {
+      setter("version", currentValue + event.key);
+    }
   }
 
   useEffect(() => {
@@ -58,7 +76,7 @@ export default function Page() {
 
   return (
     <Layout>
-      <header className="flex h-fit w-full flex-col items-center border-b border-black-10 dark:border-white-10 px-8 pt-8">
+      <header className="flex h-fit w-full flex-col items-center border-b border-black-10 px-8 pt-8 dark:border-white-10">
         <PageTitle
           title="Search"
           subtitle="Please follow the steps to configure the search and run it."
@@ -122,7 +140,7 @@ export default function Page() {
                   {...searchSectionAnimations}
                   className="w-full max-w-7xl"
                 >
-                  <div className="flex flex-col gap-4 rounded-xl border dark:border-gray-5 bg-black-2 border-black-8 dark:bg-gray-1 p-6">
+                  <div className="flex flex-col gap-4 rounded-xl border border-black-8 bg-black-2 p-6 dark:border-gray-5 dark:bg-gray-1">
                     <h2 className="text-lg font-medium">Configure Search</h2>
                     <hr className="border-black-8 dark:border-gray-5" />
                     <Formik
@@ -138,7 +156,7 @@ export default function Page() {
                       validateOnBlur={false}
                       validateOnChange={true}
                     >
-                      {({ errors, isSubmitting }) => (
+                      {({ setErrors, errors, isSubmitting, setFieldValue, values }) => (
                         <Form className="flex w-full flex-col gap-5">
                           <div className="flex w-full flex-col gap-5">
                             <div className="flex w-full gap-5">
@@ -178,43 +196,52 @@ export default function Page() {
                                 </InputLabel>
                                 <SelectDropdown
                                   defaultValue="exact"
-                                  onChange={(value) =>
-                                    setSearchType(value as VersionType)
-                                  }
+                                  onChange={(value) => {
+                                    setFieldValue("version", "");
+                                    setVersionType(value as VersionType);
+                                  }}
                                   options={["exact", "range", "below", "above"]}
                                 />
                               </div>
                               <div className="flex w-full flex-col gap-2">
                                 <InputLabel htmlFor="dependencyName">
-                                  Version
+                                  Version (Example:{" "}
+                                  {getVersionPlaceholder(versionType)})
                                 </InputLabel>
+
                                 <InputField
                                   id="version"
                                   name="version"
+                                  onKeyDown={(
+                                    e: KeyboardEvent<HTMLInputElement>
+                                  ) => {
+                                    handleKeyDownVersion(
+                                      values.version,
+                                      e,
+                                      setFieldValue
+                                    );
+                                  }}
                                   validate={async (value: string) => {
-                                    if (!validateVersion(value, searchType)) {
+                                    if (!validateVersion(value, versionType)) {
                                       return "Invalid version format";
                                     }
                                   }}
+                                  onChange={(
+                                    e: ChangeEvent<HTMLInputElement>
+                                  ) => {
+                                    e.preventDefault();
+                                  }}
                                   style="iconless"
                                   type="text"
-                                  placeholder={
-                                    searchType === "exact"
-                                      ? "0.0.0"
-                                      : searchType === "range"
-                                      ? "0.0.0-0.0.0"
-                                      : searchType === "below"
-                                      ? "=<0.0.0"
-                                      : searchType === "above"
-                                      ? ">=0.0.0"
-                                      : "0.0.0"
-                                  }
+                                  placeholder={getVersionPlaceholder(
+                                    versionType
+                                  )}
                                 />
                                 <InputError name="version" />
                               </div>
                             </div>
                           </div>
-                          <hr className="dark:border-gray-5 border-black-8" />
+                          <hr className="border-black-8 dark:border-gray-5" />
                           <div className="flex gap-3">
                             <Button
                               disabled={isSubmitting}
@@ -261,11 +288,11 @@ export default function Page() {
                   {...searchSectionAnimations}
                   className="w-full max-w-7xl rounded-xl border border-black-10 dark:border-gray-5"
                 >
-                  <div className="flex w-full items-center justify-between rounded-t-xl border-b border-black-10 dark:border-gray-5 bg-black-5 dark:bg-gray-1 px-6 py-4">
+                  <div className="flex w-full items-center justify-between rounded-t-xl border-b border-black-10 bg-black-5 px-6 py-4 dark:border-gray-5 dark:bg-gray-1">
                     <h3 className="text-sm font-medium">Search Summary</h3>
-                    <div className="flex items-center gap-3 text-sm dark:text-white-64 text-black-64">
+                    <div className="flex items-center gap-3 text-sm text-black-64 dark:text-white-64">
                       23s
-                      <div className="w-fit rounded-full bg-gray-DARK dark:bg-primary-11 p-1">
+                      <div className="w-fit rounded-full bg-gray-DARK p-1 dark:bg-primary-11">
                         <IconCheck className="w-4 text-white dark:text-gray-DARK" />
                       </div>
                     </div>
