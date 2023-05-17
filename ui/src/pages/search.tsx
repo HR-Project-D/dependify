@@ -22,7 +22,6 @@ import {
   getVersionPlaceholder,
   validateVersion,
 } from "@/utils/version";
-import { error } from "console";
 import { Formik, Form } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { ChangeEvent, useEffect, useState, KeyboardEvent } from "react";
@@ -156,7 +155,13 @@ export default function Page() {
                       validateOnBlur={false}
                       validateOnChange={true}
                     >
-                      {({ setErrors, errors, isSubmitting, setFieldValue, values }) => (
+                      {({
+                        setErrors,
+                        errors,
+                        isSubmitting,
+                        setFieldValue,
+                        values,
+                      }) => (
                         <Form className="flex w-full flex-col gap-5">
                           <div className="flex w-full flex-col gap-5">
                             <div className="flex w-full gap-5">

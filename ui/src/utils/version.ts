@@ -31,35 +31,17 @@ export function assertVersionInput(
   const input = e.key;
   const position = currentValue.length;
   const maxChars = versionType === "range" ? 11 : 5;
+  const isDot = input === ".";
+  const isValidCharacter =
+    (versionType === "range" && input === "-" && position === 5) ||
+    (position % 2 === 0 && /[0-9]/.test(input)) ||
+    (position % 2 === 1 && isDot && position !== 5);
 
   if (input === "Backspace") {
     return "remove";
   }
 
-  if (position >= maxChars) {
-    e.preventDefault();
-    return "block";
-  }
-
-  if (position === 0 && !/[0-9]/.test(input.charAt(position))) {
-    e.preventDefault();
-    return "block";
-  }
-  if (versionType === "range" && position === 5 && input === "-") {
-    return "add";
-  }
-
-  if (position % 2 === 1) {
-    const isDot = input === ".";
-    const isInvalidCharacter =
-      (versionType === "range" && input !== "." && !/[0-9]/.test(e.key)) ||
-      !isDot;
-
-    if (isInvalidCharacter) {
-      e.preventDefault();
-      return "block";
-    }
-  } else if (!/[0-9]/.test(input)) {
+  if (position >= maxChars || !isValidCharacter) {
     e.preventDefault();
     return "block";
   }
