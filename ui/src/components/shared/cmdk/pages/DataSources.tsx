@@ -1,23 +1,23 @@
-import { GitHubIcon } from "../../Icons";
+import { IconGithub } from "../../Icons";
 import Item from "../CMDKItem";
 
 function DataSources() {
   return (
     <>
       <Item>
-        <GitHubIcon />
+        <IconGithub />
         Purple Unicorn
       </Item>
       <Item>
-        <GitHubIcon />
+        <IconGithub />
         Cosmic Jellyfish
       </Item>
       <Item>
-        <GitHubIcon />
+        <IconGithub />
         Enchanted Tiger
       </Item>
       <Item>
-        <GitHubIcon />
+        <IconGithub />
         Magical Narwhal
       </Item>
     </>

@@ -1,8 +1,13 @@
 import { Button } from "@/components/primitives/Button";
 import { IconMoon } from "@/components/shared/Icons";
 import Layout from "@/components/shared/Layout";
+import { useSession } from "@/hooks/useSession";
+import { useRouter } from "next/router";
 
 export default function Page() {
+  // if setup hasn't been completed the user should be redirected to the setup page
+  //const session = useSession();
+  
   return (
     <Layout>
       <header className='flex h-fit w-full justify-center border-b border-white-10 px-8 pt-8'>

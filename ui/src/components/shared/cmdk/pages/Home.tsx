@@ -2,6 +2,7 @@ import { Command } from "cmdk";
 import Item from "../CMDKItem";
 import { IconLogout, IconMonitor } from "../../Icons";
 import { ProjectsIcon, PlusIcon, TeamsIcon, DocsIcon, FeedbackIcon, ContactIcon } from "../Icons";
+import { useUserContext } from "@/state/User";
 
 type HomeProps = {
   searchDataSources: Function;
@@ -9,6 +10,8 @@ type HomeProps = {
 };
 
 function Home({ searchDataSources, searchThemes }: HomeProps) {
+  const { state: userState, dispatch: userDispatch } = useUserContext();
+  
   return (
     <>
       <Command.Group heading='Data Sources'>
@@ -36,15 +39,15 @@ function Home({ searchDataSources, searchThemes }: HomeProps) {
           <IconMonitor />
           Change Theme...
         </Item>
-        <Item>
+        <Item onSelect={() => window.open("https://github.com/HR-Project-D/dependify")}>
           <DocsIcon />
           View Documentation
         </Item>
-        <Item>
+        <Item onSelect={() => window.open("https://github.com/HR-Project-D/dependify/issues")}>
           <FeedbackIcon />
           Report an Issue
         </Item>
-        <Item>
+        <Item onSelect={() => userDispatch({ type: "LOGOUT" })}>
           <IconLogout />
           Sign Out
         </Item>

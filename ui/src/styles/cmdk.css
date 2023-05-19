@@ -67,7 +67,7 @@
 }
 
 [cmdk-input]::placeholder {
-  @apply text-black-32 dark:font-light dark:text-white-32;
+  @apply text-black-48 dark:font-light dark:text-white-32;
 }
 
 [cmdk-page-badge] {
