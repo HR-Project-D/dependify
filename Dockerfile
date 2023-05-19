@@ -25,19 +25,24 @@ WORKDIR /app
 # Copy requirements.txt
 COPY ./backend/requirements.txt ./
 
+RUN apk add --no-cache build-base python3-dev
+
+# Upgrade pip to the latest version
+RUN pip install --no-cache-dir --upgrade pip
+
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the Django source code
 COPY ./backend .
 
-# Expose the required ports (e.g., 3000 for Next.js, 8000 for Django)
-EXPOSE 3000
-EXPOSE 8000
 
 # Finally, combine the Next.js and Django stages
 FROM python:3.9-alpine
 
+# Expose the required ports (e.g., 3000 for Next.js, 8000 for Django)
+EXPOSE 3000
+EXPOSE 8000
 # Set the working directory
 WORKDIR /app
 
