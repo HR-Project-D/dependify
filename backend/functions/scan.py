@@ -5,7 +5,7 @@ import pandas as pd
 
 def find_dependencies_in_sboms(name: str, version: str, source: str) -> object:
     results = {}
-    output = {'name': source, 'label': source, 'type': source}
+    output = {'label': source, 'name': source.lower(), 'type': source.lower()}
     print("Searching for dependencies in SBOMs")
     path = './functions/sboms'
     for file in os.listdir(path):
@@ -38,7 +38,8 @@ def find_dependencies_in_sboms(name: str, version: str, source: str) -> object:
                             v['sbomFormat'] = type
                             v['dockerImage'] = image
                         output['results'] = [{'label': v['label'], 'version': v['version'], 'sbomFile': v['sbomFile'],
-                                         'sbomFormat': v['sbomFormat'], 'dockerImage': v['dockerImage']} for v in results.values()]
+                                              'sbomFormat': v['sbomFormat'], 'dockerImage': v['dockerImage']} for v in
+                                             results.values()]
 
                     continue
                 elif str(type).find('SPDX') != -1:
@@ -57,8 +58,8 @@ def find_dependencies_in_sboms(name: str, version: str, source: str) -> object:
                             v['sbomFormat'] = type
                             v['dockerImage'] = image
                         output['results'] = [{'label': v['label'], 'version': v['version'], 'sbomFile': v['sbomFile'],
-                                         'sbomFormat': v['sbomFormat'], 'dockerImage': v['dockerImage']} for v in
-                                        results.values()]
+                                              'sbomFormat': v['sbomFormat'], 'dockerImage': v['dockerImage']} for v in
+                                             results.values()]
                     continue
                 else:
                     continue
