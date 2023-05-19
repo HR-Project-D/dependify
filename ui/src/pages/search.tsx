@@ -73,6 +73,22 @@ export default function Page() {
     setResults();
   }, [searchPhase]);
 
+  useEffect(() => {
+    // make a get request to the api to get the data sources
+
+    (async function () {
+      const res = await fetch(
+        "http://127.0.0.1:8000/api/scan/?name=babel&version=%3E=7.20.0&source=Local",
+        {
+          method: "GET",
+        }
+      );
+
+      const data = await res.json();
+      console.log(data);
+    })();
+  }, []);
+
   return (
     <Layout>
       <header className="flex h-fit w-full flex-col items-center border-b border-black-10 px-8 pt-8 dark:border-white-10">

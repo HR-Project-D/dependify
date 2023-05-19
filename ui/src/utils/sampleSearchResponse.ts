@@ -1,5 +1,11 @@
 import { APIResponseSearch } from "@/types/api/search";
 
+
+// Duration: zelf timen hoelang het duurt om een response te krijgen
+// na het sturen van de request
+
+// Result: geen "success" maar afleiden uit de response ofc
+// en met react query isError/isLoading/data vars
 export const sampleSearchResults: APIResponseSearch = {
   duration: 23,
   result: "success",
