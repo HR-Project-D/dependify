@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from playground.views import scan
+from playground.views import Scan
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('api/scan/', scan.as_view())
+    path ('api/scan/', Scan.as_view())
 ]

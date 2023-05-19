@@ -8,6 +8,12 @@ import functions.scan as f
 
 class Scan(APIView):
     def get(self, request):
+
+        name = request.GET.get('name', '')
+        version = request.GET.get('version', '')
+        source = request.GET.get('source', '')
+
         json = {'data': []}
-        json['data'].append(f.find_dependencies_in_sboms('react', '>=3.0.0', "Local"))
+
+        json['data'].append(f.find_dependencies_in_sboms(name, version, source))
         return Response(json)
