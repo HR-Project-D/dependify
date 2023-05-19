@@ -1,8 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.http import JsonResponse
 import functions.scan as f
 
 
@@ -11,5 +9,11 @@ import functions.scan as f
 
 class scan(APIView):
     def get(self, request):
-        json = f.find_dependencies_in_sboms('react', '>=3.0.0')
+        json = {'data': []}
+        json['data'].append(f.find_dependencies_in_sboms('react', '>=3.0.0', "local"))
         return Response(json)
+
+    def post(self, request):
+        json = f.find_dependencies_in_sboms('react', '>=3.0.0', "local")
+        return Response(json)
+
