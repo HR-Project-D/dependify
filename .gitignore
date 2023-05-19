@@ -1,0 +1,9 @@
+
+*.pyc
+*.pyc
+*.pyc
+backend/.idea/dataSources.xml
+backend/backend/__pycache__/settings.cpython-39.pyc
+backend/backend/__pycache__/urls.cpython-39.pyc
+*.pyc
+*.pyc
