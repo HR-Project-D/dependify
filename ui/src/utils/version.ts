@@ -28,23 +28,23 @@ export function assertVersionInput(
   currentValue: string,
   versionType: VersionType
 ): AssertVersionAction {
-  const input = e.key;
-  const position = currentValue.length;
-  const maxChars = versionType === "range" ? 11 : 5;
-  const isDot = input === ".";
-  const isValidCharacter =
-    (versionType === "range" && input === "-" && position === 5) ||
-    (position % 2 === 0 && /[0-9]/.test(input)) ||
-    (position % 2 === 1 && isDot && position !== 5);
+  // const input = e.key;
+  // const position = currentValue.length;
+  // const maxChars = versionType === "range" ? 11 : 5;
+  // const isDot = input === ".";
+  // const isValidCharacter =
+  //   (versionType === "range" && input === "-" && position === 5) ||
+  //   (position % 2 === 0 && /[0-9]/.test(input)) ||
+  //   (position % 2 === 1 && isDot && position !== 5);
 
-  if (input === "Backspace") {
-    return "remove";
-  }
+  // if (input === "Backspace") {
+  //   return "remove";
+  // }
 
-  if (position >= maxChars || !isValidCharacter) {
-    e.preventDefault();
-    return "block";
-  }
+  // if (position >= maxChars || !isValidCharacter) {
+  //   e.preventDefault();
+  //   return "block";
+  // }
 
   return "add";
 }

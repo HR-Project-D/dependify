@@ -14,8 +14,8 @@ import {
 } from "@/components/shared/Icons";
 import Layout from "@/components/shared/Layout";
 import PageTitle from "@/components/shared/PageTitle";
-import { APIResponseSearch } from "@/types/api/search";
-import { sampleSearchResults } from "@/utils/sampleSearchResponse";
+import { SearchService } from "@/services/SearchService";
+import type { APIResponseSearch } from "@/types/api/search";
 import {
   VersionType,
   assertVersionInput,
@@ -26,12 +26,16 @@ import { Formik, Form } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { ChangeEvent, useEffect, useState, KeyboardEvent } from "react";
 
+type FormValues = {
+  dependencyName: string;
+  version: string;
+};
+
 export default function Page() {
   const [searchResults, setSearchResults] = useState<APIResponseSearch>();
   const [searchPhase, setSearchPhase] = useState("configure"); // configure, running, results
   const [versionType, setVersionType] = useState<VersionType>("exact"); // exact, range, below, above
 
-  //const [dataSources, setDataSources] = useState([]);
   const [dataSources, setDataSources] = useState([
     "all",
     "Purple Unicorn",
@@ -59,35 +63,31 @@ export default function Page() {
     }
   }
 
-  useEffect(() => {
-    const setResults = async () => {
-      if (searchPhase === "running") {
-        await new Promise((resolve) => setTimeout(resolve, 5000));
-        if (searchPhase === "running") {
-          setSearchResults(sampleSearchResults);
-          setSearchPhase("results");
-        }
-      }
-    };
+  async function handleSearch(formValues: FormValues) {
+    setSearchResults(undefined);
 
-    setResults();
-  }, [searchPhase]);
+    setSearchPhase("running");
 
-  useEffect(() => {
-    // make a get request to the api to get the data sources
+    const dependencyVersion =
+      versionType === "below"
+        ? "<=" + formValues.version
+        : versionType === "above"
+        ? ">=" + formValues.version
+        : formValues.version;
 
-    (async function () {
-      const res = await fetch(
-        "http://127.0.0.1:8000/api/scan/?name=babel&version=%3E=7.20.0&source=Local",
-        {
-          method: "GET",
-        }
-      );
+    const data = await SearchService.search({
+      dependencyName: formValues.dependencyName,
+      dependencyVersion: dependencyVersion,
+      dataSource: "Local",
+    });
 
-      const data = await res.json();
-      console.log(data);
-    })();
-  }, []);
+    console.log(dependencyVersion);
+    console.log(data);
+
+    setSearchResults(data);
+    await new Promise((r) => setTimeout(r, 1000)); // React doesn't have enough time to remove dom nodes? It glitches out with the emptystate
+    setSearchPhase("results");
+  }
 
   return (
     <Layout>
@@ -164,8 +164,7 @@ export default function Page() {
                         version: "",
                       }}
                       onSubmit={async (values, errors) => {
-                        await new Promise((r) => setTimeout(r, 3000));
-                        setSearchPhase("running");
+                        handleSearch(values);
                       }}
                       validateOnMount={false}
                       validateOnBlur={false}
@@ -311,20 +310,21 @@ export default function Page() {
                 >
                   <div className="flex w-full items-center justify-between rounded-t-xl border-b border-black-10 bg-black-5 px-6 py-4 dark:border-gray-5 dark:bg-gray-1">
                     <h3 className="text-sm font-medium">Search Summary</h3>
-                    <div className="flex items-center gap-3 text-sm text-black-64 dark:text-white-64">
-                      23s
+                    {/* <div className="flex items-center gap-3 text-sm text-black-64 dark:text-white-64">
+                      23s */}
                       <div className="w-fit rounded-full bg-gray-DARK p-1 dark:bg-primary-11">
                         <IconCheck className="w-4 text-white dark:text-gray-DARK" />
-                      </div>
+                      {/* </div> */}
                     </div>
                   </div>
-                  {sampleSearchResults.data.map((dataSource) => (
-                    <DataSourceRow
-                      key={dataSource.label}
-                      label={dataSource.label}
-                      results={dataSource.results}
-                    />
-                  ))}
+                  {searchResults &&
+                    searchResults?.data.map((dataSource) => (
+                      <DataSourceRow
+                        key={dataSource.label}
+                        label={dataSource.label}
+                        results={dataSource.results}
+                      />
+                    ))}
                 </motion.div>
               )}
             </AnimatePresence>

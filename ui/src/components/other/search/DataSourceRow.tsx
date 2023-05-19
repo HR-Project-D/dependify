@@ -9,7 +9,7 @@ function DataSourceRow({
   results,
 }: {
   label: string;
-  results: Array<Dependency>;
+  results?: Array<Dependency>;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,11 +24,11 @@ function DataSourceRow({
           <h4>{label}</h4>
         </div>
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black-8 dark:bg-white-8 text-xs font-medium text-black-64 dark:text-white-64">
-          {results.length}
+          {results?.length || 0}
         </span>
       </button>
       <AnimatePresence initial={false}>
-        {isOpen && (
+        {isOpen && results && (
           <ResizablePanel
             className="w-full overflow-hidden border-t border-black-8 dark:border-gray-5 first:border-t-0"
             key={label + "content"}
