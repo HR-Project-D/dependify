@@ -1,5 +1,5 @@
 # Stage 1: Node.js base image for Next.js
-FROM node:14-alpine as nextjs
+FROM node as nextjs
 
 # Set the working directory
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY ui/. .
 RUN npm run build
 
 # Stage 2: Python base image for Django
-FROM python:3.9-alpine as django
+FROM python as django
 
 # Set the working directory
 WORKDIR /app
@@ -25,20 +25,12 @@ WORKDIR /app
 # Copy requirements.txt
 COPY ./backend/requirements.txt ./
 
-RUN apk add --no-cache build-base python3-dev
-
-# Upgrade pip to the latest version
-RUN pip install --no-cache-dir --upgrade pip
-
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Copy the Django source code
 COPY ./backend .
 
 
 # Finally, combine the Next.js and Django stages
-FROM python:3.9-alpine
+FROM node
 
 # Expose the required ports (e.g., 3000 for Next.js, 8000 for Django)
 EXPOSE 3000
@@ -46,11 +38,24 @@ EXPOSE 8000
 # Set the working directory
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y python3-pip
+
 # Copy the built Next.js files from the "nextjs" stage
-COPY --from=nextjs /app/.next ./.next
+COPY --from=nextjs /app ./ui
 
 # Copy the Django files from the "django" stage
 COPY --from=django /app .
 
+RUN pip3 install -r requirements.txt
+
+COPY start.sh ./start.sh
+
+RUN chmod +x ./start.sh
+
+VOLUME /app/keys
+
 # Start the Django server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000" ,";","npm", "run", "start"]
+CMD ./start.sh
+
+
