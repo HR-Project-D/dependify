@@ -46,16 +46,17 @@ COPY --from=nextjs /app ./ui
 # Copy the Django files from the "django" stage
 COPY --from=django /app .
 
+VOLUME /app/keys
+
 RUN pip3 install -r requirements.txt
 
-COPY start.sh ./start.sh
+COPY start_up.sh ./start_up.sh
 
-RUN chmod +x ./start.sh
+RUN chmod +x ./start_up.sh
 
-VOLUME /app/keys
 
 # Start the Django server
 #CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000" ,";","npm", "run", "start"]
-CMD ./start.sh
+CMD ./start_up.sh
 
 
