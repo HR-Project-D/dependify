@@ -52,6 +52,8 @@ COPY start.sh ./start.sh
 
 RUN chmod +x ./start.sh
 
+VOLUME /app/keys
+
 # Start the Django server
 #CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000" ,";","npm", "run", "start"]
 CMD ./start.sh
