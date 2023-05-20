@@ -29,7 +29,7 @@ function Layout({ className, children, ...props }: LayoutProps) {
             bounce: 0.25,
             stiffness: 60,
           }}
-          className="flex w-full flex-col items-center"
+          className="flex overflow-y-scroll w-full flex-col items-center"
         >
           {children}
         </motion.main>
