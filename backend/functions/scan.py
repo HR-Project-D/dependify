@@ -10,7 +10,7 @@ def find_dependencies_in_sboms(name: str, version: str, source: str) -> object:
     path = './functions/sboms'
     for file in os.listdir(path):
         if file.endswith(".json"):
-            with open(path + '\\' + file, encoding="utf-8") as json_file:
+            with open(path + '/' + file, encoding="utf-8") as json_file:
                 data = json.load(json_file)
                 try:
                     type = data['bomFormat']

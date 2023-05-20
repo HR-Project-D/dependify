@@ -1,0 +1,5 @@
+*/*/_pycache_*
+*/*/.idea*
+*/*/venv*
+*/*/node_modules*
+*/*/.next*
