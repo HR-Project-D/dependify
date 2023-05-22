@@ -33,6 +33,6 @@ class Setup(APIView):
         if request_key == key:
             response_data = {'status': 'success'}
         else:
-            response_data = {'status': 'fail'}
+            response_data = {'status': 'fail', 'message': 'Invalid key'}
 
         return Response(response_data)

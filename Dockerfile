@@ -46,7 +46,7 @@ COPY --from=nextjs /app ./ui
 # Copy the Django files from the "django" stage
 COPY --from=django /app .
 
-VOLUME /app/keys
+VOLUME /app/data
 
 RUN pip3 install -r requirements.txt
 
