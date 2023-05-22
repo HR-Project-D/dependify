@@ -15,16 +15,15 @@ import {
 import Layout from "@/components/shared/Layout";
 import PageTitle from "@/components/shared/PageTitle";
 import { SearchService } from "@/services/SearchService";
-import type { APIResponseSearch } from "@/types/api/search";
+import { type APIResponseSearch } from "@/types/api/search";
 import {
-  VersionType,
-  assertVersionInput,
+  type VersionType,
   getVersionPlaceholder,
   validateVersion,
 } from "@/utils/version";
 import { Formik, Form } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import { ChangeEvent, useEffect, useState, KeyboardEvent } from "react";
+import { useState } from "react";
 
 type FormValues = {
   dependencyName: string;
@@ -47,20 +46,6 @@ export default function Page() {
     setSearchResults(undefined);
     setSearchPhase("configure");
     setVersionType("exact");
-  }
-
-  function handleKeyDownVersion(
-    currentValue: string,
-    event: KeyboardEvent<HTMLInputElement>,
-    setter: (field: string, value: any, shouldValidate?: boolean) => void
-  ) {
-    const action = assertVersionInput(event, currentValue, versionType);
-
-    if (action === "remove") {
-      setter("version", currentValue.slice(0, -1));
-    } else if (action === "add") {
-      setter("version", currentValue + event.key);
-    }
   }
 
   async function handleSearch(formValues: FormValues) {
@@ -232,24 +217,10 @@ export default function Page() {
                                 <InputField
                                   id="version"
                                   name="version"
-                                  onKeyDown={(
-                                    e: KeyboardEvent<HTMLInputElement>
-                                  ) => {
-                                    handleKeyDownVersion(
-                                      values.version,
-                                      e,
-                                      setFieldValue
-                                    );
-                                  }}
                                   validate={async (value: string) => {
                                     if (!validateVersion(value, versionType)) {
                                       return "Invalid version format";
                                     }
-                                  }}
-                                  onChange={(
-                                    e: ChangeEvent<HTMLInputElement>
-                                  ) => {
-                                    e.preventDefault();
                                   }}
                                   style="iconless"
                                   type="text"
