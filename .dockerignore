@@ -3,3 +3,7 @@
 */*/venv*
 */*/node_modules*
 */*/.next*
+.gitignore
+README.md
+.dockerignore
+.git
