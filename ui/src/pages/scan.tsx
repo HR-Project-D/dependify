@@ -23,29 +23,14 @@ export default function Page() {
 
   useEffect(() => {
     function getQueries() {
-      const savedQueries = getSavedQueries();
-      const recentQueries = getRecentQueries();
-
-      const newSavedQueries = savedQueries.filter((savedQuery) => {
-        return !savedQueries.find((savedQuery) => {
-          return savedQuery.id === savedQuery.id;
-        });
-      });
-
-      const newRecentQueries = recentQueries.filter((recentQuery) => {
-        return !recentQueries.find((savedQuery) => {
-          return recentQuery.id === savedQuery.id;
-        });
-      });
-
-      setSavedQueries([...newSavedQueries, ...recentQueries]);
-      setRecentQueries([...newRecentQueries, ...recentQueries]);
+      setSavedQueries(getSavedQueries());
+      setRecentQueries(getRecentQueries());
     }
 
     getQueries();
 
     window.addEventListener("storage", () => {
-      const queries = getQueries();
+      getQueries();
     });
 
     return () => {

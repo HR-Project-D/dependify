@@ -110,7 +110,6 @@ export default function Page() {
                         <Button
                           disabled={isSubmitting}
                           intent="mauveDark"
-                          size="large"
                           rounded="full"
                         >
                           What is this?
@@ -118,7 +117,6 @@ export default function Page() {
                         <Button
                           disabled={isSubmitting}
                           intent="white"
-                          size="large"
                           rounded="full"
                           type="submit"
                         >
@@ -187,7 +185,6 @@ export default function Page() {
                         <Button
                           disabled={isSubmitting}
                           intent="mauveDark"
-                          size="large"
                           rounded="full"
                         >
                           What is this?
@@ -195,7 +192,6 @@ export default function Page() {
                         <Button
                           disabled={isSubmitting}
                           intent="white"
-                          size="large"
                           rounded="full"
                           type="submit"
                         >
@@ -217,7 +213,6 @@ export default function Page() {
                 <div className="flex gap-4">
                   <Button
                     intent="white"
-                    size="large"
                     rounded="full"
                     type="submit"
                   >

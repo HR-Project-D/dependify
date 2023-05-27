@@ -8,11 +8,17 @@ export function importQuery(query: Query) {
   );
 }
 
-export function ScanFormToQuery(
+export function addIdToQuery(query: Query) {
+  query.id = crypto.randomUUID();
+
+  return query;
+}
+
+export function scanFormToQuery(
   values: ScanFormValues,
   versionGuards: VersionGuard[]
 ): Query {
-  const query: Query = {
+  const query = {
     id: crypto.randomUUID(),
     dependencyName: values.dependencyName,
     exactMatch: values.exactMatch,
@@ -26,7 +32,7 @@ export function saveQuery(query: Query) {
   const savedQueries = JSON.parse(
     localStorage.getItem("dependify-savedQueries") || "[]"
   );
-  savedQueries.push(query);
+  savedQueries.push(addIdToQuery(query));
   localStorage.setItem("dependify-savedQueries", JSON.stringify(savedQueries));
   window.dispatchEvent(new Event("storage"));
 }
@@ -44,7 +50,7 @@ export function addRecentQuery(query: Query) {
   const recentQueries = JSON.parse(
     localStorage.getItem("dependify-recentQueries") || "[]"
   );
-  recentQueries.unshift(query);
+  recentQueries.unshift(addIdToQuery(query));
   localStorage.setItem(
     "dependify-recentQueries",
     JSON.stringify(recentQueries)
@@ -66,7 +72,7 @@ export function removeSavedQuery(query: Query) {
     localStorage.getItem("dependify-savedQueries") || "[]"
   );
   const index = savedQueries.findIndex(
-    (savedQuery: Query) => savedQuery === query
+    (savedQuery: Query) => savedQuery.id === query.id
   );
   savedQueries.splice(index, 1);
   localStorage.setItem("dependify-savedQueries", JSON.stringify(savedQueries));
@@ -78,7 +84,7 @@ export function removeRecentQuery(query: Query) {
     localStorage.getItem("dependify-recentQueries") || "[]"
   );
   const index = recentQueries.findIndex(
-    (recentQuery: Query) => recentQuery === query
+    (recentQuery: Query) => recentQuery.id === query.id
   );
   recentQueries.splice(index, 1);
   localStorage.setItem(
