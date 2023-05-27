@@ -31,7 +31,7 @@ function ScanForm({ setSearchResults }: Props) {
   const [guardsRef, guardsBounds] = useMeasure();
 
   const [versionGuards, setVersionGuards] = useState<VersionGuard[]>([]);
-  const [versionsExpanded, setVersionsExpanded] = useState(true);
+  const [versionsExpanded, setVersionsExpanded] = useState(false);
 
   const [initialValues, setInitialValues] = useState<ScanFormValues>({
     dependencyName: "",

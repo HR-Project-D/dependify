@@ -23,3 +23,13 @@ body {
   @apply bg-accent-11 text-gray-DARK;
 }
 
+[nav-item-underline]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  border-bottom: 2px solid white;
+}

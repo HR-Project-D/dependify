@@ -10,8 +10,8 @@ import withAuth from "@/components/_other/auth/WithAuth";
 
 function Page() {
   return (
-    <Layout className="p-16">
-      <div className="flex h-full w-full max-w-8xl flex-col gap-32 pt-8">
+    <Layout>
+      <div className="flex h-full w-full max-w-7xl flex-col gap-32 pt-8">
         <header className="flex flex-col gap-5">
           <div className="flex flex-col">
             <Subtitle>Welcome to Dependify</Subtitle>

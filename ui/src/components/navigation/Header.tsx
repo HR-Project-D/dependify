@@ -3,6 +3,8 @@ import { IconSearch, IconUser } from "../_other/Icons";
 import Keybind from "../_other/Keybind";
 import { useUIContext } from "@/state/UI";
 
+const version = require("../../../../version.json");
+
 function Header() {
   let userOs = undefined;
 
@@ -12,9 +14,10 @@ function Header() {
 
   const { dispatch: UIDispatch } = useUIContext();
 
+
   return (
-    <header className="sticky flex w-full items-center justify-between border-b px-5 py-2 text-sm border-white-10 text-white-48">
-      <h1 className="">Dependify</h1>
+    <header className="left-0 z-20 flex w-full items-center justify-between border-white-10 bg-gray-DARK px-5 py-2 text-sm text-white-48">
+      <h1 className="">Dependify {version}</h1>
 
       <div className="flex items-center gap-4">
         <button
@@ -30,7 +33,7 @@ function Header() {
             <Keybind>{userOs === "Mac" ? "K" : "K"}</Keybind>
           </span>
         </button>
-        <button className="p-2 bg-gray-1 border rounded-full border-white-8">
+        <button className="rounded-full border border-white-8 bg-gray-1 p-2">
           <IconUser className="w-4 text-white-48" />
         </button>
       </div>

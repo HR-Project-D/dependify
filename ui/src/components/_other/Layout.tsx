@@ -1,35 +1,33 @@
 import React from "react";
 import Header from "../navigation/Header";
-import Sidebar from "../navigation/Sidebar";
 import { motion } from "framer-motion";
 import { CMDK } from "../navigation/cmdk/CMDK";
+import MainNav from "../navigation/MainNav";
 
 export interface LayoutProps
   extends React.ButtonHTMLAttributes<HTMLDivElement> {}
 
 function Layout({ className, children, ...props }: LayoutProps) {
   return (
-    <div
-      className={`flex top-0 h-screen min-h-screen w-full flex-col overflow-hidden`}
-      {...props}
-    >
+    <div className={`flex min-h-screen w-full flex-col`} {...props}>
+      <Header />
+      <div className="w-full bg-gray-DARK z-50 sticky top-0">
+        <MainNav />
+      </div>
+
       <CMDK key="cmdk" />
 
-      <Header />
-
       <div className="flex h-full w-full">
-        {/* <Sidebar /> */}
-
         <motion.main
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{
-            duration: 0.15,
+            duration: 0.25,
             type: "spring",
             bounce: 0.25,
             stiffness: 60,
           }}
-          className={`flex w-full flex-col items-center overflow-y-scroll ${className}`}
+          className={`flex w-full py-16 px-12 flex-col items-center ${className}`}
         >
           {children}
         </motion.main>

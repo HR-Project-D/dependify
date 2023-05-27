@@ -1,3 +1,6 @@
+import path from "path";
+import fs from "fs";
+
 export function getFormattedDate(date: Date): string {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const dayOfWeek = daysOfWeek[date.getDay()];
