@@ -44,6 +44,6 @@ jobs:
             TAG=$VERSION
           fi
 
-          docker build -t dependify:$TAG .
+          docker build -t the0danktor/dependify:$TAG .
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           docker push the0danktor/dependify:$TAG
