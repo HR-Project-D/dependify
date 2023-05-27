@@ -20,5 +20,6 @@ body {
 }
 
 ::selection {
-  @apply bg-primary-11 text-gray-DARK;
+  @apply bg-accent-11 text-gray-DARK;
 }
+

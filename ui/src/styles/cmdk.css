@@ -36,7 +36,7 @@
   overflow: hidden;
   transition: transform 300ms ease;
 
-  @apply bg-white bg-opacity-90 dark:bg-opacity-95 shadow-md dark:border dark:border-white-10 dark:bg-gray-1;
+  @apply bg-white bg-opacity-90 dark:bg-opacity-95 shadow-md dark:border dark:border-white-8 dark:bg-gray-1;
 }
 
 [cmdk-list]::-webkit-scrollbar {

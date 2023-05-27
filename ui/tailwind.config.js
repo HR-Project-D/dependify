@@ -5,6 +5,14 @@ module.exports = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
   theme: {
+    extend: {
+      fontSize: {
+        "2xs": "0.625rem",
+      },
+      maxWidth: {
+        '8xl': '90rem',
+      }
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -60,7 +68,7 @@ module.exports = {
         12: "#EDEDEF",
       },
 
-      primary: {
+      accent: {
         1: "#17151F",
         2: "#1C172B",
         3: "#251E40",

@@ -1,6 +1,6 @@
-import { Button } from "@/components/primitives/Button";
-import { InputField } from "@/components/primitives/input/InputField";
-import { IconDependify, IconKey, IconSpinner } from "@/components/shared/Icons";
+import { Button } from "@/components/input/Button";
+import { InputField } from "@/components/input/input/InputField";
+import { IconDependify, IconKey, IconSpinner } from "@/components/_other/Icons";
 import { Form, Formik } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { useState } from "react";

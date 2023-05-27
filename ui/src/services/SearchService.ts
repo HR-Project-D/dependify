@@ -1,4 +1,4 @@
-import { APIResponseSearch } from "@/types/api/search";
+import { APIResponseScan } from "@/types/api/search";
 import { getApiUrl } from "@/utils/api";
 
 const API_URL = getApiUrl();
@@ -11,7 +11,7 @@ async function search({
   dependencyName: string;
   dependencyVersion: string;
   dataSource: string;
-}): Promise<APIResponseSearch> {
+}): Promise<APIResponseScan> {
   console.log(
     `${API_URL}scan?name=${dependencyName}&version=${dependencyVersion}&source=${dataSource}`
   );
