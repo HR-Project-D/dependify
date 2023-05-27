@@ -15,7 +15,7 @@
     "component": {
       "bom-ref": "bda4f29ab64911b2",
       "type": "container",
-      "name": "project-d-circleci:latest",
+      "name": "Random_Web_React_Projects:latest",
       "version": "sha256:f3a9a1d21d1e0af79612fbf7f9c2cc966ad7d53655ba300943e67210394ab4ea"
     }
   },
