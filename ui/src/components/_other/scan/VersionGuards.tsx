@@ -132,10 +132,10 @@ function VersionGuards({
                           className="group border-b border-white-8 last:border-b-0"
                           key={version.version + index}
                         >
-                          <td className="py-3 pl-3 text-gray-DARK dark:text-white">
+                          <td className="py-3 pl-3 text-white">
                             {capitalize(version.type)}
                           </td>
-                          <td className="py-3 text-gray-DARK dark:text-white">
+                          <td className="py-3 text-white">
                             {version.version}
                           </td>
                           <td className="w-fit py-3">

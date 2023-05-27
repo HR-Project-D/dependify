@@ -10,7 +10,7 @@ export interface LayoutProps
 function Layout({ className, children, ...props }: LayoutProps) {
   return (
     <div
-      className={`flex h-screen min-h-screen w-full flex-col overflow-hidden`}
+      className={`flex top-0 h-screen min-h-screen w-full flex-col overflow-hidden`}
       {...props}
     >
       <CMDK key="cmdk" />
@@ -18,7 +18,7 @@ function Layout({ className, children, ...props }: LayoutProps) {
       <Header />
 
       <div className="flex h-full w-full">
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <motion.main
           initial={{ opacity: 0, y: 20 }}
@@ -39,35 +39,3 @@ function Layout({ className, children, ...props }: LayoutProps) {
 }
 
 export default Layout;
-
-// import React from "react";
-// import Header from "../shared/Header";
-// import Sidebar from "../shared/Sidebar";
-// import { motion } from "framer-motion";
-// import { CMDK } from "../navigation/cmdk/CMDK";
-
-// export interface LayoutProps
-//   extends React.ButtonHTMLAttributes<HTMLDivElement> {}
-
-// function Layout({ className, children, ...props }: LayoutProps) {
-//   return (
-//     <div
-//       className={`flex h-screen min-h-screen w-full flex-col overflow-hidden ${className}`}
-//       {...props}
-//     >
-//       <CMDK key="cmdk" />
-
-//       <Header />
-
-//       <div className="flex h-full w-full">
-//         <Sidebar />
-
-//         <main className="flex w-full flex-col items-center overflow-y-scroll rounded-tl-lg dark:bg-gray-1">
-//           {children}
-//         </main>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Layout;

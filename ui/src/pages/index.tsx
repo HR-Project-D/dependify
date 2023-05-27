@@ -7,8 +7,9 @@ import BodyLarge from "@/components/text/BodyLarge";
 import Subtitle from "@/components/text/Subtitle";
 import TitleLarge from "@/components/text/TitleLarge";
 import Link from "next/link";
+import withAuth from "@/components/_other/auth/WithAuth";
 
-export default function Page() {
+function Page() {
   // if setup hasn't been completed the user should be redirected to the setup page
   //const session = useSession();
 
@@ -65,6 +66,8 @@ export default function Page() {
     </Layout>
   );
 }
+
+export default withAuth(Page);
 
 function GridItem({
   title,

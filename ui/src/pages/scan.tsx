@@ -18,28 +18,6 @@ import { useEffect, useState } from "react";
 export default function Page() {
   const [searchResults, setSearchResults] = useState<ScanResult | undefined>();
 
-  const [savedQueries, setSavedQueries] = useState<Query[] | undefined>();
-  const [recentQueries, setRecentQueries] = useState<Query[] | undefined>();
-
-  useEffect(() => {
-    function getQueries() {
-      setSavedQueries(getSavedQueries());
-      setRecentQueries(getRecentQueries());
-    }
-
-    getQueries();
-
-    window.addEventListener("storage", () => {
-      getQueries();
-    });
-
-    return () => {
-      window.removeEventListener("storage", () => {
-        getQueries();
-      });
-    };
-  }, []);
-
   return (
     <Layout className="p-16">
       <div className="flex h-full w-full max-w-8xl flex-col gap-16 pt-8">
@@ -55,16 +33,16 @@ export default function Page() {
         <div className="flex w-full gap-16">
           <aside className="flex h-fit min-w-[320px] flex-col gap-8 rounded-lg">
             <QueryList
+              getQueries={getSavedQueries}
               onRemove={removeSavedQuery}
               onClear={() => clearSavedQueries()}
-              queries={savedQueries}
               title="Saved Queries"
             />
-            <hr className="ml-3 mr-3 border-black-8 dark:border-white-8" />
+            <hr className="border-black-8 dark:border-white-8" />
             <QueryList
+              getQueries={getRecentQueries}
               onRemove={removeRecentQuery}
               onClear={() => clearRecentQueries()}
-              queries={recentQueries}
               title="Recent Queries"
             />
           </aside>

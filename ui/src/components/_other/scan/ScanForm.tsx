@@ -32,7 +32,6 @@ function ScanForm({ setSearchResults }: Props) {
   const [versionGuards, setVersionGuards] = useState<VersionGuard[]>([]);
 
   const [isOpen, setIsOpen] = useState(true);
-  const [versionType, setVersionType] = useState<VersionType>("exact");
 
   const [initialValues, setInitialValues] = useState<ScanFormValues>({
     dependencyName: "",
@@ -79,7 +78,6 @@ function ScanForm({ setSearchResults }: Props) {
       enableReinitialize
       onSubmit={async (values, errors) => {
         await new Promise((r) => setTimeout(r, 4000));
-        console.log(values);
         handleSearch(values);
       }}
       validateOnMount={false}
@@ -163,7 +161,7 @@ function ScanForm({ setSearchResults }: Props) {
 
                     <div className="flex w-full flex-col gap-2">
                       <InputLabel htmlFor="dependencyName">
-                        Version (Example: {getVersionPlaceholder(versionType)})
+                        Version (Example: {getVersionPlaceholder(values.versionType)})
                       </InputLabel>
 
                       <InputField
@@ -172,7 +170,7 @@ function ScanForm({ setSearchResults }: Props) {
                         style="iconless"
                         disabled={isSubmitting}
                         type="text"
-                        placeholder={getVersionPlaceholder(versionType)}
+                        placeholder={getVersionPlaceholder(values.versionType)}
                         onKeyDown={(
                           e: React.KeyboardEvent<HTMLInputElement>
                         ) => {
@@ -183,7 +181,7 @@ function ScanForm({ setSearchResults }: Props) {
                               setVersionGuards((prev) => [
                                 ...prev,
                                 {
-                                  type: versionType,
+                                  type: values.versionType,
                                   version: values.version,
                                 },
                               ]);
@@ -198,7 +196,7 @@ function ScanForm({ setSearchResults }: Props) {
                     <Button
                       className="mt-6"
                       disabled={isSubmitting}
-                      intent="white"
+                      intent="primary"
                       size="compact"
                       type="button"
                       onClick={() => {
@@ -206,7 +204,7 @@ function ScanForm({ setSearchResults }: Props) {
                           setVersionGuards((prev) => [
                             ...prev,
                             {
-                              type: versionType,
+                              type: values.versionType,
                               version: values.version,
                             },
                           ]);
@@ -242,10 +240,10 @@ function ScanForm({ setSearchResults }: Props) {
                                 className="group border-b border-white-8 last:border-b-0"
                                 key={version.version + index}
                               >
-                                <td className="py-3 pl-3 text-gray-DARK dark:text-white">
+                                <td className="py-3 pl-3 text-white">
                                   {capitalize(version.type)}
                                 </td>
-                                <td className="py-3 text-gray-DARK dark:text-white">
+                                <td className="py-3 text-white">
                                   {version.version}
                                 </td>
                                 <td className="w-fit py-3">
