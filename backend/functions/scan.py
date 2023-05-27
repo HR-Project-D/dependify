@@ -58,6 +58,7 @@ def find_dependencies_in_sboms(name: str, version: [str], source: str) -> object
 
     return output
 
+
 def check_versions(dataframe, versions):
     if isinstance(versions, list):
         version_filters = []
@@ -89,7 +90,9 @@ def check_versions(dataframe, versions):
     else:
         if versions.__contains__('-'):
             v = versions.split('-')
-            return dataframe[[version_parser.Version(v[0]) <= version_parser.Version(x) <= version_parser.Version(v[1]) for x in dataframe['version']]]
+            return dataframe[
+                [version_parser.Version(v[0]) <= version_parser.Version(x) <= version_parser.Version(v[1]) for x in
+                 dataframe['version']]]
         elif versions.startswith('>='):
             v = versions[2:]
             return dataframe[[version_parser.Version(x) >= version_parser.Version(v) for x in dataframe['version']]]
