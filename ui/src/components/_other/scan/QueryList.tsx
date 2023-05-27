@@ -32,21 +32,19 @@ function QueryList({
       </div>
       {queries && queries.length > 0 ? (
         <ResizablePanel key="saved-queries">
-          <AnimatePresence initial={false} mode="wait">
-            <ul className="flex flex-col">
-              {queries ? (
-                queries.map((query, i) => (
+          <ul className="flex flex-col">
+            {queries ? (
+              <AnimatePresence initial={false}>
+                {queries.map((query) => (
                   <motion.li
-                    layout
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2 }}
-                    key={crypto.randomUUID()}
+                    key={query.id}
                   >
-                    <button
-                      
+                    <div
+                      onClick={() => setIsExpanded((prev) => !prev)}
                       className="flex w-full cursor-pointer items-center justify-between rounded-lg px-3 py-1.5 text-white-48 hover:bg-gray-3 hover:text-white"
                     >
                       <BodyBase>{query.dependencyName}</BodyBase>
@@ -68,14 +66,14 @@ function QueryList({
                           <IconPlusCircle className="h-4 w-4 -rotate-90 text-white-48" />
                         </Button>
                       </div>
-                    </button>
+                    </div>
                   </motion.li>
-                ))
-              ) : (
-                <div></div>
-              )}
-            </ul>
-          </AnimatePresence>
+                ))}
+              </AnimatePresence>
+            ) : (
+              <div></div>
+            )}
+          </ul>
         </ResizablePanel>
       ) : (
         <div></div>

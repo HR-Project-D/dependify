@@ -18,7 +18,7 @@ import InputError from "@/components/input/input/InputError";
 import { capitalize } from "@/utils/formatting";
 import { AnimatePresence } from "framer-motion";
 import { versions } from "process";
-import { ScanFormToQuery, addRecentQuery, saveQuery } from "@/utils/query";
+import { scanFormToQuery, addRecentQuery, saveQuery } from "@/utils/query";
 import { ScanResult } from "@/utils/fakeApi";
 import { VersionGuard, type ScanFormValues, Query } from "@/types/scan";
 
@@ -42,7 +42,7 @@ function ScanForm({ setSearchResults }: Props) {
   });
 
   async function handleSearch(formValues: ScanFormValues) {
-    addRecentQuery(ScanFormToQuery(formValues, versionGuards));
+    addRecentQuery(scanFormToQuery(formValues, versionGuards));
 
     setSearchResults(ScanResult);
     await new Promise((r) => setTimeout(r, 1000)); // React doesn't have enough time to remove dom nodes? It glitches out with the emptystate
@@ -292,7 +292,7 @@ function ScanForm({ setSearchResults }: Props) {
               intent="mauve"
               onClick={() => {
                 if (values.dependencyName) {
-                  saveQuery(ScanFormToQuery(values, versionGuards));
+                  saveQuery(scanFormToQuery(values, versionGuards));
                 }
               }}
               type="button"
