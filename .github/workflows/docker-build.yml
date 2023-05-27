@@ -12,11 +12,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Install Docker
+      - name: Update and upgrade packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y docker.io
+          sudo apt-get upgrade -y
+
+
+      - name: Remove conflicting packages
+        run: |
+          sudo apt-get remove -y moby-containerd containerd moby-runc runc
+          
+      - name: Install Docker
+        run: |
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sudo sh get-docker.sh
+          sudo usermod -aG docker $USER
+          sudo systemctl enable docker
+          sudo systemctl start docker
+
 
       - name: Build and push Docker image
         env:
