@@ -11,12 +11,12 @@ class Scan(APIView):
     def get(self, request):
         name = request.GET.get('name', '')
         version = request.GET.get('version', '')
-        source = request.GET.get('source', '')
+        exactMatch = bool(request.GET.get('exactMatch', ''))
         version_list = ast.literal_eval(version)
 
         json = {'data': []}
 
-        json['data'].append(f.find_dependencies_in_sboms(name, version_list, source))
+        json['data'].append(f.find_dependencies_in_sboms(name, version_list, exactMatch))
         return Response(json)
 
 
