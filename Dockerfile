@@ -32,6 +32,7 @@ COPY ./backend .
 # Finally, combine the Next.js and Django stages
 FROM node
 
+
 # Expose the required ports (e.g., 3000 for Next.js, 8000 for Django)
 EXPOSE 3000
 EXPOSE 8000
