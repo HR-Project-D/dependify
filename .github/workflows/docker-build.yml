@@ -13,8 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Docker
-        uses: docker/setup-docker@v1
+      - name: Install Docker
+        run:
+          sudo apt-get update
+          sudo apt-get install -y docker.io
 
       - name: Build and push Docker image
         env:
