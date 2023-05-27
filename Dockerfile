@@ -1,26 +1,50 @@
-# Stage 1: Node.js base image for Next.js
-FROM node as nextjs
+FROM node:18-alpine AS base
 
-# Set the working directory
+# Install dependencies only when needed
+FROM base AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY ./ui/package*.json ./
+# Install dependencies based on the preferred package manager
+COPY ui/package.json ui/yarn.lock* ui/package-lock.json* ui/pnpm-lock.yaml* ./
+RUN \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-# Install dependencies
-RUN npm ci
 
-# Copy the Next.js source code
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY ui/. .
 
-# Build the Next.js application
+# Next.js collects completely anonymous telemetry data about general usage.
+# Learn more here: https://nextjs.org/telemetry
+# Uncomment the following line in case you want to disable telemetry during the build.
+ENV NEXT_TELEMETRY_DISABLED 1
 RUN npm run build
 
-# Stage 2: Python base image for Django
-FROM python as django
-
-# Set the working directory
+# Production image, copy all the files and run next
+FROM nikolaik/python-nodejs:python3.8-nodejs18-slim AS runner
 WORKDIR /app
+
+ENV NODE_ENV production
+# Uncomment the following line in case you want to disable telemetry during runtime.
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # Copy requirements.txt
 COPY ./backend/requirements.txt ./
@@ -29,27 +53,15 @@ COPY ./backend/requirements.txt ./
 COPY ./backend .
 
 
-# Finally, combine the Next.js and Django stages
-FROM node
 
-
-# Expose the required ports (e.g., 3000 for Next.js, 8000 for Django)
-EXPOSE 3000
-EXPOSE 8000
-# Set the working directory
-WORKDIR /app
-
-RUN apt-get update && apt-get install -y python3-pip
-
-# Copy the built Next.js files from the "nextjs" stage
-COPY --from=nextjs /app ./ui
-
-# Copy the Django files from the "django" stage
-COPY --from=django /app .
+RUN pip3 install -r requirements.txt
 
 VOLUME /app/data
 
-RUN pip3 install -r requirements.txt
+EXPOSE 3000
+EXPOSE 8000
+
+ENV PORT 3000
 
 COPY start_up.sh ./start_up.sh
 
@@ -59,5 +71,3 @@ RUN chmod +x ./start_up.sh
 # Start the Django server
 #CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000" ,";","npm", "run", "start"]
 CMD ./start_up.sh
-
-

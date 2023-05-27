@@ -8,4 +8,4 @@ if [[ ! -e "./data/setup_key" ]]; then
 fi
 python3 manage.py runserver 0.0.0.0:8000 &
 cd ./ui
-npm run start 
+node server.js
