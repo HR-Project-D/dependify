@@ -58,10 +58,6 @@ def find_dependencies_in_sboms(name: str, version: [str], source: str) -> object
 
     return output
 
-
-version_parser.Version('1.2.3')
-
-
 def check_versions(dataframe, versions):
     if isinstance(versions, list):
         version_filters = []
