@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Header from "../navigation/Header";
+import Sidebar from "../navigation/Sidebar";
 import { motion } from "framer-motion";
 import { CMDK } from "../navigation/cmdk/CMDK";
 

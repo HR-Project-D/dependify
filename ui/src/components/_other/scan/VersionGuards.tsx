@@ -1,11 +1,10 @@
 import ResizablePanel from "@/components/motion/ResizablePanel";
 import { Button } from "@/components/input/Button";
-import SelectDropdown from "@/components/input/SelectDropdown";
-import InputError from "@/components/input/input/InputError";
-import { InputField } from "@/components/input/input/InputField";
-import InputLabel from "@/components/input/input/InputLabel";
+import Dropdown from "@/components/input/SelectDropdown";
+import TextFieldError from "@/components/input/input/InputError";
+import { TextField } from "@/components/input/TextField";
+import InputLabel from "@/components/input/InputLabel";
 import { IconChevron, IconSpinner } from "@/components/_other/Icons";
-import Body from "@/components/text/Body";
 import BodyLarge from "@/components/text/BodyLarge";
 import { VersionGuard } from "@/types/scan";
 import { capitalize } from "@/utils/formatting";
@@ -68,7 +67,7 @@ function VersionGuards({
                         <InputLabel htmlFor="dependencyName">
                           Version Type
                         </InputLabel>
-                        <SelectDropdown
+                        <Dropdown
                           defaultValue="exact"
                           onChange={(value) => {
                             setFieldValue("version", "");
@@ -84,14 +83,14 @@ function VersionGuards({
                           )
                         </InputLabel>
 
-                        <InputField
+                        <TextField
                           id="version"
                           name="version"
                           style="iconless"
                           type="text"
                           placeholder={getVersionPlaceholder(versionType)}
                         />
-                        <InputError name="version" />
+                        <TextFieldError name="version" />
                       </div>
 
                       <Button

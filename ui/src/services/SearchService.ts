@@ -1,4 +1,4 @@
-import { APIResponseScan } from "@/types/api/search";
+import { APIResponseScan } from "@/types/api/api-scan";
 import { getApiUrl } from "@/utils/api";
 
 const API_URL = getApiUrl();

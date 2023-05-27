@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { IconDatabase, IconGrid, IconNotification, IconSearch } from "./Icons";
+import { IconDatabase, IconGrid, IconNotification, IconSearch } from "../_other/Icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 

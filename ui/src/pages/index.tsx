@@ -1,7 +1,6 @@
 import Layout from "@/components/_other/Layout";
 import { Button } from "@/components/input/Button";
 import { IconGithub } from "@/components/_other/Icons";
-import Body from "@/components/text/Body";
 import BodyBase from "@/components/text/BodyBase";
 import BodyLarge from "@/components/text/BodyLarge";
 import Subtitle from "@/components/text/Subtitle";
@@ -10,9 +9,6 @@ import Link from "next/link";
 import withAuth from "@/components/_other/auth/WithAuth";
 
 function Page() {
-  // if setup hasn't been completed the user should be redirected to the setup page
-  //const session = useSession();
-
   return (
     <Layout className="p-16">
       <div className="flex h-full w-full max-w-8xl flex-col gap-32 pt-8">

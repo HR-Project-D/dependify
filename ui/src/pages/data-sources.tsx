@@ -1,27 +1,16 @@
 import Layout from "@/components/_other/Layout";
-import { Button } from "@/components/input/Button";
 import {
   IconDependify,
   IconGithub,
   IconGitlab,
   IconSettings,
 } from "@/components/_other/Icons";
-import { DataSourceType } from "@/types/dataSource";
+import { DataSourceType } from "@/types/data-source";
 
 export default function Page() {
   return (
     <Layout>
       <header className="flex h-fit w-full flex-col items-center border-b border-black-10 px-8 dark:border-white-10">
-        {/* <PageTitle
-          title="Data Sources"
-          subtitle="Data sources are the places where your SBOM's are stored."
-          actions={
-            <>
-              <Button intent="mauve">Remove All</Button>
-              <Button intent="primary">Add</Button>
-            </>
-          }
-        /> */}
       </header>
       <div className="flex w-full flex-col items-center gap-8 p-8">
         <div className="flex w-full max-w-7xl flex-col gap-6">

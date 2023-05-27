@@ -1,6 +1,6 @@
 import { getOperatingSystem } from "@/utils/platform";
-import { IconSearch, IconUser } from "./Icons";
-import Keybind from "./Keybind";
+import { IconSearch, IconUser } from "../_other/Icons";
+import Keybind from "../_other/Keybind";
 import { useUIContext } from "@/state/UI";
 
 function Header() {
@@ -19,7 +19,7 @@ function Header() {
       <div className="flex items-center gap-4">
         <button
           onClick={() => UIDispatch({ type: "TOGGLE_COMMAND_MENU" })}
-          className="pointer-events-auto flex w-[356px] items-center justify-between rounded-lg border border-white-8 bg-gray-3 px-4 py-1.5"
+          className="pointer-events-auto flex w-[356px] items-center justify-between rounded-lg border border-white-8 bg-gray-1 px-4 py-1.5"
         >
           <span className="flex gap-3 text-white-48">
             <IconSearch className="w-4" />
@@ -30,7 +30,7 @@ function Header() {
             <Keybind>{userOs === "Mac" ? "K" : "K"}</Keybind>
           </span>
         </button>
-        <button className="p-2 bg-gray-3 border rounded-full border-white-8">
+        <button className="p-2 bg-gray-1 border rounded-full border-white-8">
           <IconUser className="w-4 text-white-48" />
         </button>
       </div>
