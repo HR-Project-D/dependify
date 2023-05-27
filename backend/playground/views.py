@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import functions.scan as f
+import ast
 
 
 # Create your views here.
@@ -11,10 +12,11 @@ class Scan(APIView):
         name = request.GET.get('name', '')
         version = request.GET.get('version', '')
         source = request.GET.get('source', '')
+        version_list = ast.literal_eval(version)
 
         json = {'data': []}
 
-        json['data'].append(f.find_dependencies_in_sboms(name, version, source))
+        json['data'].append(f.find_dependencies_in_sboms(name, version_list, source))
         return Response(json)
 
 

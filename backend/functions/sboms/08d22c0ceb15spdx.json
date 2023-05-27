@@ -1,0 +1,4911 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "ubuntu:latest",
+ "documentNamespace": "https://anchore.com/syft/image/ubuntu-latest-0bc33c65-d286-4297-a689-e8173fc39416",
+ "creationInfo": {
+  "licenseListVersion": "3.20",
+  "creators": [
+   "Organization: Anchore, Inc",
+   "Tool: syft-0.75.0"
+  ],
+  "created": "2023-04-18T12:06:03Z"
+ },
+ "packages": [
+  {
+   "name": "adduser",
+   "SPDXID": "SPDXRef-Package-deb-adduser-a1a22e7b0e4a292",
+   "versionInfo": "3.118ubuntu5",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/adduser/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:adduser:adduser:3.118ubuntu5:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/adduser@3.118ubuntu5?arch=all&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "apt",
+   "SPDXID": "SPDXRef-Package-deb-apt-c55f9b572f099afa",
+   "versionInfo": "2.4.8",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/apt/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LicenseRef-GPLv2-",
+   "licenseDeclared": "GPL-2.0-only AND LicenseRef-GPLv2-",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:apt:apt:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/apt@2.4.8?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "base-files",
+   "SPDXID": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "versionInfo": "12ubuntu4.3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/base-files/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base-files:base-files:12ubuntu4.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base-files:base_files:12ubuntu4.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base_files:base-files:12ubuntu4.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base_files:base_files:12ubuntu4.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base:base-files:12ubuntu4.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base:base_files:12ubuntu4.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/base-files@12ubuntu4.3?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "base-passwd",
+   "SPDXID": "SPDXRef-Package-deb-base-passwd-ea63946aabb58cc0",
+   "versionInfo": "3.5.52build1",
+   "originator": "Person: Colin Watson \u003ccjwatson@debian.org\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/base-passwd/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LicenseRef-public-domain",
+   "licenseDeclared": "GPL-2.0-only AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base-passwd:base-passwd:3.5.52build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base-passwd:base_passwd:3.5.52build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base_passwd:base-passwd:3.5.52build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base_passwd:base_passwd:3.5.52build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base:base-passwd:3.5.52build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:base:base_passwd:3.5.52build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/base-passwd@3.5.52build1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "bash",
+   "SPDXID": "SPDXRef-Package-deb-bash-ec404d0fccb93c72",
+   "versionInfo": "5.1-6ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/bash/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-3.0-only",
+   "licenseDeclared": "GPL-3.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:bash:bash:5.1-6ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/bash@5.1-6ubuntu1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "bsdutils",
+   "SPDXID": "SPDXRef-Package-deb-bsdutils-c3e6b0f4f61b3fe9",
+   "versionInfo": "1:2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/bsdutils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:bsdutils:bsdutils:1\\:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/bsdutils@1:2.37.2-4ubuntu3?arch=amd64&upstream=util-linux%402.37.2-4ubuntu3&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "coreutils",
+   "SPDXID": "SPDXRef-Package-deb-coreutils-606da9f70ff2cb26",
+   "versionInfo": "8.32-4.1ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/coreutils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-3.0-only",
+   "licenseDeclared": "GPL-3.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:coreutils:coreutils:8.32-4.1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/coreutils@8.32-4.1ubuntu1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "dash",
+   "SPDXID": "SPDXRef-Package-deb-dash-60e9b0ccf1a3fe65",
+   "versionInfo": "0.5.11+git20210903+057cd650a4ed-3build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/dash/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND BSD-3-Clause AND LicenseRef-Expat AND FSFUL AND FSFULLR AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-3-Clause AND BSD-3-Clause AND LicenseRef-Expat AND FSFUL AND FSFULLR AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dash:dash:0.5.11\\+git20210903\\+057cd650a4ed-3build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/dash@0.5.11+git20210903+057cd650a4ed-3build1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "debconf",
+   "SPDXID": "SPDXRef-Package-deb-debconf-c417bfa7b33bfc8d",
+   "versionInfo": "1.5.79ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/debconf/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause",
+   "licenseDeclared": "BSD-2-Clause",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:debconf:debconf:1.5.79ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/debconf@1.5.79ubuntu1?arch=all&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "debianutils",
+   "SPDXID": "SPDXRef-Package-deb-debianutils-908d3ae54fcbf259",
+   "versionInfo": "5.5-1ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/debianutils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:debianutils:debianutils:5.5-1ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/debianutils@5.5-1ubuntu2?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "diffutils",
+   "SPDXID": "SPDXRef-Package-deb-diffutils-8680651227f4ccef",
+   "versionInfo": "1:3.8-0ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/diffutils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GFDL AND LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GFDL AND LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:diffutils:diffutils:1\\:3.8-0ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/diffutils@1:3.8-0ubuntu2?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "dpkg",
+   "SPDXID": "SPDXRef-Package-deb-dpkg-9e066ac193d60109",
+   "versionInfo": "1.21.1ubuntu2.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/dpkg/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-public-domain-md5 AND LicenseRef-public-domain-s-s-d",
+   "licenseDeclared": "BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-public-domain-md5 AND LicenseRef-public-domain-s-s-d",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:dpkg:dpkg:1.21.1ubuntu2.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/dpkg@1.21.1ubuntu2.1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "e2fsprogs",
+   "SPDXID": "SPDXRef-Package-deb-e2fsprogs-b16d946dcb23bd4b",
+   "versionInfo": "1.46.5-2ubuntu1.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/e2fsprogs/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LGPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only AND LGPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:e2fsprogs:e2fsprogs:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/e2fsprogs@1.46.5-2ubuntu1.1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "findutils",
+   "SPDXID": "SPDXRef-Package-deb-findutils-d5e8dcca60abe173",
+   "versionInfo": "4.8.0-1ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/findutils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GFDL-1.3-only AND GPL-3.0-only",
+   "licenseDeclared": "GFDL-1.3-only AND GPL-3.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:findutils:findutils:4.8.0-1ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/findutils@4.8.0-1ubuntu3?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "gcc-12-base",
+   "SPDXID": "SPDXRef-Package-deb-gcc-12-base-609a8a24e80a30e",
+   "versionInfo": "12.1.0-2ubuntu1~22.04",
+   "originator": "Person: Ubuntu Core developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/gcc-12-base/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Artistic AND GFDL-1.2-only AND LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LicenseRef-LGPL",
+   "licenseDeclared": "LicenseRef-Artistic AND GFDL-1.2-only AND LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc-12-base:gcc-12-base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc-12-base:gcc_12_base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc_12_base:gcc-12-base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc_12_base:gcc_12_base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc-12:gcc-12-base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc-12:gcc_12_base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc_12:gcc-12-base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc_12:gcc_12_base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc:gcc-12-base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gcc:gcc_12_base:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/gcc-12-base@12.1.0-2ubuntu1~22.04?arch=amd64&upstream=gcc-12&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "gpgv",
+   "SPDXID": "SPDXRef-Package-deb-gpgv-e1d204735d5121ca",
+   "versionInfo": "2.2.27-3ubuntu2.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/gpgv/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND CC0-1.0 AND LicenseRef-Expat AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND LicenseRef-RFC-Reference AND LicenseRef-TinySCHEME AND LicenseRef-permissive",
+   "licenseDeclared": "BSD-3-Clause AND CC0-1.0 AND LicenseRef-Expat AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND LicenseRef-RFC-Reference AND LicenseRef-TinySCHEME AND LicenseRef-permissive",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gpgv:gpgv:2.2.27-3ubuntu2.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/gpgv@2.2.27-3ubuntu2.1?arch=amd64&upstream=gnupg2&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "grep",
+   "SPDXID": "SPDXRef-Package-deb-grep-29a4d65a2ab51e4c",
+   "versionInfo": "3.7-1build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/grep/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-3.0-only AND GPL-3.0-or-later",
+   "licenseDeclared": "GPL-3.0-only AND GPL-3.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:grep:grep:3.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/grep@3.7-1build1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "gzip",
+   "SPDXID": "SPDXRef-Package-deb-gzip-5b9a5a38c9fe3df7",
+   "versionInfo": "1.10-4ubuntu4.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/gzip/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-FSF-manpages AND LicenseRef-GFDL-1.3--no-invariant AND LicenseRef-GFDL-3 AND GPL-3.0-only AND GPL-3.0-or-later",
+   "licenseDeclared": "LicenseRef-FSF-manpages AND LicenseRef-GFDL-1.3--no-invariant AND LicenseRef-GFDL-3 AND GPL-3.0-only AND GPL-3.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:gzip:gzip:1.10-4ubuntu4.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/gzip@1.10-4ubuntu4.1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "hostname",
+   "SPDXID": "SPDXRef-Package-deb-hostname-f7b5cc65150347d0",
+   "versionInfo": "3.23ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/hostname/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:hostname:hostname:3.23ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/hostname@3.23ubuntu2?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "init-system-helpers",
+   "SPDXID": "SPDXRef-Package-deb-init-system-helpers-970ad709d70abdad",
+   "versionInfo": "1.62",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/init-system-helpers/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later",
+   "licenseDeclared": "BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init-system-helpers:init-system-helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init-system-helpers:init_system_helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init_system_helpers:init-system-helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init_system_helpers:init_system_helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init-system:init-system-helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init-system:init_system_helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init_system:init-system-helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init_system:init_system_helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init:init-system-helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:init:init_system_helpers:1.62:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/init-system-helpers@1.62?arch=all&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libacl1",
+   "SPDXID": "SPDXRef-Package-deb-libacl1-c0aa9eaabd139b00",
+   "versionInfo": "2.3.1-1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libacl1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1-only",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libacl1:libacl1:2.3.1-1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libacl1@2.3.1-1?arch=amd64&upstream=acl&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libapt-pkg6.0",
+   "SPDXID": "SPDXRef-Package-deb-libapt-pkg6.0-585b46f31872020d",
+   "versionInfo": "2.4.8",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libapt-pkg6.0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LicenseRef-GPLv2-",
+   "licenseDeclared": "GPL-2.0-only AND LicenseRef-GPLv2-",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libapt-pkg6.0:libapt-pkg6.0:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libapt-pkg6.0:libapt_pkg6.0:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libapt_pkg6.0:libapt-pkg6.0:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libapt_pkg6.0:libapt_pkg6.0:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libapt:libapt-pkg6.0:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libapt:libapt_pkg6.0:2.4.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libapt-pkg6.0@2.4.8?arch=amd64&upstream=apt&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libattr1",
+   "SPDXID": "SPDXRef-Package-deb-libattr1-ef388d6835fc0617",
+   "versionInfo": "1:2.5.1-1build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libattr1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1-only",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libattr1:libattr1:1\\:2.5.1-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libattr1@1:2.5.1-1build1?arch=amd64&upstream=attr&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libaudit-common",
+   "SPDXID": "SPDXRef-Package-deb-libaudit-common-78d440318da51a25",
+   "versionInfo": "1:3.0.7-1build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libaudit-common/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-1.0-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "GPL-1.0-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit-common:libaudit-common:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit-common:libaudit_common:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit_common:libaudit-common:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit_common:libaudit_common:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit:libaudit-common:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit:libaudit_common:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libaudit-common@1:3.0.7-1build1?arch=all&upstream=audit&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libaudit1",
+   "SPDXID": "SPDXRef-Package-deb-libaudit1-7bf7c8d6ef846159",
+   "versionInfo": "1:3.0.7-1build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libaudit1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-1.0-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "GPL-1.0-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libaudit1:libaudit1:1\\:3.0.7-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libaudit1@1:3.0.7-1build1?arch=amd64&upstream=audit&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libblkid1",
+   "SPDXID": "SPDXRef-Package-deb-libblkid1-6188c1cd8c0047ca",
+   "versionInfo": "2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libblkid1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libblkid1:libblkid1:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libblkid1@2.37.2-4ubuntu3?arch=amd64&upstream=util-linux&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libbz2-1.0",
+   "SPDXID": "SPDXRef-Package-deb-libbz2-1.0-6b3ef3f72c68401b",
+   "versionInfo": "1.0.8-5build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libbz2-1.0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-BSD-variant AND GPL-2.0-only",
+   "licenseDeclared": "LicenseRef-BSD-variant AND GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libbz2-1.0:libbz2-1.0:1.0.8-5build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libbz2-1.0:libbz2_1.0:1.0.8-5build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libbz2_1.0:libbz2-1.0:1.0.8-5build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libbz2_1.0:libbz2_1.0:1.0.8-5build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libbz2:libbz2-1.0:1.0.8-5build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libbz2:libbz2_1.0:1.0.8-5build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libbz2-1.0@1.0.8-5build1?arch=amd64&upstream=bzip2&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libc-bin",
+   "SPDXID": "SPDXRef-Package-deb-libc-bin-25c20dba11316355",
+   "versionInfo": "2.35-0ubuntu3.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libc-bin/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GFDL-1.3-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "GFDL-1.3-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc-bin:libc-bin:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc-bin:libc_bin:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc_bin:libc-bin:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc_bin:libc_bin:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc:libc-bin:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc:libc_bin:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.1?arch=amd64&upstream=glibc&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libc6",
+   "SPDXID": "SPDXRef-Package-deb-libc6-e0ec0b5c28ae7553",
+   "versionInfo": "2.35-0ubuntu3.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libc6/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GFDL-1.3-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "GFDL-1.3-only AND GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libc6:libc6:2.35-0ubuntu3.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.1?arch=amd64&upstream=glibc&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libcap-ng0",
+   "SPDXID": "SPDXRef-Package-deb-libcap-ng0-9b1779d8792a537e",
+   "versionInfo": "0.7.9-2.2build3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libcap-ng0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-3.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "GPL-2.0-only AND GPL-3.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap-ng0:libcap-ng0:0.7.9-2.2build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap-ng0:libcap_ng0:0.7.9-2.2build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap_ng0:libcap-ng0:0.7.9-2.2build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap_ng0:libcap_ng0:0.7.9-2.2build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap:libcap-ng0:0.7.9-2.2build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap:libcap_ng0:0.7.9-2.2build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libcap-ng0@0.7.9-2.2build3?arch=amd64&upstream=libcap-ng&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libcap2",
+   "SPDXID": "SPDXRef-Package-deb-libcap2-f8c439b225438547",
+   "versionInfo": "1:2.44-1build3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libcap2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later",
+   "licenseDeclared": "BSD-3-Clause AND GPL-2.0-only AND GPL-2.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcap2:libcap2:1\\:2.44-1build3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libcap2@1:2.44-1build3?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libcom-err2",
+   "SPDXID": "SPDXRef-Package-deb-libcom-err2-1d2d6c1c92b9a3a3",
+   "versionInfo": "1.46.5-2ubuntu1.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libcom-err2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcom-err2:libcom-err2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcom-err2:libcom_err2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcom_err2:libcom-err2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcom_err2:libcom_err2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcom:libcom-err2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcom:libcom_err2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libcom-err2@1.46.5-2ubuntu1.1?arch=amd64&upstream=e2fsprogs&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libcrypt1",
+   "SPDXID": "SPDXRef-Package-deb-libcrypt1-cdcaf2f8cf4382e5",
+   "versionInfo": "1:4.4.27-1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libcrypt1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libcrypt1:libcrypt1:1\\:4.4.27-1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libcrypt1@1:4.4.27-1?arch=amd64&upstream=libxcrypt&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libdb5.3",
+   "SPDXID": "SPDXRef-Package-deb-libdb5.3-67e201884be6fd6d",
+   "versionInfo": "5.3.28+dfsg1-0.8ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libdb5.3/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libdb5.3:libdb5.3:5.3.28\\+dfsg1-0.8ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libdb5.3@5.3.28+dfsg1-0.8ubuntu3?arch=amd64&upstream=db5.3&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libdebconfclient0",
+   "SPDXID": "SPDXRef-Package-deb-libdebconfclient0-d7ff153a76e6307f",
+   "versionInfo": "0.261ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libdebconfclient0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libdebconfclient0:libdebconfclient0:0.261ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libdebconfclient0@0.261ubuntu1?arch=amd64&upstream=cdebconf&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libext2fs2",
+   "SPDXID": "SPDXRef-Package-deb-libext2fs2-431b11c405974e9",
+   "versionInfo": "1.46.5-2ubuntu1.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libext2fs2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LGPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only AND LGPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libext2fs2:libext2fs2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libext2fs2@1.46.5-2ubuntu1.1?arch=amd64&upstream=e2fsprogs&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libffi8",
+   "SPDXID": "SPDXRef-Package-deb-libffi8-d2a911706fca5ee8",
+   "versionInfo": "3.4.2-4",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libffi8/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libffi8:libffi8:3.4.2-4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libffi8@3.4.2-4?arch=amd64&upstream=libffi&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libgcc-s1",
+   "SPDXID": "SPDXRef-Package-deb-libgcc-s1-3d467849ac7b26d8",
+   "versionInfo": "12.1.0-2ubuntu1~22.04",
+   "originator": "Person: Ubuntu Core developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/gcc-12-base/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Artistic AND GFDL-1.2-only AND LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LicenseRef-LGPL",
+   "licenseDeclared": "LicenseRef-Artistic AND GFDL-1.2-only AND LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcc-s1:libgcc-s1:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcc-s1:libgcc_s1:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcc_s1:libgcc-s1:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcc_s1:libgcc_s1:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcc:libgcc-s1:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcc:libgcc_s1:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libgcc-s1@12.1.0-2ubuntu1~22.04?arch=amd64&upstream=gcc-12&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libgcrypt20",
+   "SPDXID": "SPDXRef-Package-deb-libgcrypt20-bf1bb9bf5eb9ecbf",
+   "versionInfo": "1.9.4-3ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libgcrypt20/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LicenseRef-LGPL",
+   "licenseDeclared": "GPL-2.0-only AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgcrypt20:libgcrypt20:1.9.4-3ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libgcrypt20@1.9.4-3ubuntu3?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libgmp10",
+   "SPDXID": "SPDXRef-Package-deb-libgmp10-bb81ca7a2ef12732",
+   "versionInfo": "2:6.2.1+dfsg-3ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libgmp10/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LGPL-3.0-only",
+   "licenseDeclared": "LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LGPL-3.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgmp10:libgmp10:2\\:6.2.1\\+dfsg-3ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libgmp10@2:6.2.1+dfsg-3ubuntu1?arch=amd64&upstream=gmp&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libgnutls30",
+   "SPDXID": "SPDXRef-Package-deb-libgnutls30-1e483245bcb86de6",
+   "versionInfo": "3.7.3-4ubuntu1.2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libgnutls30/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND LicenseRef-CC0 AND LicenseRef-Expat AND GFDL-1.3-only AND LicenseRef-GPL AND GPL-3.0-only AND LicenseRef-GPLv3- AND LicenseRef-LGPL AND LGPL-3.0-only AND LicenseRef-LGPLv2.1- AND LicenseRef-LGPLv3--or-GPLv2- AND LicenseRef-The",
+   "licenseDeclared": "Apache-2.0 AND BSD-3-Clause AND LicenseRef-CC0 AND LicenseRef-Expat AND GFDL-1.3-only AND LicenseRef-GPL AND GPL-3.0-only AND LicenseRef-GPLv3- AND LicenseRef-LGPL AND LGPL-3.0-only AND LicenseRef-LGPLv2.1- AND LicenseRef-LGPLv3--or-GPLv2- AND LicenseRef-The",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgnutls30:libgnutls30:3.7.3-4ubuntu1.2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libgnutls30@3.7.3-4ubuntu1.2?arch=amd64&upstream=gnutls28&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libgpg-error0",
+   "SPDXID": "SPDXRef-Package-deb-libgpg-error0-d3c21e4de95bed65",
+   "versionInfo": "1.43-3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libgpg-error0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-g10-permissive",
+   "licenseDeclared": "BSD-3-Clause AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-g10-permissive",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgpg-error0:libgpg-error0:1.43-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgpg-error0:libgpg_error0:1.43-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgpg_error0:libgpg-error0:1.43-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgpg_error0:libgpg_error0:1.43-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgpg:libgpg-error0:1.43-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgpg:libgpg_error0:1.43-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libgpg-error0@1.43-3?arch=amd64&upstream=libgpg-error&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libgssapi-krb5-2",
+   "SPDXID": "SPDXRef-Package-deb-libgssapi-krb5-2-e10976a74d9fe938",
+   "versionInfo": "1.19.2-2ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libgssapi-krb5-2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi-krb5-2:libgssapi-krb5-2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi-krb5-2:libgssapi_krb5_2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi_krb5_2:libgssapi-krb5-2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi_krb5_2:libgssapi_krb5_2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi-krb5:libgssapi-krb5-2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi-krb5:libgssapi_krb5_2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi_krb5:libgssapi-krb5-2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi_krb5:libgssapi_krb5_2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi:libgssapi-krb5-2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libgssapi:libgssapi_krb5_2:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libgssapi-krb5-2@1.19.2-2ubuntu0.1?arch=amd64&upstream=krb5&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libhogweed6",
+   "SPDXID": "SPDXRef-Package-deb-libhogweed6-6b92f4b9a5a962f6",
+   "versionInfo": "3.7.3-1build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libhogweed6/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Expat AND LicenseRef-GAP AND LicenseRef-GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-3.0-or-later AND LicenseRef-public-domain",
+   "licenseDeclared": "LicenseRef-Expat AND LicenseRef-GAP AND LicenseRef-GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-3.0-or-later AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libhogweed6:libhogweed6:3.7.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libhogweed6@3.7.3-1build2?arch=amd64&upstream=nettle&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libidn2-0",
+   "SPDXID": "SPDXRef-Package-deb-libidn2-0-661e89463a6b3de3",
+   "versionInfo": "2.3.2-2build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libidn2-0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND LicenseRef-Unicode",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND LicenseRef-Unicode",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libidn2-0:libidn2-0:2.3.2-2build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libidn2-0:libidn2_0:2.3.2-2build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libidn2_0:libidn2-0:2.3.2-2build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libidn2_0:libidn2_0:2.3.2-2build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libidn2:libidn2-0:2.3.2-2build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libidn2:libidn2_0:2.3.2-2build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libidn2-0@2.3.2-2build1?arch=amd64&upstream=libidn2&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libk5crypto3",
+   "SPDXID": "SPDXRef-Package-deb-libk5crypto3-12d3aa37251b4933",
+   "versionInfo": "1.19.2-2ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libk5crypto3/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libk5crypto3:libk5crypto3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libk5crypto3@1.19.2-2ubuntu0.1?arch=amd64&upstream=krb5&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libkeyutils1",
+   "SPDXID": "SPDXRef-Package-deb-libkeyutils1-aefebd7fdb760283",
+   "versionInfo": "1.6.1-2ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libkeyutils1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkeyutils1:libkeyutils1:1.6.1-2ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libkeyutils1@1.6.1-2ubuntu3?arch=amd64&upstream=keyutils&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libkrb5-3",
+   "SPDXID": "SPDXRef-Package-deb-libkrb5-3-1f6e914773c5f940",
+   "versionInfo": "1.19.2-2ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libkrb5-3/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5-3:libkrb5-3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5-3:libkrb5_3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5_3:libkrb5-3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5_3:libkrb5_3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5:libkrb5-3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5:libkrb5_3:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libkrb5-3@1.19.2-2ubuntu0.1?arch=amd64&upstream=krb5&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libkrb5support0",
+   "SPDXID": "SPDXRef-Package-deb-libkrb5support0-8d473e8ce49b4bfa",
+   "versionInfo": "1.19.2-2ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libkrb5support0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libkrb5support0:libkrb5support0:1.19.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libkrb5support0@1.19.2-2ubuntu0.1?arch=amd64&upstream=krb5&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "liblz4-1",
+   "SPDXID": "SPDXRef-Package-deb-liblz4-1-30f908d26a3c4431",
+   "versionInfo": "1.9.3-2build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/liblz4-1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later",
+   "licenseDeclared": "BSD-2-Clause AND GPL-2.0-only AND GPL-2.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblz4-1:liblz4-1:1.9.3-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblz4-1:liblz4_1:1.9.3-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblz4_1:liblz4-1:1.9.3-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblz4_1:liblz4_1:1.9.3-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblz4:liblz4-1:1.9.3-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblz4:liblz4_1:1.9.3-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/liblz4-1@1.9.3-2build2?arch=amd64&upstream=lz4&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "liblzma5",
+   "SPDXID": "SPDXRef-Package-deb-liblzma5-9945bdf71da01bad",
+   "versionInfo": "5.2.5-2ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/liblzma5/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Autoconf AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND LGPL-2.0-only AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-PD AND LicenseRef-PD-debian AND LicenseRef-config-h AND LicenseRef-noderivs AND LicenseRef-permissive-fsf AND LicenseRef-permissive-nowarranty AND LicenseRef-probably-PD",
+   "licenseDeclared": "LicenseRef-Autoconf AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND LGPL-2.0-only AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-PD AND LicenseRef-PD-debian AND LicenseRef-config-h AND LicenseRef-noderivs AND LicenseRef-permissive-fsf AND LicenseRef-permissive-nowarranty AND LicenseRef-probably-PD",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:liblzma5:liblzma5:5.2.5-2ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/liblzma5@5.2.5-2ubuntu1?arch=amd64&upstream=xz-utils&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libmount1",
+   "SPDXID": "SPDXRef-Package-deb-libmount1-256ada3b5093aa2c",
+   "versionInfo": "2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libmount1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libmount1:libmount1:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libmount1@2.37.2-4ubuntu3?arch=amd64&upstream=util-linux&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libncurses6",
+   "SPDXID": "SPDXRef-Package-deb-libncurses6-c7759d703eb2f6f6",
+   "versionInfo": "6.3-2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libtinfo6/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "licenseDeclared": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libncurses6:libncurses6:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libncurses6@6.3-2?arch=amd64&upstream=ncurses&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libncursesw6",
+   "SPDXID": "SPDXRef-Package-deb-libncursesw6-24683315864e1a43",
+   "versionInfo": "6.3-2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libtinfo6/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "licenseDeclared": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libncursesw6:libncursesw6:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libncursesw6@6.3-2?arch=amd64&upstream=ncurses&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libnettle8",
+   "SPDXID": "SPDXRef-Package-deb-libnettle8-6564b336498ca0b3",
+   "versionInfo": "3.7.3-1build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libnettle8/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Expat AND LicenseRef-GAP AND LicenseRef-GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-3.0-or-later AND LicenseRef-public-domain",
+   "licenseDeclared": "LicenseRef-Expat AND LicenseRef-GAP AND LicenseRef-GPL AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-3.0-or-later AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libnettle8:libnettle8:3.7.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libnettle8@3.7.3-1build2?arch=amd64&upstream=nettle&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libnsl2",
+   "SPDXID": "SPDXRef-Package-deb-libnsl2-767815f00edd5a4",
+   "versionInfo": "1.3.0-2build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libnsl2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-2.0-only AND LicenseRef-GPL-2--autoconf-exception AND LicenseRef-GPL-2--libtool-exception AND GPL-3.0-only AND LicenseRef-GPL-3--autoconf-exception AND LGPL-2.1-only AND LGPL-2.1-or-later AND MIT AND LicenseRef-permissive-autoconf-m4 AND LicenseRef-permissive-autoconf-m4-no-warranty AND LicenseRef-permissive-configure AND LicenseRef-permissive-fsf AND LicenseRef-permissive-makefile-in",
+   "licenseDeclared": "BSD-3-Clause AND GPL-2.0-only AND LicenseRef-GPL-2--autoconf-exception AND LicenseRef-GPL-2--libtool-exception AND GPL-3.0-only AND LicenseRef-GPL-3--autoconf-exception AND LGPL-2.1-only AND LGPL-2.1-or-later AND MIT AND LicenseRef-permissive-autoconf-m4 AND LicenseRef-permissive-autoconf-m4-no-warranty AND LicenseRef-permissive-configure AND LicenseRef-permissive-fsf AND LicenseRef-permissive-makefile-in",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libnsl2:libnsl2:1.3.0-2build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libnsl2@1.3.0-2build2?arch=amd64&upstream=libnsl&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libp11-kit0",
+   "SPDXID": "SPDXRef-Package-deb-libp11-kit0-65e07ef2b77d90df",
+   "versionInfo": "0.24.0-6build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libp11-kit0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND ISC AND LicenseRef-ISC-IBM AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-permissive-like-automake-output AND LicenseRef-same-as-rest-of-p11kit",
+   "licenseDeclared": "Apache-2.0 AND BSD-3-Clause AND ISC AND LicenseRef-ISC-IBM AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-permissive-like-automake-output AND LicenseRef-same-as-rest-of-p11kit",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libp11-kit0:libp11-kit0:0.24.0-6build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libp11-kit0:libp11_kit0:0.24.0-6build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libp11_kit0:libp11-kit0:0.24.0-6build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libp11_kit0:libp11_kit0:0.24.0-6build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libp11:libp11-kit0:0.24.0-6build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libp11:libp11_kit0:0.24.0-6build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libp11-kit0@0.24.0-6build1?arch=amd64&upstream=p11-kit&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libpam-modules",
+   "SPDXID": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "versionInfo": "1.4.0-11ubuntu2.3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libpam-modules/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-modules:libpam-modules:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-modules:libpam_modules:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_modules:libpam-modules:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_modules:libpam_modules:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam:libpam-modules:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam:libpam_modules:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libpam-modules@1.4.0-11ubuntu2.3?arch=amd64&upstream=pam&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libpam-modules-bin",
+   "SPDXID": "SPDXRef-Package-deb-libpam-modules-bin-550afa6176fa8b46",
+   "versionInfo": "1.4.0-11ubuntu2.3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libpam-modules-bin/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-modules-bin:libpam-modules-bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-modules-bin:libpam_modules_bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_modules_bin:libpam-modules-bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_modules_bin:libpam_modules_bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-modules:libpam-modules-bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-modules:libpam_modules_bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_modules:libpam-modules-bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_modules:libpam_modules_bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam:libpam-modules-bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam:libpam_modules_bin:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libpam-modules-bin@1.4.0-11ubuntu2.3?arch=amd64&upstream=pam&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libpam-runtime",
+   "SPDXID": "SPDXRef-Package-deb-libpam-runtime-670a9bfb080af943",
+   "versionInfo": "1.4.0-11ubuntu2.3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libpam-runtime/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-runtime:libpam-runtime:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam-runtime:libpam_runtime:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_runtime:libpam-runtime:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam_runtime:libpam_runtime:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam:libpam-runtime:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam:libpam_runtime:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libpam-runtime@1.4.0-11ubuntu2.3?arch=all&upstream=pam&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libpam0g",
+   "SPDXID": "SPDXRef-Package-deb-libpam0g-3961d20002e66d30",
+   "versionInfo": "1.4.0-11ubuntu2.3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libpam0g/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpam0g:libpam0g:1.4.0-11ubuntu2.3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libpam0g@1.4.0-11ubuntu2.3?arch=amd64&upstream=pam&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libpcre2-8-0",
+   "SPDXID": "SPDXRef-Package-deb-libpcre2-8-0-60f2053060ae2d97",
+   "versionInfo": "10.39-3ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libpcre2-8-0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2-8-0:libpcre2-8-0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2-8-0:libpcre2_8_0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2_8_0:libpcre2-8-0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2_8_0:libpcre2_8_0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2-8:libpcre2-8-0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2-8:libpcre2_8_0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2_8:libpcre2-8-0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2_8:libpcre2_8_0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2:libpcre2-8-0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre2:libpcre2_8_0:10.39-3ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libpcre2-8-0@10.39-3ubuntu0.1?arch=amd64&upstream=pcre2&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libpcre3",
+   "SPDXID": "SPDXRef-Package-deb-libpcre3-fcb80e678f3f139e",
+   "versionInfo": "2:8.39-13ubuntu0.22.04.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libpcre3/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libpcre3:libpcre3:2\\:8.39-13ubuntu0.22.04.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libpcre3@2:8.39-13ubuntu0.22.04.1?arch=amd64&upstream=pcre3&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libprocps8",
+   "SPDXID": "SPDXRef-Package-deb-libprocps8-bbbbaee71ef35490",
+   "versionInfo": "2:3.3.17-6ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libprocps8/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libprocps8:libprocps8:2\\:3.3.17-6ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libprocps8@2:3.3.17-6ubuntu2?arch=amd64&upstream=procps&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libseccomp2",
+   "SPDXID": "SPDXRef-Package-deb-libseccomp2-9fc49f8ab449c12c",
+   "versionInfo": "2.5.3-2ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libseccomp2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LGPL-2.1-only",
+   "licenseDeclared": "LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libseccomp2:libseccomp2:2.5.3-2ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libseccomp2@2.5.3-2ubuntu2?arch=amd64&upstream=libseccomp&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libselinux1",
+   "SPDXID": "SPDXRef-Package-deb-libselinux1-1b1e196630f49cf2",
+   "versionInfo": "3.3-1build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libselinux1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libselinux1:libselinux1:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libselinux1@3.3-1build2?arch=amd64&upstream=libselinux&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libsemanage-common",
+   "SPDXID": "SPDXRef-Package-deb-libsemanage-common-5f8d29178edda774",
+   "versionInfo": "3.3-1build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libsemanage-common/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL AND LicenseRef-LGPL",
+   "licenseDeclared": "LicenseRef-GPL AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage-common:libsemanage-common:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage-common:libsemanage_common:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage_common:libsemanage-common:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage_common:libsemanage_common:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage:libsemanage-common:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage:libsemanage_common:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libsemanage-common@3.3-1build2?arch=all&upstream=libsemanage&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libsemanage2",
+   "SPDXID": "SPDXRef-Package-deb-libsemanage2-76c815dc9f3c0139",
+   "versionInfo": "3.3-1build2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libsemanage2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL AND LicenseRef-LGPL",
+   "licenseDeclared": "LicenseRef-GPL AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsemanage2:libsemanage2:3.3-1build2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libsemanage2@3.3-1build2?arch=amd64&upstream=libsemanage&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libsepol2",
+   "SPDXID": "SPDXRef-Package-deb-libsepol2-d5329404b58a4523",
+   "versionInfo": "3.3-1build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libsepol2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL AND LicenseRef-LGPL",
+   "licenseDeclared": "LicenseRef-GPL AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsepol2:libsepol2:3.3-1build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libsepol2@3.3-1build1?arch=amd64&upstream=libsepol&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libsmartcols1",
+   "SPDXID": "SPDXRef-Package-deb-libsmartcols1-667634138f61ea99",
+   "versionInfo": "2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libsmartcols1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsmartcols1:libsmartcols1:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libsmartcols1@2.37.2-4ubuntu3?arch=amd64&upstream=util-linux&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libss2",
+   "SPDXID": "SPDXRef-Package-deb-libss2-e2eb5502a732fe3d",
+   "versionInfo": "1.46.5-2ubuntu1.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libss2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "NONE",
+   "licenseDeclared": "NONE",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libss2:libss2:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libss2@1.46.5-2ubuntu1.1?arch=amd64&upstream=e2fsprogs&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libssl3",
+   "SPDXID": "SPDXRef-Package-deb-libssl3-bd67ab28411d2ebf",
+   "versionInfo": "3.0.2-0ubuntu1.8",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libssl3/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "Apache-2.0 AND LicenseRef-Artistic AND GPL-1.0-only AND GPL-1.0-or-later",
+   "licenseDeclared": "Apache-2.0 AND LicenseRef-Artistic AND GPL-1.0-only AND GPL-1.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libssl3:libssl3:3.0.2-0ubuntu1.8:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libssl3@3.0.2-0ubuntu1.8?arch=amd64&upstream=openssl&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libstdc++6",
+   "SPDXID": "SPDXRef-Package-deb-libstdc--6-262105cf346eba84",
+   "versionInfo": "12.1.0-2ubuntu1~22.04",
+   "originator": "Person: Ubuntu Core developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/gcc-12-base/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Artistic AND GFDL-1.2-only AND LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LicenseRef-LGPL",
+   "licenseDeclared": "LicenseRef-Artistic AND GFDL-1.2-only AND LicenseRef-GPL AND GPL-2.0-only AND GPL-3.0-only AND LicenseRef-LGPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libstdc\\+\\+6:libstdc\\+\\+6:12.1.0-2ubuntu1\\~22.04:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libstdc++6@12.1.0-2ubuntu1~22.04?arch=amd64&upstream=gcc-12&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libsystemd0",
+   "SPDXID": "SPDXRef-Package-deb-libsystemd0-b354b7709f3d5689",
+   "versionInfo": "249.11-0ubuntu3.7",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libsystemd0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "CC0-1.0 AND LicenseRef-Expat AND GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-public-domain",
+   "licenseDeclared": "CC0-1.0 AND LicenseRef-Expat AND GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libsystemd0:libsystemd0:249.11-0ubuntu3.7:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libsystemd0@249.11-0ubuntu3.7?arch=amd64&upstream=systemd&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libtasn1-6",
+   "SPDXID": "SPDXRef-Package-deb-libtasn1-6-eccf841ebe9d1a5c",
+   "versionInfo": "4.18.0-4build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libtasn1-6/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GFDL-1.3-only AND GPL-3.0-only AND LicenseRef-LGPL AND LGPL-2.1-only",
+   "licenseDeclared": "GFDL-1.3-only AND GPL-3.0-only AND LicenseRef-LGPL AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtasn1-6:libtasn1-6:4.18.0-4build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtasn1-6:libtasn1_6:4.18.0-4build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtasn1_6:libtasn1-6:4.18.0-4build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtasn1_6:libtasn1_6:4.18.0-4build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtasn1:libtasn1-6:4.18.0-4build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtasn1:libtasn1_6:4.18.0-4build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libtasn1-6@4.18.0-4build1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libtinfo6",
+   "SPDXID": "SPDXRef-Package-deb-libtinfo6-5e517d216ccae900",
+   "versionInfo": "6.3-2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libtinfo6/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "licenseDeclared": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtinfo6:libtinfo6:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libtinfo6@6.3-2?arch=amd64&upstream=ncurses&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libtirpc-common",
+   "SPDXID": "SPDXRef-Package-deb-libtirpc-common-727ec6489929a420",
+   "versionInfo": "1.3.2-2ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libtirpc-common/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "BSD-3-Clause AND GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc-common:libtirpc-common:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc-common:libtirpc_common:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc_common:libtirpc-common:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc_common:libtirpc_common:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc:libtirpc-common:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc:libtirpc_common:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libtirpc-common@1.3.2-2ubuntu0.1?arch=all&upstream=libtirpc&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libtirpc3",
+   "SPDXID": "SPDXRef-Package-deb-libtirpc3-9b1db2c89d008dab",
+   "versionInfo": "1.3.2-2ubuntu0.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libtirpc3/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-2.0-only AND LGPL-2.1-only",
+   "licenseDeclared": "BSD-3-Clause AND GPL-2.0-only AND LGPL-2.1-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libtirpc3:libtirpc3:1.3.2-2ubuntu0.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libtirpc3@1.3.2-2ubuntu0.1?arch=amd64&upstream=libtirpc&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libudev1",
+   "SPDXID": "SPDXRef-Package-deb-libudev1-d3b3ff5b02a60230",
+   "versionInfo": "249.11-0ubuntu3.7",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libudev1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "CC0-1.0 AND LicenseRef-Expat AND GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-public-domain",
+   "licenseDeclared": "CC0-1.0 AND LicenseRef-Expat AND GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libudev1:libudev1:249.11-0ubuntu3.7:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libudev1@249.11-0ubuntu3.7?arch=amd64&upstream=systemd&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libunistring2",
+   "SPDXID": "SPDXRef-Package-deb-libunistring2-df0dd5625c756d03",
+   "versionInfo": "1.0-1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libunistring2/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-FreeSoftware AND GFDL-1.2-only AND LicenseRef-GFDL-1.2- AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT",
+   "licenseDeclared": "LicenseRef-FreeSoftware AND GFDL-1.2-only AND LicenseRef-GFDL-1.2- AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libunistring2:libunistring2:1.0-1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libunistring2@1.0-1?arch=amd64&upstream=libunistring&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libuuid1",
+   "SPDXID": "SPDXRef-Package-deb-libuuid1-98fc76014f6ddecb",
+   "versionInfo": "2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libuuid1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libuuid1:libuuid1:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libuuid1@2.37.2-4ubuntu3?arch=amd64&upstream=util-linux&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libxxhash0",
+   "SPDXID": "SPDXRef-Package-deb-libxxhash0-498a7b7d7b9c9370",
+   "versionInfo": "0.8.1-1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libxxhash0/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND GPL-2.0-only",
+   "licenseDeclared": "BSD-2-Clause AND GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libxxhash0:libxxhash0:0.8.1-1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libxxhash0@0.8.1-1?arch=amd64&upstream=xxhash&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "libzstd1",
+   "SPDXID": "SPDXRef-Package-deb-libzstd1-26b5eeb93d823928",
+   "versionInfo": "1.4.8+dfsg-3build1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/libzstd1/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND LicenseRef-Expat AND GPL-2.0-only AND Zlib",
+   "licenseDeclared": "BSD-3-Clause AND LicenseRef-Expat AND GPL-2.0-only AND Zlib",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:libzstd1:libzstd1:1.4.8\\+dfsg-3build1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/libzstd1@1.4.8+dfsg-3build1?arch=amd64&upstream=libzstd&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "login",
+   "SPDXID": "SPDXRef-Package-deb-login-b3bda084cdaf9f86",
+   "versionInfo": "1:4.8.1-2ubuntu2.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/login/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:login:login:1\\:4.8.1-2ubuntu2.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/login@1:4.8.1-2ubuntu2.1?arch=amd64&upstream=shadow&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "logsave",
+   "SPDXID": "SPDXRef-Package-deb-logsave-e63f0033d41f8123",
+   "versionInfo": "1.46.5-2ubuntu1.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/logsave/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND LGPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only AND LGPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:logsave:logsave:1.46.5-2ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/logsave@1.46.5-2ubuntu1.1?arch=amd64&upstream=e2fsprogs&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "lsb-base",
+   "SPDXID": "SPDXRef-Package-deb-lsb-base-bfbd583cb4338b13",
+   "versionInfo": "11.1.0ubuntu4",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/lsb-base/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND GPL-2.0-only",
+   "licenseDeclared": "BSD-3-Clause AND GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:lsb-base:lsb-base:11.1.0ubuntu4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:lsb-base:lsb_base:11.1.0ubuntu4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:lsb_base:lsb-base:11.1.0ubuntu4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:lsb_base:lsb_base:11.1.0ubuntu4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:lsb:lsb-base:11.1.0ubuntu4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:lsb:lsb_base:11.1.0ubuntu4:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/lsb-base@11.1.0ubuntu4?arch=all&upstream=lsb&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "mawk",
+   "SPDXID": "SPDXRef-Package-deb-mawk-69f7f6ed1aa6bcf9",
+   "versionInfo": "1.3.4.20200120-3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/mawk/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:mawk:mawk:1.3.4.20200120-3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/mawk@1.3.4.20200120-3?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "mount",
+   "SPDXID": "SPDXRef-Package-deb-mount-c0ba66dc67228f17",
+   "versionInfo": "2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/mount/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:mount:mount:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/mount@2.37.2-4ubuntu3?arch=amd64&upstream=util-linux&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "ncurses-base",
+   "SPDXID": "SPDXRef-Package-deb-ncurses-base-ada11db6eee5526f",
+   "versionInfo": "6.3-2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/ncurses-base/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "licenseDeclared": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses-base:ncurses-base:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses-base:ncurses_base:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses_base:ncurses-base:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses_base:ncurses_base:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses:ncurses-base:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses:ncurses_base:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/ncurses-base@6.3-2?arch=all&upstream=ncurses&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "ncurses-bin",
+   "SPDXID": "SPDXRef-Package-deb-ncurses-bin-707c5f0a353b50dd",
+   "versionInfo": "6.3-2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/ncurses-bin/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "licenseDeclared": "BSD-3-Clause AND LicenseRef-MIT-X11 AND X11",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses-bin:ncurses-bin:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses-bin:ncurses_bin:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses_bin:ncurses-bin:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses_bin:ncurses_bin:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses:ncurses-bin:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ncurses:ncurses_bin:6.3-2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/ncurses-bin@6.3-2?arch=amd64&upstream=ncurses&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "passwd",
+   "SPDXID": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "versionInfo": "1:4.8.1-2ubuntu2.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/passwd/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only",
+   "licenseDeclared": "GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:passwd:passwd:1\\:4.8.1-2ubuntu2.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/passwd@1:4.8.1-2ubuntu2.1?arch=amd64&upstream=shadow&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "perl-base",
+   "SPDXID": "SPDXRef-Package-deb-perl-base-33a561468f59324a",
+   "versionInfo": "5.34.0-3ubuntu1.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/perl-base/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-Artistic AND Artistic-2.0 AND LicenseRef-Artistic-dist AND BSD-3-Clause AND LicenseRef-BSD-3-clause-GENERIC AND LicenseRef-BSD-3-clause-with-weird-numbering AND LicenseRef-BSD-4-clause-POWERDOG AND LicenseRef-BZIP AND LicenseRef-DONT-CHANGE-THE-GPL AND LicenseRef-Expat AND GPL-1.0-only AND GPL-1.0-or-later AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-GPL-3--WITH-BISON-EXCEPTION AND LicenseRef-HSIEH-BSD AND LicenseRef-HSIEH-DERIVATIVE AND LGPL-2.1-only AND LicenseRef-REGCOMP AND LicenseRef-REGCOMP- AND LicenseRef-RRA-KEEP-THIS-NOTICE AND LicenseRef-SDBM-PUBLIC-DOMAIN AND LicenseRef-TEXT-TABS AND LicenseRef-Unicode AND Zlib",
+   "licenseDeclared": "LicenseRef-Artistic AND Artistic-2.0 AND LicenseRef-Artistic-dist AND BSD-3-Clause AND LicenseRef-BSD-3-clause-GENERIC AND LicenseRef-BSD-3-clause-with-weird-numbering AND LicenseRef-BSD-4-clause-POWERDOG AND LicenseRef-BZIP AND LicenseRef-DONT-CHANGE-THE-GPL AND LicenseRef-Expat AND GPL-1.0-only AND GPL-1.0-or-later AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-GPL-3--WITH-BISON-EXCEPTION AND LicenseRef-HSIEH-BSD AND LicenseRef-HSIEH-DERIVATIVE AND LGPL-2.1-only AND LicenseRef-REGCOMP AND LicenseRef-REGCOMP- AND LicenseRef-RRA-KEEP-THIS-NOTICE AND LicenseRef-SDBM-PUBLIC-DOMAIN AND LicenseRef-TEXT-TABS AND LicenseRef-Unicode AND Zlib",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:perl-base:perl-base:5.34.0-3ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:perl-base:perl_base:5.34.0-3ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:perl_base:perl-base:5.34.0-3ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:perl_base:perl_base:5.34.0-3ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:perl:perl-base:5.34.0-3ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:perl:perl_base:5.34.0-3ubuntu1.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/perl-base@5.34.0-3ubuntu1.1?arch=amd64&upstream=perl&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "procps",
+   "SPDXID": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "versionInfo": "2:3.3.17-6ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/procps/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:procps:procps:2\\:3.3.17-6ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/procps@2:3.3.17-6ubuntu2?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "sed",
+   "SPDXID": "SPDXRef-Package-deb-sed-f88fd5224c8bdfa0",
+   "versionInfo": "4.8-1ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/sed/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-3.0-only",
+   "licenseDeclared": "GPL-3.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sed:sed:4.8-1ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/sed@4.8-1ubuntu2?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "sensible-utils",
+   "SPDXID": "SPDXRef-Package-deb-sensible-utils-20db672fe09d393f",
+   "versionInfo": "0.0.17",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/sensible-utils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-All-permissive AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-configure AND LicenseRef-installsh",
+   "licenseDeclared": "LicenseRef-All-permissive AND GPL-2.0-only AND GPL-2.0-or-later AND LicenseRef-configure AND LicenseRef-installsh",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sensible-utils:sensible-utils:0.0.17:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sensible-utils:sensible_utils:0.0.17:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sensible_utils:sensible-utils:0.0.17:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sensible_utils:sensible_utils:0.0.17:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sensible:sensible-utils:0.0.17:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sensible:sensible_utils:0.0.17:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/sensible-utils@0.0.17?arch=all&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "sysvinit-utils",
+   "SPDXID": "SPDXRef-Package-deb-sysvinit-utils-ae98210e1cd32779",
+   "versionInfo": "3.01-1ubuntu1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/sysvinit-utils/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-2.0-or-later",
+   "licenseDeclared": "GPL-2.0-only AND GPL-2.0-or-later",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sysvinit-utils:sysvinit-utils:3.01-1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sysvinit-utils:sysvinit_utils:3.01-1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sysvinit_utils:sysvinit-utils:3.01-1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sysvinit_utils:sysvinit_utils:3.01-1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sysvinit:sysvinit-utils:3.01-1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:sysvinit:sysvinit_utils:3.01-1ubuntu1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/sysvinit-utils@3.01-1ubuntu1?arch=amd64&upstream=sysvinit&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "tar",
+   "SPDXID": "SPDXRef-Package-deb-tar-f58d996552b03bea",
+   "versionInfo": "1.34+dfsg-1ubuntu0.1.22.04.1",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/tar/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "GPL-2.0-only AND GPL-3.0-only",
+   "licenseDeclared": "GPL-2.0-only AND GPL-3.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:tar:tar:1.34\\+dfsg-1ubuntu0.1.22.04.1:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/tar@1.34+dfsg-1ubuntu0.1.22.04.1?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "ubuntu-keyring",
+   "SPDXID": "SPDXRef-Package-deb-ubuntu-keyring-87474303cb3adc82",
+   "versionInfo": "2021.03.26",
+   "originator": "Person: Dimitri John Ledkov \u003cdimitri.ledkov@canonical.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/ubuntu-keyring/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL",
+   "licenseDeclared": "LicenseRef-GPL",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ubuntu-keyring:ubuntu-keyring:2021.03.26:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ubuntu-keyring:ubuntu_keyring:2021.03.26:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ubuntu_keyring:ubuntu-keyring:2021.03.26:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ubuntu_keyring:ubuntu_keyring:2021.03.26:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ubuntu:ubuntu-keyring:2021.03.26:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:ubuntu:ubuntu_keyring:2021.03.26:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/ubuntu-keyring@2021.03.26?arch=all&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "usrmerge",
+   "SPDXID": "SPDXRef-Package-deb-usrmerge-68ef8442475bd4cc",
+   "versionInfo": "25ubuntu2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/usrmerge/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "LicenseRef-GPL AND GPL-2.0-only",
+   "licenseDeclared": "LicenseRef-GPL AND GPL-2.0-only",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:usrmerge:usrmerge:25ubuntu2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/usrmerge@25ubuntu2?arch=all&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "util-linux",
+   "SPDXID": "SPDXRef-Package-deb-util-linux-e605c1ddf5a1eedc",
+   "versionInfo": "2.37.2-4ubuntu3",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/util-linux/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "licenseDeclared": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LicenseRef-LGPL AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later AND MIT AND LicenseRef-public-domain",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:util-linux:util-linux:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:util-linux:util_linux:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:util_linux:util-linux:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:util_linux:util_linux:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:util:util-linux:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:util:util_linux:2.37.2-4ubuntu3:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/util-linux@2.37.2-4ubuntu3?arch=amd64&distro=ubuntu-22.04"
+    }
+   ]
+  },
+  {
+   "name": "zlib1g",
+   "SPDXID": "SPDXRef-Package-deb-zlib1g-a96b29c092d71303",
+   "versionInfo": "1:1.2.11.dfsg-2ubuntu9.2",
+   "originator": "Person: Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+   "downloadLocation": "NOASSERTION",
+   "sourceInfo": "acquired package info from DPKG DB: /usr/share/doc/zlib1g/copyright, /var/lib/dpkg/status",
+   "licenseConcluded": "Zlib",
+   "licenseDeclared": "Zlib",
+   "copyrightText": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceType": "cpe23Type",
+     "referenceLocator": "cpe:2.3:a:zlib1g:zlib1g:1\\:1.2.11.dfsg-2ubuntu9.2:*:*:*:*:*:*:*"
+    },
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:deb/ubuntu/zlib1g@1:1.2.11.dfsg-2ubuntu9.2?arch=amd64&upstream=zlib&distro=ubuntu-22.04"
+    }
+   ]
+  }
+ ],
+ "files": [
+  {
+   "fileName": "/etc/alternatives/README",
+   "SPDXID": "SPDXRef-b0f5399639d783ec",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/apt/apt.conf.d/01-vendor-ubuntu",
+   "SPDXID": "SPDXRef-2f740f6acd3a7b46",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/apt/apt.conf.d/01autoremove",
+   "SPDXID": "SPDXRef-5ae7b1a1fdd59f4d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/apt/apt.conf.d/70debconf",
+   "SPDXID": "SPDXRef-3abb7e242538fc61",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/bash.bashrc",
+   "SPDXID": "SPDXRef-66cf8de88e2cd1a6",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/bindresvport.blacklist",
+   "SPDXID": "SPDXRef-a563bd420fd740da",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/cron.d/e2scrub_all",
+   "SPDXID": "SPDXRef-62c6acc95b011470",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/cron.daily/apt-compat",
+   "SPDXID": "SPDXRef-9cfe67ab77cb09a7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/cron.daily/dpkg",
+   "SPDXID": "SPDXRef-9c97e0d7ac8e390d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/debconf.conf",
+   "SPDXID": "SPDXRef-fbfc331e025b79c8",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/debian_version",
+   "SPDXID": "SPDXRef-7765a7b4e2a3634f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/default/useradd",
+   "SPDXID": "SPDXRef-7658651d29bf7223",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/deluser.conf",
+   "SPDXID": "SPDXRef-68a15c5b7c5ff00",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/dpkg/dpkg.cfg",
+   "SPDXID": "SPDXRef-e929a71450c56589",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/dpkg/origins/debian",
+   "SPDXID": "SPDXRef-69105e84585ee1ed",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/dpkg/origins/ubuntu",
+   "SPDXID": "SPDXRef-bd161df1f7df04fc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/e2scrub.conf",
+   "SPDXID": "SPDXRef-2e6fca9bd912074f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/gai.conf",
+   "SPDXID": "SPDXRef-4067d98e1e478735",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/host.conf",
+   "SPDXID": "SPDXRef-1082baf9d037e94d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/init.d/hwclock.sh",
+   "SPDXID": "SPDXRef-b6abb495817ff2fd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/init.d/procps",
+   "SPDXID": "SPDXRef-f22d64e45165ca73",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/issue",
+   "SPDXID": "SPDXRef-b75bb92d975cffd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/issue.net",
+   "SPDXID": "SPDXRef-f6b0424571e922ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/ld.so.conf",
+   "SPDXID": "SPDXRef-459e02f0af035962",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/ld.so.conf.d/libc.conf",
+   "SPDXID": "SPDXRef-2fe582b82b9568d9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/ld.so.conf.d/x86_64-linux-gnu.conf",
+   "SPDXID": "SPDXRef-b1c7ea9ca0ccb2bd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/legal",
+   "SPDXID": "SPDXRef-e8b79de797409d9f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/libaudit.conf",
+   "SPDXID": "SPDXRef-f90eb64653be23a2",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/login.defs",
+   "SPDXID": "SPDXRef-65e89abe068e8e30",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/logrotate.d/alternatives",
+   "SPDXID": "SPDXRef-aeab1b6967675d19",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/logrotate.d/apt",
+   "SPDXID": "SPDXRef-5ed8873a6659ae24",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/logrotate.d/dpkg",
+   "SPDXID": "SPDXRef-cc1bbdbd2367bf7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/lsb-release",
+   "SPDXID": "SPDXRef-fec77dae719145d1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/mke2fs.conf",
+   "SPDXID": "SPDXRef-603217a570c3cdda",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/netconfig",
+   "SPDXID": "SPDXRef-da208214d0741610",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.conf",
+   "SPDXID": "SPDXRef-91cf8f752e6f3bed",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/chfn",
+   "SPDXID": "SPDXRef-9a4d0062d7e62c5c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/chpasswd",
+   "SPDXID": "SPDXRef-7dbd02a5760693ba",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/chsh",
+   "SPDXID": "SPDXRef-4d92575bfc3c7fb4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/login",
+   "SPDXID": "SPDXRef-1fcbd4c54524e8c4",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/newusers",
+   "SPDXID": "SPDXRef-9b2863d30815c2a1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/other",
+   "SPDXID": "SPDXRef-564013e8401e88e5",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/passwd",
+   "SPDXID": "SPDXRef-ba733c470c4c709d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/runuser",
+   "SPDXID": "SPDXRef-8bc41bc5534674b7",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/runuser-l",
+   "SPDXID": "SPDXRef-f7f1e5158fcac4d9",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/su",
+   "SPDXID": "SPDXRef-e63550acc78f2792",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/pam.d/su-l",
+   "SPDXID": "SPDXRef-9ef1e913c927a160",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/profile.d/01-locale-fix.sh",
+   "SPDXID": "SPDXRef-482538138a8459fb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/access.conf",
+   "SPDXID": "SPDXRef-6dd5770e4dfc45f1",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/faillock.conf",
+   "SPDXID": "SPDXRef-6c09c09efedf51fd",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/group.conf",
+   "SPDXID": "SPDXRef-8e146ab79bbe2578",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/limits.conf",
+   "SPDXID": "SPDXRef-8ade05103587355c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/namespace.conf",
+   "SPDXID": "SPDXRef-19fdc829b2891377",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/namespace.init",
+   "SPDXID": "SPDXRef-2748809e8c14b10b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/pam_env.conf",
+   "SPDXID": "SPDXRef-9d019aba085b2dcb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/sepermit.conf",
+   "SPDXID": "SPDXRef-e0c8aecfdf8b4d59",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/security/time.conf",
+   "SPDXID": "SPDXRef-de60f623e4a6677f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/selinux/semanage.conf",
+   "SPDXID": "SPDXRef-8da17c570e6b2e72",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/skel/.bash_logout",
+   "SPDXID": "SPDXRef-6572cfbf2e5a7f6a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/skel/.bashrc",
+   "SPDXID": "SPDXRef-8ecd6293e526c1dc",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/skel/.profile",
+   "SPDXID": "SPDXRef-3628410efaeb7b3c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.conf",
+   "SPDXID": "SPDXRef-95c4161c922d26bb",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-console-messages.conf",
+   "SPDXID": "SPDXRef-e8e20e5c8a31961b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-ipv6-privacy.conf",
+   "SPDXID": "SPDXRef-18c4370c3c728857",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-kernel-hardening.conf",
+   "SPDXID": "SPDXRef-57006572024b9a0a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-magic-sysrq.conf",
+   "SPDXID": "SPDXRef-8492f6349448241d",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-network-security.conf",
+   "SPDXID": "SPDXRef-35adce657e1e053f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-ptrace.conf",
+   "SPDXID": "SPDXRef-9fc6dba7a2434287",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/10-zeropage.conf",
+   "SPDXID": "SPDXRef-dcca8bf0cf2ad066",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/sysctl.d/README.sysctl",
+   "SPDXID": "SPDXRef-bc9ff93dde7fe94c",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/terminfo/README",
+   "SPDXID": "SPDXRef-17e0d6ed9bf67f1f",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/update-motd.d/00-header",
+   "SPDXID": "SPDXRef-4e5b67557524306b",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/update-motd.d/10-help-text",
+   "SPDXID": "SPDXRef-ddd2de9e1a0a32ec",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/update-motd.d/50-motd-news",
+   "SPDXID": "SPDXRef-198bcea1e168b76a",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  },
+  {
+   "fileName": "/etc/xattr.conf",
+   "SPDXID": "SPDXRef-767e1226739eaea3",
+   "checksums": [
+    {
+     "algorithm": "SHA1",
+     "checksumValue": "0000000000000000000000000000000000000000"
+    }
+   ],
+   "licenseConcluded": "NOASSERTION",
+   "copyrightText": "",
+   "comment": "layerID: sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+  }
+ ],
+ "hasExtractedLicensingInfos": [
+  {
+   "licenseId": "LicenseRef-Expat",
+   "extractedText": "NONE",
+   "name": "Expat"
+  },
+  {
+   "licenseId": "LicenseRef-probably-PD",
+   "extractedText": "NONE",
+   "name": "probably-PD"
+  },
+  {
+   "licenseId": "LicenseRef-GPL-2--libtool-exception",
+   "extractedText": "NONE",
+   "name": "GPL-2+-libtool-exception"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-autoconf-m4",
+   "extractedText": "NONE",
+   "name": "permissive-autoconf-m4"
+  },
+  {
+   "licenseId": "LicenseRef-BZIP",
+   "extractedText": "NONE",
+   "name": "BZIP"
+  },
+  {
+   "licenseId": "LicenseRef-DONT-CHANGE-THE-GPL",
+   "extractedText": "NONE",
+   "name": "DONT-CHANGE-THE-GPL"
+  },
+  {
+   "licenseId": "LicenseRef-public-domain",
+   "extractedText": "NONE",
+   "name": "public-domain"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-fsf",
+   "extractedText": "NONE",
+   "name": "permissive-fsf"
+  },
+  {
+   "licenseId": "LicenseRef-Artistic-dist",
+   "extractedText": "NONE",
+   "name": "Artistic-dist"
+  },
+  {
+   "licenseId": "LicenseRef-BSD-4-clause-POWERDOG",
+   "extractedText": "NONE",
+   "name": "BSD-4-clause-POWERDOG"
+  },
+  {
+   "licenseId": "LicenseRef-HSIEH-BSD",
+   "extractedText": "NONE",
+   "name": "HSIEH-BSD"
+  },
+  {
+   "licenseId": "LicenseRef-HSIEH-DERIVATIVE",
+   "extractedText": "NONE",
+   "name": "HSIEH-DERIVATIVE"
+  },
+  {
+   "licenseId": "LicenseRef-LGPLv3--or-GPLv2-",
+   "extractedText": "NONE",
+   "name": "LGPLv3+_or_GPLv2+"
+  },
+  {
+   "licenseId": "LicenseRef-noderivs",
+   "extractedText": "NONE",
+   "name": "noderivs"
+  },
+  {
+   "licenseId": "LicenseRef-REGCOMP",
+   "extractedText": "NONE",
+   "name": "REGCOMP"
+  },
+  {
+   "licenseId": "LicenseRef-public-domain-s-s-d",
+   "extractedText": "NONE",
+   "name": "public-domain-s-s-d"
+  },
+  {
+   "licenseId": "LicenseRef-PD-debian",
+   "extractedText": "NONE",
+   "name": "PD-debian"
+  },
+  {
+   "licenseId": "LicenseRef-GPL-3--autoconf-exception",
+   "extractedText": "NONE",
+   "name": "GPL-3+-autoconf-exception"
+  },
+  {
+   "licenseId": "LicenseRef-SDBM-PUBLIC-DOMAIN",
+   "extractedText": "NONE",
+   "name": "SDBM-PUBLIC-DOMAIN"
+  },
+  {
+   "licenseId": "LicenseRef-PD",
+   "extractedText": "NONE",
+   "name": "PD"
+  },
+  {
+   "licenseId": "LicenseRef-GPL-3--WITH-BISON-EXCEPTION",
+   "extractedText": "NONE",
+   "name": "GPL-3+-WITH-BISON-EXCEPTION"
+  },
+  {
+   "licenseId": "LicenseRef-BSD-variant",
+   "extractedText": "NONE",
+   "name": "BSD-variant"
+  },
+  {
+   "licenseId": "LicenseRef-BSD-3-clause-with-weird-numbering",
+   "extractedText": "NONE",
+   "name": "BSD-3-clause-with-weird-numbering"
+  },
+  {
+   "licenseId": "LicenseRef-RRA-KEEP-THIS-NOTICE",
+   "extractedText": "NONE",
+   "name": "RRA-KEEP-THIS-NOTICE"
+  },
+  {
+   "licenseId": "LicenseRef-TinySCHEME",
+   "extractedText": "NONE",
+   "name": "TinySCHEME"
+  },
+  {
+   "licenseId": "LicenseRef-GPLv3-",
+   "extractedText": "NONE",
+   "name": "GPLv3+"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-autoconf-m4-no-warranty",
+   "extractedText": "NONE",
+   "name": "permissive-autoconf-m4-no-warranty"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-configure",
+   "extractedText": "NONE",
+   "name": "permissive-configure"
+  },
+  {
+   "licenseId": "LicenseRef-GPLv2-",
+   "extractedText": "NONE",
+   "name": "GPLv2+"
+  },
+  {
+   "licenseId": "LicenseRef-config-h",
+   "extractedText": "NONE",
+   "name": "config-h"
+  },
+  {
+   "licenseId": "LicenseRef-BSD-3-clause-GENERIC",
+   "extractedText": "NONE",
+   "name": "BSD-3-clause-GENERIC"
+  },
+  {
+   "licenseId": "LicenseRef-configure",
+   "extractedText": "NONE",
+   "name": "configure"
+  },
+  {
+   "licenseId": "LicenseRef-Autoconf",
+   "extractedText": "NONE",
+   "name": "Autoconf"
+  },
+  {
+   "licenseId": "LicenseRef-ISC-IBM",
+   "extractedText": "NONE",
+   "name": "ISC+IBM"
+  },
+  {
+   "licenseId": "LicenseRef-permissive",
+   "extractedText": "NONE",
+   "name": "permissive"
+  },
+  {
+   "licenseId": "LicenseRef-The",
+   "extractedText": "NONE",
+   "name": "The"
+  },
+  {
+   "licenseId": "LicenseRef-Unicode",
+   "extractedText": "NONE",
+   "name": "Unicode"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-nowarranty",
+   "extractedText": "NONE",
+   "name": "permissive-nowarranty"
+  },
+  {
+   "licenseId": "LicenseRef-GPL-2--autoconf-exception",
+   "extractedText": "NONE",
+   "name": "GPL-2+-autoconf-exception"
+  },
+  {
+   "licenseId": "LicenseRef-REGCOMP-",
+   "extractedText": "NONE",
+   "name": "REGCOMP,"
+  },
+  {
+   "licenseId": "LicenseRef-TEXT-TABS",
+   "extractedText": "NONE",
+   "name": "TEXT-TABS"
+  },
+  {
+   "licenseId": "LicenseRef-All-permissive",
+   "extractedText": "NONE",
+   "name": "All-permissive"
+  },
+  {
+   "licenseId": "LicenseRef-Artistic",
+   "extractedText": "NONE",
+   "name": "Artistic"
+  },
+  {
+   "licenseId": "LicenseRef-installsh",
+   "extractedText": "NONE",
+   "name": "installsh"
+  },
+  {
+   "licenseId": "LicenseRef-g10-permissive",
+   "extractedText": "NONE",
+   "name": "g10-permissive"
+  },
+  {
+   "licenseId": "LicenseRef-public-domain-md5",
+   "extractedText": "NONE",
+   "name": "public-domain-md5"
+  },
+  {
+   "licenseId": "LicenseRef-GFDL",
+   "extractedText": "NONE",
+   "name": "GFDL"
+  },
+  {
+   "licenseId": "LicenseRef-CC0",
+   "extractedText": "NONE",
+   "name": "CC0"
+  },
+  {
+   "licenseId": "LicenseRef-MIT-X11",
+   "extractedText": "NONE",
+   "name": "MIT/X11"
+  },
+  {
+   "licenseId": "LicenseRef-FreeSoftware",
+   "extractedText": "NONE",
+   "name": "FreeSoftware"
+  },
+  {
+   "licenseId": "LicenseRef-LGPL",
+   "extractedText": "NONE",
+   "name": "LGPL"
+  },
+  {
+   "licenseId": "LicenseRef-GFDL-3",
+   "extractedText": "NONE",
+   "name": "GFDL-3"
+  },
+  {
+   "licenseId": "LicenseRef-GAP",
+   "extractedText": "NONE",
+   "name": "GAP"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-like-automake-output",
+   "extractedText": "NONE",
+   "name": "permissive-like-automake-output"
+  },
+  {
+   "licenseId": "LicenseRef-GPL",
+   "extractedText": "NONE",
+   "name": "GPL"
+  },
+  {
+   "licenseId": "LicenseRef-LGPLv2.1-",
+   "extractedText": "NONE",
+   "name": "LGPLv2.1+"
+  },
+  {
+   "licenseId": "LicenseRef-permissive-makefile-in",
+   "extractedText": "NONE",
+   "name": "permissive-makefile-in"
+  },
+  {
+   "licenseId": "LicenseRef-FSF-manpages",
+   "extractedText": "NONE",
+   "name": "FSF-manpages"
+  },
+  {
+   "licenseId": "LicenseRef-GFDL-1.3--no-invariant",
+   "extractedText": "NONE",
+   "name": "GFDL-1.3+-no-invariant"
+  },
+  {
+   "licenseId": "LicenseRef-same-as-rest-of-p11kit",
+   "extractedText": "NONE",
+   "name": "same-as-rest-of-p11kit"
+  },
+  {
+   "licenseId": "LicenseRef-GFDL-1.2-",
+   "extractedText": "NONE",
+   "name": "GFDL-1.2+"
+  },
+  {
+   "licenseId": "LicenseRef-RFC-Reference",
+   "extractedText": "NONE",
+   "name": "RFC-Reference"
+  }
+ ],
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libc-bin-25c20dba11316355",
+   "relatedSpdxElement": "SPDXRef-2fe582b82b9568d9",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libc-bin-25c20dba11316355",
+   "relatedSpdxElement": "SPDXRef-4067d98e1e478735",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libc-bin-25c20dba11316355",
+   "relatedSpdxElement": "SPDXRef-459e02f0af035962",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libc-bin-25c20dba11316355",
+   "relatedSpdxElement": "SPDXRef-a563bd420fd740da",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libsemanage-common-5f8d29178edda774",
+   "relatedSpdxElement": "SPDXRef-8da17c570e6b2e72",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-19fdc829b2891377",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-2748809e8c14b10b",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-6c09c09efedf51fd",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-6dd5770e4dfc45f1",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-8ade05103587355c",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-8e146ab79bbe2578",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-9d019aba085b2dcb",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-de60f623e4a6677f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-modules-645841d4686bdc9d",
+   "relatedSpdxElement": "SPDXRef-e0c8aecfdf8b4d59",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-runtime-670a9bfb080af943",
+   "relatedSpdxElement": "SPDXRef-564013e8401e88e5",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libpam-runtime-670a9bfb080af943",
+   "relatedSpdxElement": "SPDXRef-91cf8f752e6f3bed",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "relatedSpdxElement": "SPDXRef-4d92575bfc3c7fb4",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "relatedSpdxElement": "SPDXRef-7658651d29bf7223",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "relatedSpdxElement": "SPDXRef-7dbd02a5760693ba",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "relatedSpdxElement": "SPDXRef-9a4d0062d7e62c5c",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "relatedSpdxElement": "SPDXRef-9b2863d30815c2a1",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-passwd-6f6eabdbcb0d8f8c",
+   "relatedSpdxElement": "SPDXRef-ba733c470c4c709d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libtirpc-common-727ec6489929a420",
+   "relatedSpdxElement": "SPDXRef-da208214d0741610",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libaudit-common-78d440318da51a25",
+   "relatedSpdxElement": "SPDXRef-f90eb64653be23a2",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-dpkg-9e066ac193d60109",
+   "relatedSpdxElement": "SPDXRef-9c97e0d7ac8e390d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-dpkg-9e066ac193d60109",
+   "relatedSpdxElement": "SPDXRef-aeab1b6967675d19",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-dpkg-9e066ac193d60109",
+   "relatedSpdxElement": "SPDXRef-b0f5399639d783ec",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-dpkg-9e066ac193d60109",
+   "relatedSpdxElement": "SPDXRef-cc1bbdbd2367bf7",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-dpkg-9e066ac193d60109",
+   "relatedSpdxElement": "SPDXRef-e929a71450c56589",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-adduser-a1a22e7b0e4a292",
+   "relatedSpdxElement": "SPDXRef-68a15c5b7c5ff00",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-ncurses-base-ada11db6eee5526f",
+   "relatedSpdxElement": "SPDXRef-17e0d6ed9bf67f1f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-e2fsprogs-b16d946dcb23bd4b",
+   "relatedSpdxElement": "SPDXRef-2e6fca9bd912074f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-e2fsprogs-b16d946dcb23bd4b",
+   "relatedSpdxElement": "SPDXRef-603217a570c3cdda",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-e2fsprogs-b16d946dcb23bd4b",
+   "relatedSpdxElement": "SPDXRef-62c6acc95b011470",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-login-b3bda084cdaf9f86",
+   "relatedSpdxElement": "SPDXRef-1fcbd4c54524e8c4",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-login-b3bda084cdaf9f86",
+   "relatedSpdxElement": "SPDXRef-65e89abe068e8e30",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-18c4370c3c728857",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-35adce657e1e053f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-57006572024b9a0a",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-8492f6349448241d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-95c4161c922d26bb",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-9fc6dba7a2434287",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-bc9ff93dde7fe94c",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-dcca8bf0cf2ad066",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-e8e20e5c8a31961b",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-procps-b4a4871dfefaa93",
+   "relatedSpdxElement": "SPDXRef-f22d64e45165ca73",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-debconf-c417bfa7b33bfc8d",
+   "relatedSpdxElement": "SPDXRef-3abb7e242538fc61",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-debconf-c417bfa7b33bfc8d",
+   "relatedSpdxElement": "SPDXRef-fbfc331e025b79c8",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-apt-c55f9b572f099afa",
+   "relatedSpdxElement": "SPDXRef-2f740f6acd3a7b46",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-apt-c55f9b572f099afa",
+   "relatedSpdxElement": "SPDXRef-5ae7b1a1fdd59f4d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-apt-c55f9b572f099afa",
+   "relatedSpdxElement": "SPDXRef-5ed8873a6659ae24",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-apt-c55f9b572f099afa",
+   "relatedSpdxElement": "SPDXRef-9cfe67ab77cb09a7",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-1082baf9d037e94d",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-198bcea1e168b76a",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-482538138a8459fb",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-4e5b67557524306b",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-69105e84585ee1ed",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-7765a7b4e2a3634f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-b75bb92d975cffd",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-bd161df1f7df04fc",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-ddd2de9e1a0a32ec",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-e8b79de797409d9f",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-f6b0424571e922ba",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-base-files-dd7a0d513f1cc5d9",
+   "relatedSpdxElement": "SPDXRef-fec77dae719145d1",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libc6-e0ec0b5c28ae7553",
+   "relatedSpdxElement": "SPDXRef-b1c7ea9ca0ccb2bd",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-util-linux-e605c1ddf5a1eedc",
+   "relatedSpdxElement": "SPDXRef-8bc41bc5534674b7",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-util-linux-e605c1ddf5a1eedc",
+   "relatedSpdxElement": "SPDXRef-9ef1e913c927a160",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-util-linux-e605c1ddf5a1eedc",
+   "relatedSpdxElement": "SPDXRef-b6abb495817ff2fd",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-util-linux-e605c1ddf5a1eedc",
+   "relatedSpdxElement": "SPDXRef-e63550acc78f2792",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-util-linux-e605c1ddf5a1eedc",
+   "relatedSpdxElement": "SPDXRef-f7f1e5158fcac4d9",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-bash-ec404d0fccb93c72",
+   "relatedSpdxElement": "SPDXRef-3628410efaeb7b3c",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-bash-ec404d0fccb93c72",
+   "relatedSpdxElement": "SPDXRef-6572cfbf2e5a7f6a",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-bash-ec404d0fccb93c72",
+   "relatedSpdxElement": "SPDXRef-66cf8de88e2cd1a6",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-bash-ec404d0fccb93c72",
+   "relatedSpdxElement": "SPDXRef-8ecd6293e526c1dc",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-deb-libattr1-ef388d6835fc0617",
+   "relatedSpdxElement": "SPDXRef-767e1226739eaea3",
+   "relationshipType": "CONTAINS"
+  },
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relatedSpdxElement": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES"
+  }
+ ]
+}
