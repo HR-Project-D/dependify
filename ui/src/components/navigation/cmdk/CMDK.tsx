@@ -3,7 +3,6 @@ import { Command } from "cmdk";
 import Home from "./pages/Home";
 import DataSources from "./pages/DataSources";
 import { AnimatePresence, motion } from "framer-motion";
-import Theme from "./pages/Theme";
 import { useUIContext } from "@/state/UI";
 
 export function CMDK() {
@@ -140,11 +139,9 @@ export function CMDK() {
                     searchDataSources={() =>
                       setPages([...pages, "data sources"])
                     }
-                    searchThemes={() => setPages([...pages, "themes"])}
                   />
                 )}
                 {activePage === "data sources" && <DataSources />}
-                {activePage === "themes" && <Theme onClose={onClose} />}
               </Command.List>
 
               <footer cmdk-footer="">

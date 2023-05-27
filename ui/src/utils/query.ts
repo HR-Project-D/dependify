@@ -1,6 +1,6 @@
 import { ScanFormValues, type Query, VersionGuard } from "@/types/scan";
 
-export function importQuery(query: Query) {
+export function importQuery(query: Query) {  
   window.dispatchEvent(
     new CustomEvent("importQuery", {
       detail: query,
@@ -50,6 +50,13 @@ export function addRecentQuery(query: Query) {
   const recentQueries = JSON.parse(
     localStorage.getItem("dependify-recentQueries") || "[]"
   );
+
+  // only keep the last 10 queries
+
+  if (recentQueries.length > 9) {
+    recentQueries.pop();
+  }
+
   recentQueries.unshift(addIdToQuery(query));
   localStorage.setItem(
     "dependify-recentQueries",

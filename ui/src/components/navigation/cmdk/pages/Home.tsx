@@ -1,15 +1,14 @@
 import { Command } from "cmdk";
 import Item from "../CMDKItem";
-import { ProjectsIcon, PlusIcon, TeamsIcon, DocsIcon, FeedbackIcon, ContactIcon } from "../Icons";
+import { ProjectsIcon, PlusIcon, TeamsIcon, DocsIcon, FeedbackIcon } from "../Icons";
 import { useUserContext } from "@/state/User";
-import { IconMonitor, IconLogout } from "@/components/_other/Icons";
+import { IconLogout } from "@/components/_other/Icons";
 
 type HomeProps = {
   searchDataSources: Function;
-  searchThemes: Function;
 };
 
-function Home({ searchDataSources, searchThemes }: HomeProps) {
+function Home({ searchDataSources }: HomeProps) {
   const { state: userState, dispatch: userDispatch } = useUserContext();
   
   return (
@@ -35,10 +34,6 @@ function Home({ searchDataSources, searchThemes }: HomeProps) {
         </Item>
       </Command.Group>
       <Command.Group heading='General'>
-        <Item onSelect={() => searchThemes()}>
-          <IconMonitor />
-          Change Theme...
-        </Item>
         <Item onSelect={() => window.open("https://github.com/HR-Project-D/dependify")}>
           <DocsIcon />
           View Documentation
