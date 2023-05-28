@@ -125,6 +125,7 @@ function NavItem({ children, href, ...props }: NavItem) {
         {children}
         {isActive && (
           <motion.div
+            transition={{ type: "spring", stiffness: 165, damping: 30 }}
             nav-item-underline=""
             className="nav-item pointer-events-none absolute left-0 top-0 block h-full w-full"
             layoutId="tab-underline"

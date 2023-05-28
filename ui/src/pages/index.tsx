@@ -7,6 +7,7 @@ import Subtitle from "@/components/text/Subtitle";
 import TitleLarge from "@/components/text/TitleLarge";
 import Link from "next/link";
 import withAuth from "@/components/_other/auth/WithAuth";
+import { MagicCard, MagicCardGrid } from "@/components/motion/MagicCard";
 
 function Page() {
   return (
@@ -29,22 +30,22 @@ function Page() {
           </div>
         </header>
 
-        <ul className="grid grid-cols-3 gap-4">
-          <GridItem
-            title="Connect your data sources"
-            description="Data sources are the places where your SBOM's are stored. You can add multiple GitHub repositories."
-            icon={<IconGithub />}
-            action={{
-              text: "Add source",
-              onClick: () => {},
-            }}
-          />
+        <MagicCardGrid className="grid-cols-3 gap-3">
           <GridItem
             title="Create more users"
             description="You can create more users to collaborate with your team."
             icon={<IconGithub />}
             action={{
               text: "Create user",
+              onClick: () => {},
+            }}
+          />
+          <GridItem
+            title="Connect your data sources"
+            description="Data sources are the places where your SBOM's are stored. You can add multiple repositories."
+            icon={<IconGithub />}
+            action={{
+              text: "Add source",
               onClick: () => {},
             }}
           />
@@ -57,7 +58,7 @@ function Page() {
               onClick: () => {},
             }}
           />
-        </ul>
+        </MagicCardGrid>
       </div>
     </Layout>
   );
@@ -65,7 +66,7 @@ function Page() {
 
 export default withAuth(Page);
 
-function GridItem({
+export function GridItem({
   title,
   description,
   icon,
@@ -80,13 +81,18 @@ function GridItem({
   };
 }) {
   return (
-    <li className="flex flex-col justify-between gap-16 border bg-white border-black-8 drop-shadow-sm dark:border-white-8 rounded-lg dark:bg-gray-1 p-8">
+    <li className="flex h-full flex-col justify-between gap-16 bg-gray-1 rounded-lg p-8">
       <div className="flex flex-col gap-4">
         <BodyLarge>{title}</BodyLarge>
         <BodyBase>{description}</BodyBase>
       </div>
 
-      <Button onClick={action.onClick} intent="mauve" fullWidth>
+      <Button
+        className="z-20"
+        onClick={action.onClick}
+        intent="mauve"
+        fullWidth
+      >
         {action.text}
       </Button>
     </li>

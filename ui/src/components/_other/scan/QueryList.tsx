@@ -1,6 +1,10 @@
 import ResizablePanel from "@/components/motion/ResizablePanel";
 import { Button } from "@/components/input/Button";
-import { IconEye, IconMinusCircle } from "@/components/_other/Icons";
+import {
+  IconArrowCircleBroken,
+  IconEye,
+  IconMinusCircle,
+} from "@/components/_other/Icons";
 import BodyBase from "@/components/text/BodyBase";
 import BodyLarge from "@/components/text/BodyLarge";
 import { Query } from "@/types/scan";
@@ -10,6 +14,7 @@ import { useEffect, useState } from "react";
 import { IconPlusCircle } from "@/components/_other/Icons";
 import Body from "@/components/text/Body";
 import { capitalize } from "@/utils/formatting";
+import Tooltip from "@/components/status_info/Tooltip";
 
 function QueryList({
   onClear,
@@ -50,7 +55,7 @@ function QueryList({
           Clear All
         </Button>
       </div>
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence initial={true} mode="wait">
         <ResizablePanel key="saved-queries">
           <ul className="flex flex-col">
             {queries && (
@@ -105,30 +110,36 @@ function QueryItem({
       >
         <BodyBase>{query.dependencyName}</BodyBase>
         <div className="flex">
-          <Button
-            onClick={() => setIsExpanded(!isExpanded)}
-            rounded="full"
-            size="icon"
-            intent="noBG"
-          >
-            <IconEye className="h-4 w-4 text-white-48" />
-          </Button>
-          <Button
-            onClick={() => onRemove(query)}
-            rounded="full"
-            size="icon"
-            intent="noBG"
-          >
-            <IconMinusCircle className="h-4 w-4 text-white-48" />
-          </Button>
-          <Button
-            onClick={() => importQuery(query)}
-            rounded="full"
-            size="icon"
-            intent="noBG"
-          >
-            <IconPlusCircle className="h-4 w-4 -rotate-90 text-white-48" />
-          </Button>
+          <Tooltip text="View version guards">
+            <Button
+              onClick={() => setIsExpanded(!isExpanded)}
+              rounded="full"
+              size="icon"
+              intent="noBG"
+            >
+              <IconPlusCircle className="h-4 w-4 -rotate-90 text-white-48" />
+            </Button>
+          </Tooltip>
+          <Tooltip text="Remove query">
+            <Button
+              onClick={() => onRemove(query)}
+              rounded="full"
+              size="icon"
+              intent="noBG"
+            >
+              <IconMinusCircle className="h-4 w-4 text-white-48" />
+            </Button>
+          </Tooltip>
+          <Tooltip text="Import query">
+            <Button
+              onClick={() => importQuery(query)}
+              rounded="full"
+              size="icon"
+              intent="noBG"
+            >
+              <IconArrowCircleBroken className="h-4 w-4 text-white-48" />
+            </Button>
+          </Tooltip>
         </div>
       </div>
 

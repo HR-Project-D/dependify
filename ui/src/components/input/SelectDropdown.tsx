@@ -42,7 +42,7 @@ function Dropdown({
       <Select.Portal>
         <Select.Content
           position={contentPosition}
-          className="w-[--radix-select-trigger-width] rounded-lg border border-black-10 bg-white p-1 drop-shadow-lg dark:border-white-8 dark:bg-gray-1"
+          className="w-[--radix-select-trigger-width] z-40 rounded-lg border border-black-10 bg-white p-1 drop-shadow-lg dark:border-white-8 dark:bg-gray-1"
         >
           <Select.Viewport>
             <Select.Group className="flex flex-col gap-1">

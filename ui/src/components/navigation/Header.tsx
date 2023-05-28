@@ -2,8 +2,7 @@ import { getOperatingSystem } from "@/utils/platform";
 import { IconSearch, IconUser } from "../_other/Icons";
 import Keybind from "../_other/Keybind";
 import { useUIContext } from "@/state/UI";
-
-const version = require("../../../../version.json");
+import { getApplicationVersion } from "@/utils/version";
 
 function Header() {
   let userOs = undefined;
@@ -16,8 +15,8 @@ function Header() {
 
 
   return (
-    <header className="left-0 z-20 flex w-full items-center justify-between border-white-10 bg-gray-DARK px-5 py-2 text-sm text-white-48">
-      <h1 className="">Dependify {version}</h1>
+    <header className="left-0 z-20 flex w-full items-center justify-between bg-gray-DARK px-5 py-2 text-sm text-white-48">
+      <h1 className="">Dependify {getApplicationVersion()}</h1>
 
       <div className="flex items-center gap-4">
         <button

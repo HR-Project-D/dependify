@@ -1,8 +1,7 @@
 import ResizablePanel from "@/components/motion/ResizablePanel";
 import { Button } from "@/components/input/Button";
 import Dropdown from "@/components/input/SelectDropdown";
-import TextFieldError from "@/components/input/input/InputError";
-import { TextField } from "@/components/input/TextField";
+import { TextField, TextFieldError } from "@/components/input/TextField";
 import InputLabel from "@/components/input/InputLabel";
 import { IconChevron, IconSpinner } from "@/components/_other/Icons";
 import BodyLarge from "@/components/text/BodyLarge";

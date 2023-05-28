@@ -23,6 +23,15 @@ body {
   @apply bg-accent-11 text-gray-DARK;
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 [nav-item-underline]::before {
   content: "";
   display: block;
@@ -32,4 +41,47 @@ body {
   right: 16px;
   bottom: 0;
   border-bottom: 2px solid white;
+}
+
+[magic-card] {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: hsla(0, 0%, 100%, 0.12);
+}
+
+[magic-card-inner] {
+  position: absolute;
+  inset: 1px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+[magic-card]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+
+  background: radial-gradient(
+    700px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.3),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+[magic-card-gr] {
+  display: grid;
+  width: 100%;
 }

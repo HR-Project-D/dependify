@@ -6,4 +6,3 @@ import { Project } from "../scan";
 export type APIResponseScan = {
   data: Array<Project>;
 };
-

@@ -23,7 +23,7 @@
   z-index: 1000;
   backdrop-filter: blur(4px);
 
-  @apply bg-black-64;
+  @apply bg-black-80;
 }
 
 [cmdk-root] {

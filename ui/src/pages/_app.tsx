@@ -7,9 +7,6 @@ import { UserContext, initialUserState, userReducer } from "@/state/User";
 import { UIContext, initialUIState, UIReducer } from "@/state/UI";
 import { useReducer } from "react";
 import { ThemeProvider } from "next-themes";
-import { QueryClient, QueryClientProvider } from "react-query";
-
-const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
   const [userState, userDispatch] = useReducer(userReducer, initialUserState);
@@ -21,15 +18,13 @@ export default function App({ Component, pageProps }: AppProps) {
       disableTransitionOnChange
       defaultTheme="dark"
     >
-      <QueryClientProvider client={queryClient}>
-        <UIContext.Provider value={{ state: uiState, dispatch: uiDispatch }}>
-          <UserContext.Provider
-            value={{ state: userState, dispatch: userDispatch }}
-          >
-            <Component {...pageProps} />
-          </UserContext.Provider>
-        </UIContext.Provider>
-      </QueryClientProvider>
+      <UIContext.Provider value={{ state: uiState, dispatch: uiDispatch }}>
+        <UserContext.Provider
+          value={{ state: userState, dispatch: userDispatch }}
+        >
+          <Component {...pageProps} />
+        </UserContext.Provider>
+      </UIContext.Provider>
     </ThemeProvider>
   );
 }

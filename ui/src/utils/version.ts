@@ -1,3 +1,5 @@
+const appVersion = require("../../../version.json");
+
 export const versionRegex = {
   exact: /^[0-9]+\.[0-9]+\.[0-9]+$/,
   range: /^[0-9]+\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+\.[0-9]+$/,
@@ -17,4 +19,8 @@ export function getVersionPlaceholder(type: VersionType): string {
   }
 
   return "0.0.0";
+}
+
+export function getApplicationVersion(): string {
+  return appVersion;
 }

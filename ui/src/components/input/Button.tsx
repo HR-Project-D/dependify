@@ -30,10 +30,7 @@ const button = cva(
           "text-white",
           "border-white-10",
         ],
-        noBG: [
-          "text-white-64 hover:bg-white-5",
-          "border-transparent",
-        ],
+        noBG: ["text-white-64 hover:bg-white-5", "border-transparent"],
       },
       size: {
         standard: "px-4 py-1.5 min-w-[120px]",

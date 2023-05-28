@@ -1,9 +1,12 @@
 import Layout from "@/components/_other/Layout";
 import QueryList from "@/components/_other/scan/QueryList";
 import ScanForm from "@/components/_other/scan/ScanForm";
+import ScanResults from "@/components/_other/scan/ScanResults";
 import BodyBase from "@/components/text/BodyBase";
 import TitleLarge from "@/components/text/TitleLarge";
+import { ScanService } from "@/services/ScanService";
 import { APIResponseScan } from "@/types/api/api-scan";
+import { ScanFormValues, VersionGuard } from "@/types/scan";
 import {
   clearRecentQueries,
   clearSavedQueries,
@@ -15,12 +18,44 @@ import {
 import { useState } from "react";
 
 export default function Page() {
-  const [searchResults, setSearchResults] = useState<
-    APIResponseScan | undefined
-  >();
+  const [scanResults, setScanResults] = useState<APIResponseScan | undefined>();
+  const [openResultsOverlay, setOpenResultsOverlay] = useState(false);
+  const [phase, setPhase] = useState<"waiting" | "scanning" | "results">(
+    "waiting"
+  );
+
+  async function handleSubmitScan(
+    values: ScanFormValues,
+    versionGuards: VersionGuard[]
+  ) {
+    try {
+      const response = await ScanService.scan({
+        dependencyName: values.dependencyName,
+        exactMatch: values.exactMatch,
+        versionGuards: versionGuards,
+      });
+
+      setScanResults(response);
+
+      if (response.data.length > 0) {
+        setOpenResultsOverlay(true);
+      }
+    } catch {
+      // TODO: Handle error
+      console.log("HANDLE SCAN ERROR");
+    }
+  }
 
   return (
     <Layout className="">
+      {scanResults && (
+        <ScanResults
+          setOpen={setOpenResultsOverlay}
+          open={openResultsOverlay}
+          results={scanResults}
+        />
+      )}
+
       <div className="flex h-full w-full max-w-7xl flex-col gap-16 pt-8">
         <div className="flex w-full flex-col gap-8">
           <div>
@@ -48,7 +83,10 @@ export default function Page() {
             />
           </aside>
 
-          <ScanForm setSearchResults={setSearchResults} />
+          <ScanForm
+            handleSubmit={handleSubmitScan}
+            setSearchResults={setScanResults}
+          />
         </div>
       </div>
     </Layout>

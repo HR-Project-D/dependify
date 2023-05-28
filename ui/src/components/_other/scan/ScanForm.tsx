@@ -20,18 +20,23 @@ import { VersionGuard, type ScanFormValues, Query } from "@/types/scan";
 import { APIResponseScan } from "@/types/api/api-scan";
 import Body from "@/components/text/Body";
 import useMeasure from "react-use-measure";
+import Tooltip from "@/components/status_info/Tooltip";
 
 type Props = {
   setSearchResults: React.Dispatch<
     React.SetStateAction<APIResponseScan | undefined>
   >;
+  handleSubmit: (
+    formValues: ScanFormValues,
+    versionGuards: VersionGuard[]
+  ) => void;
 };
 
-function ScanForm({ setSearchResults }: Props) {
+function ScanForm({ setSearchResults, handleSubmit }: Props) {
   const [guardsRef, guardsBounds] = useMeasure();
 
   const [versionGuards, setVersionGuards] = useState<VersionGuard[]>([]);
-  const [versionsExpanded, setVersionsExpanded] = useState(false);
+  const [versionsExpanded, setVersionsExpanded] = useState(true);
 
   const [initialValues, setInitialValues] = useState<ScanFormValues>({
     dependencyName: "",
@@ -39,12 +44,6 @@ function ScanForm({ setSearchResults }: Props) {
     versionType: "exact",
     version: "",
   });
-
-  async function handleSearch(formValues: ScanFormValues) {
-    addRecentQuery(scanFormToQuery(formValues, versionGuards));
-
-    await new Promise((r) => setTimeout(r, 1000)); // React doesn't have enough time to remove dom nodes? It glitches out with the emptystate
-  }
 
   function importQuery(query: Query) {
     setVersionGuards(query.versions);
@@ -77,7 +76,8 @@ function ScanForm({ setSearchResults }: Props) {
       enableReinitialize
       onSubmit={async (values, errors) => {
         await new Promise((r) => setTimeout(r, 4000));
-        handleSearch(values);
+        addRecentQuery(scanFormToQuery(values, versionGuards));
+        handleSubmit(values, versionGuards);
       }}
       validateOnMount={false}
       validateOnBlur={false}
@@ -109,17 +109,21 @@ function ScanForm({ setSearchResults }: Props) {
                     type="text"
                     placeholder="Log4j"
                   />
-                  <CheckboxLabel className="flex h-full justify-center gap-2 rounded-lg border border-b border-white-8 px-3">
-                    <Checkbox
-                      disabled={isSubmitting}
-                      onClick={(e: ChangeEvent<HTMLInputElement>) => {
-                        setFieldValue("exactMatch", e.target.checked);
-                      }}
-                      id="exactMatch"
-                      name="exactMatch"
-                    />
-                    Only exact match
-                  </CheckboxLabel>
+                  <Tooltip
+                    text="By default, Dependify will match any dependency that contains the name you enter"
+                  >
+                    <CheckboxLabel className="flex h-full justify-center gap-2 rounded-lg border border-b border-white-8 px-3">
+                      <Checkbox
+                        disabled={isSubmitting}
+                        onClick={(e: ChangeEvent<HTMLInputElement>) => {
+                          setFieldValue("exactMatch", e.target.checked);
+                        }}
+                        id="exactMatch"
+                        name="exactMatch"
+                      />
+                      Only exact match
+                    </CheckboxLabel>
+                  </Tooltip>
                 </div>
               </div>
             </div>

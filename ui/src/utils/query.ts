@@ -9,23 +9,19 @@ export function importQuery(query: Query) {
 }
 
 export function addIdToQuery(query: Query) {
-  query.id = crypto.randomUUID();
-
-  return query;
+  return { ...query, id: crypto.randomUUID() };
 }
 
 export function scanFormToQuery(
   values: ScanFormValues,
   versionGuards: VersionGuard[]
 ): Query {
-  const query = {
+  return {
     id: crypto.randomUUID(),
     dependencyName: values.dependencyName,
     exactMatch: values.exactMatch,
     versions: versionGuards,
   };
-
-  return query;
 }
 
 export function saveQuery(query: Query) {
