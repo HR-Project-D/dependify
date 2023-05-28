@@ -50,29 +50,33 @@ function QueryList({
           Clear All
         </Button>
       </div>
-      {queries !== undefined && queries.length > 0 ? (
-        <AnimatePresence initial={false} mode="wait">
-          <ResizablePanel key="saved-queries">
-            <ul className="flex flex-col">
-              {queries ? (
-                <AnimatePresence initial={false}>
-                  {queries.map((query) => (
-                    <QueryItem
-                      key={query.id}
-                      query={query}
-                      onRemove={onRemove}
-                    />
-                  ))}
-                </AnimatePresence>
-              ) : (
-                <div></div>
-              )}
-            </ul>
-          </ResizablePanel>
-        </AnimatePresence>
-      ) : (
-        <div></div>
-      )}
+      <AnimatePresence initial={false} mode="wait">
+        <ResizablePanel key="saved-queries">
+          <ul className="flex flex-col">
+            {queries && (
+              <AnimatePresence initial={false} mode="sync">
+                {queries.length === 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                    key="empty"
+                  >
+                    <Body as="span" className="text-white-48">
+                      No queries found..
+                    </Body>
+                  </motion.div>
+                )}
+
+                {queries.map((query) => (
+                  <QueryItem key={query.id} query={query} onRemove={onRemove} />
+                ))}
+              </AnimatePresence>
+            )}
+          </ul>
+        </ResizablePanel>
+      </AnimatePresence>
     </div>
   );
 }
@@ -97,7 +101,7 @@ function QueryItem({
       key={query.id}
     >
       <div
-        className={`flex w-full items-center justify-between rounded-lg py-1.5 text-white-48 hover:text-white`}
+        className={`flex w-full items-center justify-between rounded-lg py-1 text-white-48 hover:text-white`}
       >
         <BodyBase>{query.dependencyName}</BodyBase>
         <div className="flex">
@@ -130,12 +134,8 @@ function QueryItem({
 
       <AnimatePresence initial={false} mode="wait">
         {isExpanded && (
-          <ResizablePanel
-            key="expanded"
-          >
-            <div
-              className="mr-1 flex flex-col gap-2 border-t border-t-white-8 py-4 text-white-48"
-            >
+          <ResizablePanel key="expanded">
+            <div className="mr-1 mt-2 flex flex-col gap-2 border-t border-t-white-8 py-4 text-white-48">
               {query.versions.length > 0 ? (
                 <Body as="span" className="flex flex-col gap-1">
                   {query.versions.map((version) => (

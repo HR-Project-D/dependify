@@ -3,8 +3,7 @@ import QueryList from "@/components/_other/scan/QueryList";
 import ScanForm from "@/components/_other/scan/ScanForm";
 import BodyBase from "@/components/text/BodyBase";
 import TitleLarge from "@/components/text/TitleLarge";
-import { type Query } from "@/types/scan";
-import { ScanResult } from "@/utils/fakeApi";
+import { APIResponseScan } from "@/types/api/api-scan";
 import {
   clearRecentQueries,
   clearSavedQueries,
@@ -13,14 +12,16 @@ import {
   removeRecentQuery,
   removeSavedQuery,
 } from "@/utils/query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Page() {
-  const [searchResults, setSearchResults] = useState<ScanResult | undefined>();
+  const [searchResults, setSearchResults] = useState<
+    APIResponseScan | undefined
+  >();
 
   return (
-    <Layout className="p-16">
-      <div className="flex h-full w-full max-w-8xl flex-col gap-16 pt-8">
+    <Layout className="">
+      <div className="flex h-full w-full max-w-7xl flex-col gap-16 pt-8">
         <div className="flex w-full flex-col gap-8">
           <div>
             <TitleLarge className="mb-2">Configure your scan</TitleLarge>
