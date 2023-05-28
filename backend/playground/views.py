@@ -10,7 +10,7 @@ import ast
 class Scan(APIView):
     def get(self, request):
         name = request.GET.get('name', '')
-        version = request.GET.get('version', '')
+        version = request.GET.get('version', "['']")
         exactMatch = bool(request.GET.get('exactMatch', ''))
         version_list = ast.literal_eval(version)
 
