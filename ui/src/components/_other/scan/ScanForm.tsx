@@ -110,6 +110,7 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
                     placeholder="Log4j"
                   />
                   <Tooltip
+                    className="h-full"
                     text="By default, Dependify will match any dependency that contains the name you enter"
                   >
                     <CheckboxLabel className="flex h-full justify-center gap-2 rounded-lg border border-b border-white-8 px-3">

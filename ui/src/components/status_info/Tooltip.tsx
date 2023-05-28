@@ -4,14 +4,16 @@ import * as RadixTooltip from "@radix-ui/react-tooltip";
 function Tooltip({
   children,
   text,
+  className,
 }: {
   children: React.ReactNode;
   text: string;
+  className?: string;
 }) {
   return (
     <RadixTooltip.Provider>
       <RadixTooltip.Root>
-        <RadixTooltip.Trigger className="h-full">{children}</RadixTooltip.Trigger>
+        <RadixTooltip.Trigger className={className}>{children}</RadixTooltip.Trigger>
         <RadixTooltip.Portal>
           <RadixTooltip.Content
             sideOffset={6}
