@@ -10,8 +10,9 @@ export interface LayoutProps
 function Layout({ className, children, ...props }: LayoutProps) {
   return (
     <div className={`flex min-h-screen w-full flex-col`} {...props}>
-      <Header />
+      
       <div className="w-full bg-gray-DARK z-50 sticky top-0">
+        <Header />
         <MainNav />
       </div>
 
