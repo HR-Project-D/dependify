@@ -14,9 +14,8 @@ class Scan(APIView):
         exactMatch = bool(request.GET.get('exactMatch', ''))
         version_list = ast.literal_eval(version)
 
-        json = {'data': []}
+        json = {'data': f.find_dependencies_in_sboms(name, version_list, exactMatch)}
 
-        json['data'].append(f.find_dependencies_in_sboms(name, version_list, exactMatch))
         return Response(json)
 
 
