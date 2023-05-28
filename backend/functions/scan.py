@@ -6,7 +6,7 @@ import pandas as pd
 import functions.version as version_parser
 
 
-def find_dependencies_in_sboms(name: str, version: [str], source: str) -> object:
+def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> object:
     # output = {'label': source, 'name': source.lower(), 'type': source.lower(), 'results': []}
     output = []
     print("Searching for dependencies in SBOMs")
@@ -41,7 +41,12 @@ def find_dependencies_in_sboms(name: str, version: [str], source: str) -> object
                         columns={'name': 'label', 'versionInfo': 'version'})
                 else:
                     continue
-                df = df[df['label'].str.contains(name, case=False)]
+
+                if exactMatch:
+                    df = df[df['label'].str.lower() == name.lower()]
+                else:
+                    df = df[df['label'].str.contains(name, case=False)]
+
                 df = check_versions(df, version)
                 if not df.empty:
                     results = df.to_dict(orient='index')

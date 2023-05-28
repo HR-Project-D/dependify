@@ -3,7 +3,6 @@ import { Command } from "cmdk";
 import Home from "./pages/Home";
 import DataSources from "./pages/DataSources";
 import { AnimatePresence, motion } from "framer-motion";
-import Theme from "./pages/Theme";
 import { useUIContext } from "@/state/UI";
 
 export function CMDK() {
@@ -99,7 +98,7 @@ export function CMDK() {
     <AnimatePresence initial={false}>
       {open && (
         <motion.div
-          className="fixed z-[1001] flex h-screen w-full items-start justify-center overflow-hidden bg-black-48"
+          className="fixed z-[1001] flex h-screen w-full items-start justify-center backdrop-blur-sm overflow-hidden bg-black-64"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -140,11 +139,9 @@ export function CMDK() {
                     searchDataSources={() =>
                       setPages([...pages, "data sources"])
                     }
-                    searchThemes={() => setPages([...pages, "themes"])}
                   />
                 )}
                 {activePage === "data sources" && <DataSources />}
-                {activePage === "themes" && <Theme onClose={onClose} />}
               </Command.List>
 
               <footer cmdk-footer="">

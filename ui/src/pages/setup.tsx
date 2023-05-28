@@ -1,5 +1,5 @@
 import { Button } from "@/components/input/Button";
-import { InputField } from "@/components/input/input/InputField";
+import { TextField } from "@/components/input/TextField";
 import { IconDependify, IconKey, IconSpinner } from "@/components/_other/Icons";
 import { Form, Formik } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
@@ -98,7 +98,7 @@ export default function Page() {
                 >
                   {({ errors, isSubmitting }) => (
                     <Form className="flex w-full flex-col items-center gap-8">
-                      <InputField
+                      <TextField
                         icon={<IconKey className="w-5 text-gray-10" />}
                         id="key"
                         name="key"
@@ -152,28 +152,28 @@ export default function Page() {
                   {({ errors, touched, isValidating, isSubmitting }) => (
                     <Form className="flex w-full flex-col items-center gap-8">
                       <div className="flex w-full flex-col gap-5">
-                        <InputField
+                        <TextField
                           id="fullName"
                           name="fullName"
                           style="iconless"
                           type="text"
                           placeholder="Full Name"
                         />
-                        <InputField
+                        <TextField
                           id="email"
                           name="email"
                           style="iconless"
                           type="email"
                           placeholder="Email"
                         />
-                        <InputField
+                        <TextField
                           id="password"
                           name="password"
                           style="iconless"
                           type="password"
                           placeholder="Password"
                         />
-                        <InputField
+                        <TextField
                           id="confirmPassword"
                           name="confirmPassword"
                           style="iconless"

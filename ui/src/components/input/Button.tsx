@@ -4,7 +4,7 @@ import Body from "../text/Body";
 
 const button = cva(
   [
-    "transition-all border-t disabled:cursor-not-allowed justify-center flex items-center active:shadow-inner active:translate-y-0.5 duration-200",
+    "transition-all border-t disabled:opacity-60 disabled:cursor-not-allowed justify-center flex items-center active:shadow-inner active:translate-y-0.5 duration-200",
   ],
   {
     variants: {
@@ -16,24 +16,21 @@ const button = cva(
           "border-accent-11 hover:border-accent-11",
         ],
         white: [
-          "dark:bg-white bg-gray-4 hover:bg-gray-5 dark:hover:bg-white-80",
-          "dark:text-gray-DARK font-medium text-white",
-          "dark:border-white dark:hover:border-white-16 border-gray-4 hover:border-gray-5",
+          "bg-white hover:bg-white-80",
+          "text-gray-DARK font-medium",
+          "border-whitehover:border-white-16",
         ],
         lightGray: [
-          "bg-black-5 hover:bg-black-8 dark:bg-white-5 dark:hover:bg-white-8",
-          "text-gray-DARK dark:text-white",
-          "border-black-2 dark:border-white-2",
+          "bg-white-5 hover:bg-white-8",
+          "text-white",
+          "border-white-2",
         ],
         mauveDark: [
           "bg-gray-2 hover:bg-gray-3",
           "text-white",
           "border-white-10",
         ],
-        noBG: [
-          "dark:text-white-64 dark:hover:bg-white-5 hover:bg-black-5 text-black-64",
-          "border-transparent",
-        ],
+        noBG: ["text-white-64 hover:bg-white-5", "border-transparent"],
       },
       size: {
         standard: "px-4 py-1.5 min-w-[120px]",

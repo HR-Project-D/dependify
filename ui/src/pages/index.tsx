@@ -1,20 +1,18 @@
 import Layout from "@/components/_other/Layout";
 import { Button } from "@/components/input/Button";
 import { IconGithub } from "@/components/_other/Icons";
-import Body from "@/components/text/Body";
 import BodyBase from "@/components/text/BodyBase";
 import BodyLarge from "@/components/text/BodyLarge";
 import Subtitle from "@/components/text/Subtitle";
 import TitleLarge from "@/components/text/TitleLarge";
 import Link from "next/link";
+import withAuth from "@/components/_other/auth/WithAuth";
+import { MagicCard, MagicCardGrid } from "@/components/motion/MagicCard";
 
-export default function Page() {
-  // if setup hasn't been completed the user should be redirected to the setup page
-  //const session = useSession();
-
+function Page() {
   return (
-    <Layout className="p-16">
-      <div className="flex h-full w-full max-w-8xl flex-col gap-32 pt-8">
+    <Layout>
+      <div className="flex h-full w-full max-w-7xl flex-col gap-32 pt-8">
         <header className="flex flex-col gap-5">
           <div className="flex flex-col">
             <Subtitle>Welcome to Dependify</Subtitle>
@@ -32,22 +30,22 @@ export default function Page() {
           </div>
         </header>
 
-        <ul className="grid grid-cols-3 gap-4">
-          <GridItem
-            title="Connect your data sources"
-            description="Data sources are the places where your SBOM's are stored. You can add multiple GitHub repositories."
-            icon={<IconGithub />}
-            action={{
-              text: "Add source",
-              onClick: () => {},
-            }}
-          />
+        <MagicCardGrid className="grid-cols-3 gap-3">
           <GridItem
             title="Create more users"
             description="You can create more users to collaborate with your team."
             icon={<IconGithub />}
             action={{
               text: "Create user",
+              onClick: () => {},
+            }}
+          />
+          <GridItem
+            title="Connect your data sources"
+            description="Data sources are the places where your SBOM's are stored. You can add multiple repositories."
+            icon={<IconGithub />}
+            action={{
+              text: "Add source",
               onClick: () => {},
             }}
           />
@@ -60,13 +58,15 @@ export default function Page() {
               onClick: () => {},
             }}
           />
-        </ul>
+        </MagicCardGrid>
       </div>
     </Layout>
   );
 }
 
-function GridItem({
+export default withAuth(Page);
+
+export function GridItem({
   title,
   description,
   icon,
@@ -81,13 +81,18 @@ function GridItem({
   };
 }) {
   return (
-    <li className="flex flex-col justify-between gap-16 border bg-white border-black-8 drop-shadow-sm dark:border-white-8 rounded-lg dark:bg-gray-1 p-8">
+    <li className="flex h-full flex-col justify-between gap-16 bg-gray-1 rounded-lg p-8">
       <div className="flex flex-col gap-4">
         <BodyLarge>{title}</BodyLarge>
         <BodyBase>{description}</BodyBase>
       </div>
 
-      <Button onClick={action.onClick} intent="mauve" fullWidth>
+      <Button
+        className="z-20"
+        onClick={action.onClick}
+        intent="mauve"
+        fullWidth
+      >
         {action.text}
       </Button>
     </li>

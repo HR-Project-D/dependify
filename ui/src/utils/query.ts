@@ -1,31 +1,27 @@
-import { ScanFormValues, type Query, VersionGuard } from "@/types/scan";
+import {
+  type ScanFormValues,
+  type Query,
+  type VersionGuard,
+} from "@/types/scan";
 
 export function importQuery(query: Query) {
-  window.dispatchEvent(
-    new CustomEvent("importQuery", {
-      detail: query,
-    })
-  );
+  window.dispatchEvent(new CustomEvent("importQuery", { detail: query }));
 }
 
 export function addIdToQuery(query: Query) {
-  query.id = crypto.randomUUID();
-
-  return query;
+  return { ...query, id: crypto.randomUUID() };
 }
 
 export function scanFormToQuery(
   values: ScanFormValues,
   versionGuards: VersionGuard[]
 ): Query {
-  const query = {
+  return {
     id: crypto.randomUUID(),
     dependencyName: values.dependencyName,
     exactMatch: values.exactMatch,
     versions: versionGuards,
   };
-
-  return query;
 }
 
 export function saveQuery(query: Query) {
@@ -50,6 +46,13 @@ export function addRecentQuery(query: Query) {
   const recentQueries = JSON.parse(
     localStorage.getItem("dependify-recentQueries") || "[]"
   );
+
+  // only keep the last 10 queries
+
+  if (recentQueries.length > 9) {
+    recentQueries.pop();
+  }
+
   recentQueries.unshift(addIdToQuery(query));
   localStorage.setItem(
     "dependify-recentQueries",

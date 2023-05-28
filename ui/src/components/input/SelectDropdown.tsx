@@ -2,22 +2,25 @@ import React from "react";
 import * as Select from "@radix-ui/react-select";
 import { IconCheck, IconChevron } from "../_other/Icons";
 import { capitalize } from "@/utils/formatting";
+import { AnimatePresence } from "framer-motion";
 
-type SelectDropdownProps = {
+type DropdownProps = {
   options: string[];
   disabled?: boolean;
   onChange: (value: string) => void;
   defaultValue: string;
   icon?: React.ReactNode;
+  contentPosition?: "popper" | "item-aligned"
 };
 
-function SelectDropdown({
+function Dropdown({
   options,
   defaultValue,
   disabled,
   onChange,
   icon,
-}: SelectDropdownProps) {
+  contentPosition = "item-aligned",
+}: DropdownProps) {
   return (
     <Select.Root
       defaultValue={defaultValue}
@@ -38,15 +41,15 @@ function SelectDropdown({
 
       <Select.Portal>
         <Select.Content
-          position="popper"
-          className="mt-2 w-[--radix-select-trigger-width] rounded-lg border border-black-10 bg-white p-1 drop-shadow-lg dark:border-white-8 dark:bg-gray-1"
+          position={contentPosition}
+          className="w-[--radix-select-trigger-width] z-40 rounded-lg border border-black-10 bg-white p-1 drop-shadow-lg dark:border-white-8 dark:bg-gray-1"
         >
           <Select.Viewport>
             <Select.Group className="flex flex-col gap-1">
               {options.map((option) => (
-                <SelectItem key={option} value={option}>
+                <DropdownItem key={option} value={option}>
                   {capitalize(option)}
-                </SelectItem>
+                </DropdownItem>
               ))}
             </Select.Group>
           </Select.Viewport>
@@ -56,14 +59,14 @@ function SelectDropdown({
   );
 }
 
-export default SelectDropdown;
+export default Dropdown;
 
-type SelectItemProps = {
+type DropdownItemProps = {
   value: string;
   children: React.ReactNode;
 };
 
-function SelectItem({ children, value }: SelectItemProps) {
+function DropdownItem({ children, value }: DropdownItemProps) {
   return (
     <Select.Item
       value={value}

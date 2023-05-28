@@ -10,13 +10,14 @@ import ast
 class Scan(APIView):
     def get(self, request):
         name = request.GET.get('name', '')
-        version = request.GET.get('version', '')
-        source = request.GET.get('source', '')
+        version = request.GET.get('version', "['']")
+        exactMatch = request.GET.get('exactMatch', '')
         version_list = ast.literal_eval(version)
 
-        json = {'data': []}
+        bool_exactMatch = eval(exactMatch.capitalize())
 
-        json['data'].append(f.find_dependencies_in_sboms(name, version_list, source))
+        json = {'data': f.find_dependencies_in_sboms(name, version_list, bool_exactMatch)}
+
         return Response(json)
 
 

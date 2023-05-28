@@ -1,17 +1,12 @@
 import { Button } from "@/components/input/Button";
-import { InputField } from "@/components/input/input/InputField";
-import { IconDependify, IconKey, IconSpinner } from "@/components/_other/Icons";
+import { TextField } from "@/components/input/TextField";
+import { IconDependify, IconSpinner } from "@/components/_other/Icons";
 import Body from "@/components/text/Body";
-import BodyBase from "@/components/text/BodyBase";
-import Subtitle from "@/components/text/Subtitle";
 import Title from "@/components/text/Title";
-import TitleLarge from "@/components/text/TitleLarge";
 import { Form, Formik } from "formik";
-import { AnimatePresence, steps, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 export default function Page() {
-  //const session = useSession();
   const router = useRouter();
 
   return (
@@ -27,12 +22,6 @@ export default function Page() {
                 the username: “admin” and the admin password you used to access
                 the setup
               </Body>
-
-              {/* <BodyBase>
-                If you have previously skipped the setup of an admin user: use
-                the username: “admin” and the admin password you used to access
-                the setup
-              </BodyBase> */}
             </div>
           </header>
           <Formik
@@ -50,14 +39,14 @@ export default function Page() {
             {({ errors, isSubmitting }) => (
               <Form className="flex w-full flex-col items-center gap-8">
                 <div className="mb-12 flex w-full flex-col gap-5">
-                  <InputField
+                  <TextField
                     id="email"
                     name="email"
                     style="iconless"
                     type="text"
                     placeholder="Email"
                   />
-                  <InputField
+                  <TextField
                     id="password"
                     name="password"
                     style="iconless"
