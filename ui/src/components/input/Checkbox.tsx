@@ -3,12 +3,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { ChangeEvent } from "react";
 
 interface CheckboxProps extends FieldAttributes<any> {
+  checked: boolean;
   onClick?: (e: ChangeEvent<HTMLInputElement>) => void;
   children?: React.ReactNode;
 }
 
-export function Checkbox({ children, onClick, ...props }: CheckboxProps) {
-  const [checked, setChecked] = React.useState(false);
+export function Checkbox({ children, onClick, checked, ...props }: CheckboxProps) {
+
 
   return (
     <div className="group relative flex">
@@ -18,9 +19,6 @@ export function Checkbox({ children, onClick, ...props }: CheckboxProps) {
         </AnimatePresence>
       </span>
       <Field
-        onChange={(e: any) => {
-          setChecked(!checked);
-        }}
         onClick={onClick}
         checked={checked}
         type="checkbox"

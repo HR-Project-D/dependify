@@ -111,13 +111,13 @@ function ScanResultProject({ project }: { project: Project }) {
             <tbody>
               <tr>
                 {project.dockerImage && (
-                  <td className="px-1.5 text-sm text-white-48">
+                  <td className="px-2 text-sm text-white-48">
                     <Tooltip text={project.dockerImage}>
                       <IconDocker className="mt-1 w-6 text-white-48" />
                     </Tooltip>
                   </td>
                 )}
-                <td className="px-1.5 text-sm text-white-48">
+                <td className="px-2 text-sm text-white-48">
                   <Tooltip text={project.sbomFile}>
                     <IconFile className="mt-1 w-4 text-white-48" />
                   </Tooltip>

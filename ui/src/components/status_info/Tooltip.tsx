@@ -12,8 +12,14 @@ function Tooltip({
 }) {
   return (
     <RadixTooltip.Provider>
-      <RadixTooltip.Root>
-        <RadixTooltip.Trigger className={className}>{children}</RadixTooltip.Trigger>
+      <RadixTooltip.Root
+        delayDuration={400}
+      >
+        <RadixTooltip.Trigger asChild type="button" className={` ${className}`}>
+          <span>
+          {children}
+          </span>
+        </RadixTooltip.Trigger>
         <RadixTooltip.Portal>
           <RadixTooltip.Content
             sideOffset={6}

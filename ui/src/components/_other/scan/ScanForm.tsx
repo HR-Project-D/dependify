@@ -111,10 +111,11 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
                   />
                   <Tooltip
                     className="h-full"
-                    text="By default, Dependify will match any dependency that contains the name you enter"
+                    text="Exact match: dependency name must be identical to input"
                   >
                     <CheckboxLabel className="flex h-full justify-center gap-2 rounded-lg border border-b border-white-8 px-3">
                       <Checkbox
+                        checked={values.exactMatch}
                         disabled={isSubmitting}
                         onClick={(e: ChangeEvent<HTMLInputElement>) => {
                           setFieldValue("exactMatch", e.target.checked);
