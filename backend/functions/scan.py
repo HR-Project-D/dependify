@@ -64,6 +64,14 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
     return output
 
 
+def create_random_key():
+    import random
+    import string
+
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(10))
+
+
 def check_versions(dataframe, versions):
     if isinstance(versions, list):
         version_filters = []
