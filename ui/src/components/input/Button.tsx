@@ -4,7 +4,7 @@ import Body from "../text/Body";
 
 const button = cva(
   [
-    "transition-all border-t disabled:opacity-60 disabled:cursor-not-allowed justify-center flex items-center active:shadow-inner active:translate-y-0.5 duration-200",
+    "transition-all border-t whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed justify-center flex items-center active:shadow-inner active:translate-y-0.5 duration-200",
   ],
   {
     variants: {
