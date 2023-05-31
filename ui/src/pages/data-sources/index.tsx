@@ -25,6 +25,7 @@ import { motion } from "framer-motion";
 import { MagicCardWrapper } from "@/components/motion/MagicCard";
 import { capitalize, getDateDifferenceText } from "@/utils/formatting";
 import Tooltip from "@/components/status_info/Tooltip";
+import withAuth from "@/components/_other/auth/WithAuth";
 
 const fakeDataSources: Array<DataSource> = [
   {
@@ -198,7 +199,7 @@ const fakeDataSources: Array<DataSource> = [
   },
 ];
 
-export default function Page() {
+function Page() {
   const [dataSources, setDataSources] = useState<DataSource[]>(fakeDataSources);
   const [filteredDataSources, setFilteredDataSources] =
     useState<DataSource[]>();
@@ -347,3 +348,5 @@ function DataSource({
     </li>
   );
 }
+
+export default withAuth(Page);

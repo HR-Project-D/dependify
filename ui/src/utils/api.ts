@@ -1,3 +1,3 @@
 export function getApiUrl(): string {
-  return "http://localhost:8000/api/";
+  return "http://127.0.01:8000/api/";
 }

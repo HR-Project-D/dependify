@@ -5,12 +5,37 @@ import type { AppProps } from "next/app";
 
 import { UserContext, initialUserState, userReducer } from "@/state/User";
 import { UIContext, initialUIState, UIReducer } from "@/state/UI";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { ThemeProvider } from "next-themes";
+import { AuthService } from "@/services/AuthService";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [userState, userDispatch] = useReducer(userReducer, initialUserState);
   const [uiState, uiDispatch] = useReducer(UIReducer, initialUIState);
+
+  const router = useRouter();
+
+  async function handleGetUser() {
+    try {
+      const response = await AuthService.getUser();
+
+      userDispatch({
+        type: "LOGIN",
+        payload: response,
+      });
+    } catch {
+      userDispatch({
+        type: "LOGOUT",
+      });
+
+      router.push("/login");
+    }
+  }
+
+  useEffect(() => {
+    handleGetUser();
+  }, []);
 
   return (
     <ThemeProvider

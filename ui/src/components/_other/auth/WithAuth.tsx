@@ -14,6 +14,10 @@ const withAuth = (WrappedComponent: React.ComponentType) => {
       }
     }, [UserState, isAuthenticated, router]);
 
+    useEffect(() => {
+      console.log(UserState);
+    }, [UserState]);
+
     if (!isAuthenticated) {
       return null; // Render nothing until authentication status is checked
     }

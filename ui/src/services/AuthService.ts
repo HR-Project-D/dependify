@@ -1,4 +1,4 @@
-import { APIResponseLogin } from "@/types/api/api-auth";
+import { APIResponseLogin, APIResponseUser } from "@/types/api/api-auth";
 import { getApiUrl } from "@/utils/api";
 
 const API_URL = getApiUrl();
@@ -21,7 +21,7 @@ async function login({
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password }),
-    credentials: "include",
+    credentials: "same-origin",
   });
 
   const json = await response.json();
@@ -39,14 +39,35 @@ async function logout(): Promise<void> {
     headers: {
       "Content-Type": "application/json",
     },
-    credentials: "include",
+    credentials: "same-origin",
   });
 
   const json = await response.json();
   return json;
 }
 
+/**
+ * http://127.0.0.1:8000/api/user
+ */
+async function getUser(): Promise<APIResponseUser> {
+  const URL = `${API_URL}user/`;
+
+  const response = await fetch(URL, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "same-origin",
+  });
+
+
+  const json = await response.json();
+  return json;
+}
+
+
 export const AuthService = {
   login,
   logout,
+  getUser,
 };

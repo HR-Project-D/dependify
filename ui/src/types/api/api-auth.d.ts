@@ -3,3 +3,9 @@ export type APIResponseLogin = {
   error?: string;
   user?: User;
 };
+
+export type APIResponseUser = {
+  name: string;
+  email: string;
+  role: string;
+};

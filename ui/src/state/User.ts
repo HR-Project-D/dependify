@@ -7,11 +7,9 @@ type UserContextAction =
   | { type: "UPDATE"; payload: User };
 
 type User = {
-  id: string;
   name: string;
   email: string;
   role: string;
-  token: string;
 };
 
 type UserState = {
