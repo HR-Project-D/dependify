@@ -5,8 +5,6 @@ import {
   IconDependify,
   IconGithub,
   IconGitlab,
-  IconGrid,
-  IconList,
   IconPlus,
   IconPower,
   IconRefresh,

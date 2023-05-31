@@ -5,9 +5,38 @@ import Body from "@/components/text/Body";
 import Title from "@/components/text/Title";
 import { Form, Formik } from "formik";
 import { useRouter } from "next/router";
+import { AuthService } from "@/services/AuthService";
+import { useUserContext } from "@/state/User";
+import { useEffect } from "react";
 
 export default function Page() {
   const router = useRouter();
+
+  const { state: UserState, dispatch: UserDispatch } = useUserContext();
+
+  async function handleLogin(formValues: { email: string; password: string }) {
+    try {
+      const response = await AuthService.login({
+        email: formValues.email,
+        password: formValues.password,
+      });
+
+      if (response.message) {
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  }
+
+  useEffect(() => {
+    if (UserState.isAuthenticated) {
+      router.push("/");
+    }
+  }, []);
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center p-8">
@@ -30,8 +59,13 @@ export default function Page() {
               password: "",
             }}
             onSubmit={async (values, errors) => {
-              await new Promise((r) => setTimeout(r, 3000));
-              router.push("/");
+              const success = await handleLogin(values);
+              if (success) {
+                UserDispatch({
+                  type: "LOGIN",
+                });
+                router.push("/");
+              }
             }}
             validateOnBlur={false}
             validateOnChange={false}
@@ -53,16 +87,6 @@ export default function Page() {
                     type="password"
                     placeholder="Password"
                   />
-                  {/* <Button
-                    className="text-white-48 -mt-1"
-                    intent="hyperlink"
-                    size="hyperlink"
-                    disabled={isSubmitting}
-                    type="button"
-                  >
-                    {isSubmitting && <IconSpinner className="w-4" />}
-                    Forgot Password?
-                  </Button> */}
                 </div>
                 <div className="flex w-full flex-col gap-3">
                   <Button

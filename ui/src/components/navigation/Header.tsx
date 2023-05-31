@@ -1,19 +1,15 @@
 import { getOperatingSystem } from "@/utils/platform";
-import { IconSearch, IconUser } from "../_other/Icons";
+import { IconLogout, IconSearch, IconUser } from "../_other/Icons";
 import Keybind from "../_other/Keybind";
 import { useUIContext } from "@/state/UI";
+import { useUserContext } from "@/state/User";
 
 function Header() {
-  let userOs = undefined;
-
-  if (typeof window !== "undefined") {
-    userOs = getOperatingSystem();
-  }
-
   const { dispatch: UIDispatch } = useUIContext();
+  const { dispatch: UserDispatch } = useUserContext();
 
   return (
-    <header className="left-0 z-20 pointer-events-none absolute flex w-full items-center justify-between px-5 py-2 text-sm text-white-48">
+    <header className="pointer-events-none absolute left-0 z-20 flex w-full items-center justify-between px-5 py-2 text-sm text-white-48">
       <h1 className="">Dependify</h1>
 
       <div className="flex items-center gap-3">
@@ -32,12 +28,18 @@ function Header() {
         </button> */}
         <button
           onClick={() => UIDispatch({ type: "TOGGLE_COMMAND_MENU" })}
-          className="rounded-full pointer-events-auto border border-white-8 bg-gray-1 p-2"
+          className="pointer-events-auto rounded-full border border-white-8 bg-gray-1 p-2"
         >
           <IconSearch className="w-4 text-white-48" />
         </button>
-        <button className="rounded-full pointer-events-auto border border-white-8 bg-gray-1 p-2">
+        <button className="pointer-events-auto rounded-full border border-white-8 bg-gray-1 p-2">
           <IconUser className="w-4 text-white-48" />
+        </button>
+        <button
+          onClick={() => UserDispatch({ type: "LOGOUT" })}
+          className="pointer-events-auto rounded-full border border-white-8 bg-gray-1 p-2"
+        >
+          <IconLogout className="w-4 text-white-48" />
         </button>
       </div>
     </header>

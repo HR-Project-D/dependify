@@ -1,6 +1,4 @@
 import { APIResponseLogin } from "@/types/api/api-auth";
-import { APIResponseScan } from "@/types/api/api-scan";
-import { VersionGuard } from "@/types/scan";
 import { getApiUrl } from "@/utils/api";
 
 const API_URL = getApiUrl();
@@ -30,10 +28,6 @@ async function login({
   return json;
 }
 
-export const AuthService = {
-  login,
-};
-
 /**
  * http://127.0.0.1:8000/api/logout
  */
@@ -51,3 +45,8 @@ async function logout(): Promise<void> {
   const json = await response.json();
   return json;
 }
+
+export const AuthService = {
+  login,
+  logout,
+};

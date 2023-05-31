@@ -10,12 +10,13 @@ interface TextFieldProps extends FieldAttributes<any> {
   style: "icon" | "iconless";
   icon?: React.ReactNode;
   color?: "default" | "transparent";
-  as: "input" | "formik";
+  as?: "input" | "formik";
 }
 
 export function TextField({
   icon,
   style,
+  as = "formik",
   error,
   color = "default",
   touched,
@@ -38,10 +39,11 @@ export function TextField({
           {icon}
         </div>
       )}
-      as === "input" && (
-      <input {...props} className={styles} />
+      {as === "input" ? (
+        <input {...props} className={styles} />
       ) : (
-      <Field {...props} className={styles} />)
+        <Field {...props} className={styles} />
+      )}
     </div>
   );
 }

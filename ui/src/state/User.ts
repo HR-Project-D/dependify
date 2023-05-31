@@ -1,7 +1,7 @@
 import { Dispatch, createContext, useContext } from "react";
 
 type UserContextAction =
-  | { type: "LOGIN"; payload: User }
+  | { type: "LOGIN"; payload?: User }
   | { type: "LOGOUT" }
   | { type: "REGISTER"; payload: User }
   | { type: "UPDATE"; payload: User };
