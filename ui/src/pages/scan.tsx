@@ -113,8 +113,9 @@ export default function Page() {
                   open={searchResultStatus === "error"}
                   title="Unable to scan"
                 >
-                  Oops! We couldn't scan your data sources. Please try again
-                  later.
+                  {
+                    "Oops! We couldn't scan your data sources. Please try again later."
+                  }
                 </InfoBar>
               )}
               {searchResultStatus === "no-results" && (
@@ -133,7 +134,7 @@ export default function Page() {
                   open={searchResultStatus === "no-results"}
                   title="No results found"
                 >
-                  We couldn't find any results for your query.
+                  {"We couldn't find any results for your query."}
                 </InfoBar>
               )}
             </AnimatePresence>

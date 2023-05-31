@@ -8,7 +8,6 @@ import TitleLarge from "@/components/text/TitleLarge";
 import Link from "next/link";
 import withAuth from "@/components/_other/auth/WithAuth";
 import { MagicCardWrapper } from "@/components/motion/MagicCard";
-import Image from "next/image";
 
 function Page() {
   return (
@@ -84,12 +83,11 @@ export function GridItem({
   return (
     <li className="flex h-full flex-col justify-between gap-16 rounded-lg bg-gray-1 p-8">
       <div>
-        <Image
+        <img
           className="mb-6 aspect-[4/2] rounded-lg object-cover object-center drop-shadow"
           src="/images/dashboard-scan.png"
           width={1600}
           height={1200}
-          alt="Dashboard scan"
         />
 
         <div className="flex flex-col gap-4 px-2">
