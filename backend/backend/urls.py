@@ -18,9 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from playground.views import Scan
 from playground.views import Setup
+from playground.views import SetupUserRegistration
+from playground.views import UserRegistration
+from playground.views import Login
+from playground.views import Logout
+from playground.views import User
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path ('api/scan/', Scan.as_view()),
     path ('api/setup', Setup.as_view()),
+    path ('api/setup_registration/', SetupUserRegistration.as_view()),
+    path ('api/registration/',UserRegistration.as_view()),
+    path ('api/login/',Login.as_view()),
+    path ('api/logout/',Logout.as_view()),
+    path ('api/user/',User.as_view()),
 ]

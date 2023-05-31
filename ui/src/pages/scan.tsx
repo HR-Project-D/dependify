@@ -1,7 +1,11 @@
 import Layout from "@/components/_other/Layout";
+import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
+import withAuth from "@/components/_other/auth/WithAuth";
 import QueryList from "@/components/_other/scan/QueryList";
 import ScanForm from "@/components/_other/scan/ScanForm";
 import ScanResults from "@/components/_other/scan/ScanResults";
+import { Button } from "@/components/input/Button";
+import { InfoBar } from "@/components/status_info/InfoBar";
 import BodyBase from "@/components/text/BodyBase";
 import TitleLarge from "@/components/text/TitleLarge";
 import { ScanService } from "@/services/ScanService";
@@ -15,14 +19,15 @@ import {
   removeRecentQuery,
   removeSavedQuery,
 } from "@/utils/query";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-export default function Page() {
+function Page() {
   const [scanResults, setScanResults] = useState<APIResponseScan | undefined>();
   const [openResultsOverlay, setOpenResultsOverlay] = useState(false);
-  const [phase, setPhase] = useState<"waiting" | "scanning" | "results">(
-    "waiting"
-  );
+  const [searchResultStatus, setSearchResultStatus] = useState<
+    "idle" | "no-results" | "error"
+  >("idle");
 
   async function handleSubmitScan(
     values: ScanFormValues,
@@ -39,10 +44,12 @@ export default function Page() {
 
       if (response.data.length > 0) {
         setOpenResultsOverlay(true);
+        setSearchResultStatus("idle");
+      } else {
+        setSearchResultStatus("no-results");
       }
     } catch {
-      // TODO: Handle error
-      console.log("HANDLE SCAN ERROR");
+      setSearchResultStatus("error");
     }
   }
 
@@ -83,12 +90,60 @@ export default function Page() {
             />
           </aside>
 
-          <ScanForm
-            handleSubmit={handleSubmitScan}
-            setSearchResults={setScanResults}
-          />
+          <section className="flex w-full flex-col gap-4">
+            <AnimatePresence>
+              <ScanForm
+                key="scan-form"
+                handleSubmit={handleSubmitScan}
+                setSearchResults={setScanResults}
+              />
+              {searchResultStatus === "error" && (
+                <InfoBar
+                  key="info-bar"
+                  intent="critical"
+                  button={
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://github.com/HR-Project-D/dependify/issues"
+                    >
+                      <Button intent="transparent">Report issue</Button>
+                    </a>
+                  }
+                  onClose={() => setSearchResultStatus("idle")}
+                  open={searchResultStatus === "error"}
+                  title="Unable to scan"
+                >
+                  {
+                    "Oops! We couldn't scan your data sources. Please try again later."
+                  }
+                </InfoBar>
+              )}
+              {searchResultStatus === "no-results" && (
+                <InfoBar
+                  key="info-bar"
+                  button={
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://github.com/HR-Project-D/dependify/issues"
+                    >
+                      <Button intent="transparent">Report issue</Button>
+                    </a>
+                  }
+                  onClose={() => setSearchResultStatus("idle")}
+                  open={searchResultStatus === "no-results"}
+                  title="No results found"
+                >
+                  {"We couldn't find any results for your query."}
+                </InfoBar>
+              )}
+            </AnimatePresence>
+          </section>
         </div>
       </div>
     </Layout>
   );
 }
+
+export default ComponentWrapper(withAuth(Page));

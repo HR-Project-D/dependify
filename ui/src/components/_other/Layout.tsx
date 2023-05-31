@@ -20,9 +20,9 @@ function Layout({ className, children, ...props }: LayoutProps) {
 
       <div className="flex h-full w-full">
         <motion.main
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", damping: 20, stiffness: 100 }}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ type: "spring", damping: 20, stiffness: 100 }}
           className={`flex w-full py-16 px-12 flex-col items-center ${className}`}
         >
           {children}

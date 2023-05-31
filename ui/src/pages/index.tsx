@@ -7,12 +7,16 @@ import Subtitle from "@/components/text/Subtitle";
 import TitleLarge from "@/components/text/TitleLarge";
 import Link from "next/link";
 import withAuth from "@/components/_other/auth/WithAuth";
-import { MagicCard, MagicCardGrid } from "@/components/motion/MagicCard";
+import { MagicCardWrapper } from "@/components/motion/MagicCard";
+import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
+import { useSession } from "@/utils/session";
 
 function Page() {
+  //const session = useSession();
+
   return (
     <Layout>
-      <div className="flex h-full w-full max-w-7xl flex-col gap-32 pt-8">
+      <div className="flex h-full w-full max-w-7xl flex-col gap-24 pt-8">
         <header className="flex flex-col gap-5">
           <div className="flex flex-col">
             <Subtitle>Welcome to Dependify</Subtitle>
@@ -30,16 +34,7 @@ function Page() {
           </div>
         </header>
 
-        <MagicCardGrid className="grid-cols-3 gap-3">
-          <GridItem
-            title="Create more users"
-            description="You can create more users to collaborate with your team."
-            icon={<IconGithub />}
-            action={{
-              text: "Create user",
-              onClick: () => {},
-            }}
-          />
+        <MagicCardWrapper className="grid w-full grid-cols-3 gap-3">
           <GridItem
             title="Connect your data sources"
             description="Data sources are the places where your SBOM's are stored. You can add multiple repositories."
@@ -50,21 +45,30 @@ function Page() {
             }}
           />
           <GridItem
-            title="Configure alerts"
+            title="Scan your data sources"
+            description="You can scan your data sources to find out if you are using certain dependencies."
+            icon={<IconGithub />}
+            action={{
+              text: "Scan",
+              onClick: () => {},
+            }}
+          />
+          {/* <GridItem
+            title="Setup alerts"
             description="You can configure alerts to be notified when a combination of dependency and version is found."
             icon={<IconGithub />}
             action={{
               text: "Add alert",
               onClick: () => {},
             }}
-          />
-        </MagicCardGrid>
+          /> */}
+        </MagicCardWrapper>
       </div>
     </Layout>
   );
 }
 
-export default withAuth(Page);
+export default ComponentWrapper(withAuth(Page));
 
 export function GridItem({
   title,
@@ -81,10 +85,19 @@ export function GridItem({
   };
 }) {
   return (
-    <li className="flex h-full flex-col justify-between gap-16 bg-gray-1 rounded-lg p-8">
-      <div className="flex flex-col gap-4">
-        <BodyLarge>{title}</BodyLarge>
-        <BodyBase>{description}</BodyBase>
+    <li className="flex h-full flex-col justify-between gap-16 rounded-lg bg-gray-1 p-8">
+      <div>
+        <img
+          className="mb-6 aspect-[4/2] rounded-lg object-cover object-center drop-shadow"
+          src="/images/dashboard-scan.png"
+          width={1600}
+          height={1200}
+        />
+
+        <div className="flex flex-col gap-4 px-2">
+          <BodyLarge>{title}</BodyLarge>
+          <BodyBase>{description}</BodyBase>
+        </div>
       </div>
 
       <Button

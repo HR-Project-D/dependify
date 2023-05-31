@@ -80,8 +80,3 @@ body {
   );
   z-index: 1;
 }
-
-[magic-card-gr] {
-  display: grid;
-  width: 100%;
-}

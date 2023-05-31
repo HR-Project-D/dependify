@@ -12,7 +12,7 @@ import { Formik, Form } from "formik";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { getVersionPlaceholder } from "@/utils/version";
 import { Button } from "@/components/input/Button";
-import Dropdown from "@/components/input/SelectDropdown";
+import SelectDropdown from "@/components/input/SelectDropdown";
 import { capitalize } from "@/utils/formatting";
 import { AnimatePresence, motion } from "framer-motion";
 import { scanFormToQuery, addRecentQuery, saveQuery } from "@/utils/query";
@@ -75,9 +75,9 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
       initialValues={initialValues}
       enableReinitialize
       onSubmit={async (values, errors) => {
-        await new Promise((r) => setTimeout(r, 4000));
         addRecentQuery(scanFormToQuery(values, versionGuards));
-        handleSubmit(values, versionGuards);
+        await new Promise((r) => setTimeout(r, 500));
+        await handleSubmit(values, versionGuards);
       }}
       validateOnMount={false}
       validateOnBlur={false}
@@ -111,7 +111,7 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
                   />
                   <Tooltip
                     className="h-full"
-                    text="Exact match: dependency name must be identical to input"
+                    text="Dependency name must be identical to input"
                   >
                     <CheckboxLabel className="flex h-full justify-center gap-2 rounded-lg border border-b border-white-8 px-3">
                       <Checkbox
@@ -143,7 +143,7 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
             <div className="flex w-full gap-3 px-8 pt-8">
               <div className="flex w-full flex-col gap-2">
                 <InputLabel htmlFor="dependencyName">Version Type</InputLabel>
-                <Dropdown
+                <SelectDropdown
                   disabled={isSubmitting}
                   defaultValue="exact"
                   onChange={(value) => {

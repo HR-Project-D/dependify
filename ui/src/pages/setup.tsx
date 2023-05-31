@@ -110,14 +110,12 @@ export default function Page() {
                         <Button
                           disabled={isSubmitting}
                           intent="mauveDark"
-                          rounded="full"
                         >
                           What is this?
                         </Button>
                         <Button
                           disabled={isSubmitting}
                           intent="white"
-                          rounded="full"
                           type="submit"
                         >
                           {isSubmitting && <IconSpinner className="w-4" />}

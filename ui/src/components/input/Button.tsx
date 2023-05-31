@@ -4,7 +4,7 @@ import Body from "../text/Body";
 
 const button = cva(
   [
-    "transition-all border-t disabled:opacity-60 disabled:cursor-not-allowed justify-center flex items-center active:shadow-inner active:translate-y-0.5 duration-200",
+    "transition-all border-t whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed justify-center flex items-center active:shadow-inner active:translate-y-0.5 duration-200",
   ],
   {
     variants: {
@@ -31,11 +31,14 @@ const button = cva(
           "border-white-10",
         ],
         noBG: ["text-white-64 hover:bg-white-5", "border-transparent"],
+        transparent: ["bg-white-8 hover:bg-white-10", "text-white", "border-transparent"],
+        hyperlink: ["bg-transparent hover:bg-transparent hover:text-white", "border-transparent"],
       },
       size: {
         standard: "px-4 py-1.5 min-w-[120px]",
         compact: "px-2.5 py-1",
         icon: "p-1.5",
+        hyperlink: "px-0 py-0",
       },
       rounded: {
         full: "rounded-full",

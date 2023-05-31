@@ -13,14 +13,11 @@ export function MagicCard({ children, ...props }: MagicCardProps) {
   );
 }
 
-interface MagicCardGrid extends React.HTMLAttributes<HTMLDivElement> {
+interface MagicCardWrapper extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-export function MagicCardGrid({
-  children,
-  ...props
-}: MagicCardGrid) {
+export function MagicCardWrapper({ children, ...props }: MagicCardWrapper) {
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -49,11 +46,7 @@ export function MagicCardGrid({
   }, []);
 
   return (
-    <div
-      ref={cardsRef}
-      magic-card-gr=""
-      {...props}
-    >
+    <div ref={cardsRef} magic-card-wrapper="" {...props}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return <MagicCard>{child}</MagicCard>;
