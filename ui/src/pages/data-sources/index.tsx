@@ -230,7 +230,7 @@ function Page() {
           <div>
             <TitleLarge className="mb-2">Manage your data sources</TitleLarge>
             <BodyBase className="text-white-56">
-              Data sources are the places where your SBOM's are stored.
+              {"Data sources are the places where your SBOM's are stored."}
             </BodyBase>
           </div>
         </div>

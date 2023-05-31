@@ -22,6 +22,15 @@ export default function Page() {
       });
 
       if (response.message) {
+        UserDispatch({
+          type: "LOGIN",
+          payload: {
+            name: response.name || "",
+            email: response.email || "",
+            role: response.role || "",
+          },
+        });
+
         return true;
       }
 
@@ -61,9 +70,6 @@ export default function Page() {
             onSubmit={async (values, errors) => {
               const success = await handleLogin(values);
               if (success) {
-                UserDispatch({
-                  type: "LOGIN",
-                });
                 router.push("/");
               }
             }}

@@ -1,7 +1,10 @@
 export type APIResponseLogin = {
   message?: string;
   error?: string;
-  user?: User;
+  
+  name?: string;
+  email?: string;
+  role?: string;
 };
 
 export type APIResponseUser = {

@@ -1,5 +1,6 @@
 import { APIResponseLogin, APIResponseUser } from "@/types/api/api-auth";
 import { getApiUrl } from "@/utils/api";
+import { getCookie } from "@/utils/cookies";
 
 const API_URL = getApiUrl();
 
@@ -21,7 +22,7 @@ async function login({
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password }),
-    credentials: "same-origin",
+    credentials: "include",
   });
 
   const json = await response.json();
@@ -38,8 +39,9 @@ async function logout(): Promise<void> {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-CSRFToken": getCookie("csrftoken") || "",
     },
-    credentials: "same-origin",
+    credentials: "include",
   });
 
   const json = await response.json();
@@ -56,15 +58,14 @@ async function getUser(): Promise<APIResponseUser> {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "X-CSRFToken": getCookie("csrftoken") || "",
     },
-    credentials: "same-origin",
+    credentials: "include",
   });
-
 
   const json = await response.json();
   return json;
 }
-
 
 export const AuthService = {
   login,
