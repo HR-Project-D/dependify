@@ -55,7 +55,7 @@ function ScanResults({ results, open, setOpen }: ScanResultsProps) {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className={`no-scrollbar fixed left-[5%] lg:left-[25%] top-[10%] z-[60] flex max-h-[80%] flex-col gap-8 overflow-y-scroll rounded-lg border border-white-8 bg-gray-0 p-8 pt-0 drop-shadow-2xl w-[90%] lg:w-1/2`}
               >
-                <header className="sticky top-0 z-[20] flex w-full justify-between border-b border-white-8 bg-gray-0 pb-6 pt-8">
+                <header className="sticky top-0 z-[20] flex w-full justify-between border-b border-white-8 bg-gray-0 pb-4 pt-8">
                   <Subtitle className="">Search Results</Subtitle>
                   <Button
                     className="h-fit"

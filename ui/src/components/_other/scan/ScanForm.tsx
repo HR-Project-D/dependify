@@ -75,9 +75,9 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
       initialValues={initialValues}
       enableReinitialize
       onSubmit={async (values, errors) => {
-        await new Promise((r) => setTimeout(r, 4000));
         addRecentQuery(scanFormToQuery(values, versionGuards));
-        handleSubmit(values, versionGuards);
+        await new Promise((r) => setTimeout(r, 500));
+        await handleSubmit(values, versionGuards);
       }}
       validateOnMount={false}
       validateOnBlur={false}
@@ -111,7 +111,7 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
                   />
                   <Tooltip
                     className="h-full"
-                    text="Exact match: dependency name must be identical to input"
+                    text="Dependency name must be identical to input"
                   >
                     <CheckboxLabel className="flex h-full justify-center gap-2 rounded-lg border border-b border-white-8 px-3">
                       <Checkbox

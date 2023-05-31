@@ -13,7 +13,7 @@ function Tooltip({
   return (
     <RadixTooltip.Provider>
       <RadixTooltip.Root
-        delayDuration={400}
+        delayDuration={200}
       >
         <RadixTooltip.Trigger asChild type="button" className={` ${className}`}>
           <span>

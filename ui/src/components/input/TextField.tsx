@@ -4,12 +4,14 @@ import React from "react";
 interface TextFieldProps extends FieldAttributes<any> {
   style: "icon" | "iconless";
   icon?: React.ReactNode;
+  color?: "default" | "transparent"
 }
 
 export function TextField({
   icon,
   style,
   error,
+  color = "default",
   touched,
   ...props
 }: TextFieldProps) {
@@ -24,8 +26,9 @@ export function TextField({
         {...props}
         className={`
           ${style === "icon" && "pl-11"}
-          w-full border disabled:opacity-60 rounded-lg border-black-10 bg-white px-4 py-2 font-normal placeholder:text-white-48
-          focus:outline-none disabled:cursor-not-allowed dark:border-white-8 dark:bg-gray-1 focus:outline focus:outline-1 focus:outline-offset-0 focus:outline-white-16 dark:text-white`}
+          ${color === "default" ? "border-white-8 bg-gray-1 " : " border-white-5 bg-white-5"}
+          w-full border disabled:opacity-60 rounded-lg px-4 py-2 placeholder:text-white-48
+          focus:outline-none disabled:cursor-not-allowed focus:outline focus:outline-1 focus:outline-offset-0 focus:outline-white-16 text-white`}
       />
     </div>
   );
