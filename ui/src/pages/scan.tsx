@@ -1,4 +1,6 @@
 import Layout from "@/components/_other/Layout";
+import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
+import withAuth from "@/components/_other/auth/WithAuth";
 import QueryList from "@/components/_other/scan/QueryList";
 import ScanForm from "@/components/_other/scan/ScanForm";
 import ScanResults from "@/components/_other/scan/ScanResults";
@@ -18,10 +20,9 @@ import {
   removeSavedQuery,
 } from "@/utils/query";
 import { AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
-export default function Page() {
+function Page() {
   const [scanResults, setScanResults] = useState<APIResponseScan | undefined>();
   const [openResultsOverlay, setOpenResultsOverlay] = useState(false);
   const [searchResultStatus, setSearchResultStatus] = useState<
@@ -144,3 +145,5 @@ export default function Page() {
     </Layout>
   );
 }
+
+export default ComponentWrapper(withAuth(Page));

@@ -8,8 +8,9 @@ import { useRouter } from "next/router";
 import { AuthService } from "@/services/AuthService";
 import { useUserContext } from "@/state/User";
 import { useEffect } from "react";
+import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
 
-export default function Page() {
+function Page() {
   const router = useRouter();
 
   const { state: UserState, dispatch: UserDispatch } = useUserContext();
@@ -42,10 +43,12 @@ export default function Page() {
   }
 
   useEffect(() => {
+    console.log(UserState.isAuthenticated);
+
     if (UserState.isAuthenticated) {
       router.push("/");
     }
-  }, []);
+  }, [UserState.isAuthenticated]);
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center p-8">
@@ -113,3 +116,5 @@ export default function Page() {
     </div>
   );
 }
+
+export default ComponentWrapper(Page);

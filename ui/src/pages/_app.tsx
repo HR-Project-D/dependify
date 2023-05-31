@@ -16,27 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const router = useRouter();
 
-  async function handleGetUser() {
-    try {
-      const response = await AuthService.getUser();
-
-      userDispatch({
-        type: "LOGIN",
-        payload: response,
-      });
-    } catch {
-      userDispatch({
-        type: "LOGOUT",
-      });
-
-      router.push("/login");
-    }
-  }
-
-  useEffect(() => {
-    handleGetUser();
-  }, []);
-
   return (
     <ThemeProvider
       attribute="class"

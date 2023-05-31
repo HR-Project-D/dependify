@@ -20,6 +20,12 @@ export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+export function getInitials(str: string): string {
+  const words = str.split(" ");
+  const initials = words.map((word) => word.charAt(0).toUpperCase());
+  return initials.join("");
+}
+
 export function getDateDifferenceText(date1: Date, date2: Date): string {
   const diffMilliseconds = date2.getTime() - date1.getTime();
   const diffSeconds = Math.floor(diffMilliseconds / 1000);

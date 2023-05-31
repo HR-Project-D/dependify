@@ -1,6 +1,6 @@
 import ResizablePanel from "@/components/motion/ResizablePanel";
 import { Button } from "@/components/input/Button";
-import Dropdown from "@/components/input/SelectDropdown";
+import SelectDropdown from "@/components/input/SelectDropdown";
 import { TextField, TextFieldError } from "@/components/input/TextField";
 import InputLabel from "@/components/input/InputLabel";
 import { IconChevron, IconSpinner } from "@/components/_other/Icons";
@@ -66,7 +66,7 @@ function VersionGuards({
                         <InputLabel htmlFor="dependencyName">
                           Version Type
                         </InputLabel>
-                        <Dropdown
+                        <SelectDropdown
                           defaultValue="exact"
                           onChange={(value) => {
                             setFieldValue("version", "");

@@ -12,7 +12,7 @@ import { Formik, Form } from "formik";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { getVersionPlaceholder } from "@/utils/version";
 import { Button } from "@/components/input/Button";
-import Dropdown from "@/components/input/SelectDropdown";
+import SelectDropdown from "@/components/input/SelectDropdown";
 import { capitalize } from "@/utils/formatting";
 import { AnimatePresence, motion } from "framer-motion";
 import { scanFormToQuery, addRecentQuery, saveQuery } from "@/utils/query";
@@ -143,7 +143,7 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
             <div className="flex w-full gap-3 px-8 pt-8">
               <div className="flex w-full flex-col gap-2">
                 <InputLabel htmlFor="dependencyName">Version Type</InputLabel>
-                <Dropdown
+                <SelectDropdown
                   disabled={isSubmitting}
                   defaultValue="exact"
                   onChange={(value) => {

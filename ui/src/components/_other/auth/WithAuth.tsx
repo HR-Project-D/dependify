@@ -9,14 +9,12 @@ const withAuth = (WrappedComponent: React.ComponentType) => {
     const router = useRouter();
 
     useEffect(() => {
-      if (!isAuthenticated) {
-        router.push("/login"); // Redirect to login page if not authenticated
+      if (UserState.attemptedFetch) {
+        if (!isAuthenticated) {
+          router.push("/login"); // Redirect to login page if not authenticated
+        }
       }
-    }, [UserState, isAuthenticated, router]);
-
-    useEffect(() => {
-      console.log(UserState);
-    }, [UserState]);
+    }, [UserState.attemptedFetch, isAuthenticated, router]);
 
     if (!isAuthenticated) {
       return null; // Render nothing until authentication status is checked

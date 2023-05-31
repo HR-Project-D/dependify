@@ -26,6 +26,7 @@ import { MagicCardWrapper } from "@/components/motion/MagicCard";
 import { capitalize, getDateDifferenceText } from "@/utils/formatting";
 import Tooltip from "@/components/status_info/Tooltip";
 import withAuth from "@/components/_other/auth/WithAuth";
+import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
 
 const fakeDataSources: Array<DataSource> = [
   {
@@ -65,7 +66,7 @@ const fakeDataSources: Array<DataSource> = [
     labels: ["label4", "label5"],
     lastSync: "2023-05-31T13:32:19+00:00",
     lastSyncStatus: "synced",
-    lastSyncError: "",
+    lastSyncError: "Unable to connect to data source",
   },
   {
     id: "4",
@@ -117,7 +118,7 @@ const fakeDataSources: Array<DataSource> = [
     labels: ["label4", "label5"],
     lastSync: "2023-05-31T13:32:19+00:00",
     lastSyncStatus: "synced",
-    lastSyncError: "",
+    lastSyncError: "Unable to connect to data source",
   },
   {
     id: "8",
@@ -264,6 +265,7 @@ function Page() {
                   label={dataSource.label}
                   type={dataSource.type}
                   lastSync={dataSource.lastSync}
+                  lastSyncError={dataSource.lastSyncError}
                   enabled={dataSource.enabled}
                 />
               ))}
@@ -280,12 +282,14 @@ function DataSource({
   status,
   type,
   lastSync,
+  lastSyncError,
   enabled,
 }: {
   label: string;
   status: DataSourceStatus;
   type: DataSourceType;
   lastSync: string | undefined;
+  lastSyncError?: string;
   enabled: boolean;
 }) {
   const iconClassName = "w-6 ml-0.5 text-white";
@@ -301,14 +305,19 @@ function DataSource({
 
   return (
     <li className="group flex w-full cursor-pointer flex-col items-start justify-between gap-8 rounded-lg bg-gray-DARK p-6 transition-all duration-200 hover:bg-gray-1">
-      <span
+      <Tooltip
+        text={
+          status === "connected"
+            ? "No problems found"
+            : lastSyncError || "There is a problem with this data source"
+        }
         className={`absolute right-4 top-4 flex gap-1.5 rounded-md px-3 py-1 text-xs transition-colors duration-200
-      ${
-        status === "connected"
-          ? "bg-gray-2 text-white-48 group-hover:bg-gray-3"
-          : "bg-red-1 text-red-10 group-hover:bg-red-2"
-      }
-      `}
+                ${
+                  status === "connected"
+                    ? "bg-gray-2 text-white-48 group-hover:bg-gray-3"
+                    : "bg-red-1 text-red-10 group-hover:bg-red-2"
+                }
+                `}
       >
         {status === "connected" ? (
           <IconCheck className="w-3" />
@@ -316,12 +325,12 @@ function DataSource({
           <IconWarning className="w-3" />
         )}
         {capitalize(status)}
-      </span>
+      </Tooltip>
       <div className="flex w-full items-center gap-3">
         <IconGithub className={iconClassName} />
         <BodyBase className="font-medium text-white">{label}</BodyBase>
       </div>
-      <div className="flex gap-5">
+      <div className="flex items-center w-full justify-between gap-5">
         <span className="flex items-center gap-1.5 text-white-48">
           <Tooltip text="Last update">
             <IconRefresh className="w-4" />
@@ -336,17 +345,17 @@ function DataSource({
             )}
           </span>
         </span>
-        <span className="flex items-center gap-1.5 text-white-48">
-          <Tooltip text="Last update">
+        {/* <span className="flex items-center gap-1.5 text-white-48">
+          <Tooltip text="Enabled/disabled">
             <IconPower className="w-4" />
           </Tooltip>
           <span className="text-sm">
             {enabled ? <span>Enabled</span> : <span>Disabled</span>}
           </span>
-        </span>
+        </span> */}
       </div>
     </li>
   );
 }
 
-export default withAuth(Page);
+export default ComponentWrapper(withAuth(Page));

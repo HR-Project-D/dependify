@@ -13,7 +13,7 @@ type DropdownProps = {
   contentPosition?: "popper" | "item-aligned"
 };
 
-function Dropdown({
+function SelectDropdown({
   options,
   defaultValue,
   disabled,
@@ -59,7 +59,7 @@ function Dropdown({
   );
 }
 
-export default Dropdown;
+export default SelectDropdown;
 
 type DropdownItemProps = {
   value: string;

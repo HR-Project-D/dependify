@@ -8,8 +8,12 @@ import TitleLarge from "@/components/text/TitleLarge";
 import Link from "next/link";
 import withAuth from "@/components/_other/auth/WithAuth";
 import { MagicCardWrapper } from "@/components/motion/MagicCard";
+import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
+import { useSession } from "@/utils/session";
 
 function Page() {
+  //const session = useSession();
+
   return (
     <Layout>
       <div className="flex h-full w-full max-w-7xl flex-col gap-24 pt-8">
@@ -49,7 +53,7 @@ function Page() {
               onClick: () => {},
             }}
           />
-          <GridItem
+          {/* <GridItem
             title="Setup alerts"
             description="You can configure alerts to be notified when a combination of dependency and version is found."
             icon={<IconGithub />}
@@ -57,14 +61,14 @@ function Page() {
               text: "Add alert",
               onClick: () => {},
             }}
-          />
+          /> */}
         </MagicCardWrapper>
       </div>
     </Layout>
   );
 }
 
-export default withAuth(Page);
+export default ComponentWrapper(withAuth(Page));
 
 export function GridItem({
   title,

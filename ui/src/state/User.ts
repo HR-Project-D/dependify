@@ -3,6 +3,7 @@ import { Dispatch, createContext, useContext } from "react";
 type UserContextAction =
   | { type: "LOGIN"; payload?: User }
   | { type: "LOGOUT" }
+  | { type: "FETCH" }
   | { type: "REGISTER"; payload: User }
   | { type: "UPDATE"; payload: User };
 
@@ -13,6 +14,7 @@ type User = {
 };
 
 type UserState = {
+  attemptedFetch: boolean;
   isAuthenticated: boolean;
   user: User | undefined;
 };
@@ -23,6 +25,7 @@ type UserContext = {
 };
 
 export const initialUserState: UserState = {
+  attemptedFetch: false,
   isAuthenticated: false,
   user: undefined,
 };
@@ -40,6 +43,11 @@ export function userReducer(state: UserState, action: UserContextAction) {
         ...state,
         isAuthenticated: false,
         user: undefined,
+      };
+    case "FETCH":
+      return {
+        ...state,
+        attemptedFetch: true,
       };
     case "REGISTER":
       return {
