@@ -127,12 +127,12 @@ class Login(APIView):
         user = authenticate(email=email, password=password)
 
         if not user:
-            return Response({'error': 'Invalid Credentials', 'name': user.name, 'email': user.email, 'role': user.role},
+            return Response({'error': 'Invalid Credentials'},
                             status=status.HTTP_404_NOT_FOUND)
 
         login(request, user)
 
-        return Response({'message': 'User logged in successfully.'},
+        return Response({'message': 'User logged in successfully.', 'name': user.name, 'email': user.email, 'role': user.role},
                         status=status.HTTP_200_OK)
 
 
