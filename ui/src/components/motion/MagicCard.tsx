@@ -43,7 +43,7 @@ export function MagicCardWrapper({ children, ...props }: MagicCardWrapper) {
         document.removeEventListener("mousemove", handleMouseMove);
       };
     }
-  }, []);
+  }, [children]);
 
   return (
     <div ref={cardsRef} magic-card-wrapper="" {...props}>
