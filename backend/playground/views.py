@@ -51,6 +51,17 @@ class Setup(APIView):
         return Response(response_data)
 
 
+class IsSetup(APIView):
+    def get(self, request):
+        # get the key from data/setup_key file
+        key = RegistrationKey.objects.all().first()
+
+        # if key is not None then setup is complete and return true
+        if key is not None:
+            return Response({'is_setup': True})
+        else:
+            return Response({'is_setup': False})
+
 class SetupUserRegistration(APIView):
     def post(self, request):
         User = get_user_model()

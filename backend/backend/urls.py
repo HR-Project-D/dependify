@@ -23,15 +23,17 @@ from playground.views import UserRegistration
 from playground.views import Login
 from playground.views import Logout
 from playground.views import User
+from playground.views import IsSetup
 
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path ('api/scan/', Scan.as_view()),
-    path ('api/setup', Setup.as_view()),
+    path ('api/setup/', Setup.as_view()),
     path ('api/setup_registration/', SetupUserRegistration.as_view()),
     path ('api/registration/',UserRegistration.as_view()),
     path ('api/login/',Login.as_view()),
     path ('api/logout/',Logout.as_view()),
     path ('api/user/',User.as_view()),
+    path ('api/is_setup/',IsSetup.as_view()),
 ]
