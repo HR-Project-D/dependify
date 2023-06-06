@@ -38,3 +38,9 @@ class RegistrationKey(models.Model):
     def __str__(self):
         return self.key
 
+
+class DataSource(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.CharField(max_length=30)
+    url = models.CharField(max_length=30)
+    key = models.TextField()

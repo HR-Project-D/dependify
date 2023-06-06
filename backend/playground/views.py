@@ -1,3 +1,6 @@
+import paramiko
+import os
+from git import Repo
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -5,6 +8,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth import login, logout, authenticate
 from playground.models import UserManager
 from playground.models import RegistrationKey
+from playground.models import DataSource
 import functions.scan as func
 import ast
 
@@ -61,6 +65,7 @@ class IsSetup(APIView):
             return Response({'is_setup': True})
         else:
             return Response({'is_setup': False})
+
 
 class SetupUserRegistration(APIView):
     def post(self, request):
@@ -143,8 +148,9 @@ class Login(APIView):
 
         login(request, user)
 
-        return Response({'message': 'User logged in successfully.', 'name': user.name, 'email': user.email, 'role': user.role},
-                        status=status.HTTP_200_OK)
+        return Response(
+            {'message': 'User logged in successfully.', 'name': user.name, 'email': user.email, 'role': user.role},
+            status=status.HTTP_200_OK)
 
 
 class Logout(APIView):
@@ -166,3 +172,32 @@ class User(APIView):
 
         return Response({'name': user.name, 'email': user.email, 'role': user.role},
                         status=status.HTTP_200_OK)
+
+
+class Generate_datasource(APIView):
+    def post(self, request):
+        request_data = request.data
+        name = request_data['name']
+        description = request_data['description']
+        url = request_data['url']
+
+
+        key = paramiko.RSAKey.generate(bits=2048)
+        public_key = key.get_base64()
+
+        keys_dir = "data/keys"
+
+        os.makedirs(keys_dir, exist_ok=True)
+
+        filename = f"{name}_private_key.pem"
+
+        private_key_file_path = os.path.join(keys_dir, filename)
+
+        key.write_private_key_file(private_key_file_path)
+
+        datasource = DataSource.objects.create(name=name, description=description,
+                                               url=url, key=public_key)
+        datasource.save()
+
+        return Response({'message': 'Datasource created successfully.','public_key':public_key})
+
