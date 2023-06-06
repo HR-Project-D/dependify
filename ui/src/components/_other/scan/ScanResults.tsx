@@ -53,7 +53,7 @@ function ScanResults({ results, open, setOpen }: ScanResultsProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`no-scrollbar fixed left-[5%] lg:left-[25%] top-[10%] z-[60] flex max-h-[80%] flex-col gap-8 overflow-y-scroll rounded-lg border border-white-8 bg-gray-0 p-8 pt-0 drop-shadow-2xl w-[90%] lg:w-1/2`}
+                className={`no-scrollbar fixed left-[5%] top-[10%] z-[60] flex max-h-[80%] w-[90%] flex-col gap-8 overflow-y-scroll rounded-lg border border-white-8 bg-gray-0 p-8 pt-0 drop-shadow-2xl lg:left-[25%] lg:w-1/2`}
               >
                 <header className="sticky top-0 z-[20] flex w-full justify-between border-b border-white-8 bg-gray-0 pb-4 pt-8">
                   <Subtitle className="">Search Results</Subtitle>
@@ -91,7 +91,7 @@ function ScanResultProject({ project }: { project: Project }) {
 
   return (
     <>
-      <div className="mb-4 last:mb-0 overflow-hidden rounded-lg border border-white-8">
+      <div className="mb-4 overflow-hidden rounded-lg border border-white-8 last:mb-0">
         <button
           className="first flex w-full items-center justify-between bg-gray-1 px-6 py-3"
           onClick={() => setIsOpen((prev) => !prev)}
@@ -107,18 +107,16 @@ function ScanResultProject({ project }: { project: Project }) {
 
           <table className="">
             <tbody>
-              <tr>
+              <tr className=" w-full flex items-center whitespace-nowrap">
                 {project.dockerImage && (
-                  <td className="px-2 text-sm text-white-48">
-                    <Tooltip text={project.dockerImage}>
-                      <IconDocker className="mt-1 w-6 text-white-48" />
-                    </Tooltip>
+                  <td className="flex w-full items-center gap-2 px-2 text-sm text-white-48">
+                    <IconDocker className="mt-1 w-6 text-white-48" />
+                    {project.dockerImage}
                   </td>
                 )}
-                <td className="px-2 text-sm text-white-48">
-                  <Tooltip text={project.sbomFile}>
-                    <IconFile className="mt-1 w-4 text-white-48" />
-                  </Tooltip>
+                <td className="flex w-full items-center gap-2 px-2 text-sm text-white-48">
+                  <IconFile className="mt-1 w-4 text-white-48" />
+                  {project.sbomFile}
                 </td>
               </tr>
             </tbody>

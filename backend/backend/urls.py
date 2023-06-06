@@ -28,7 +28,7 @@ from playground.views import User
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path ('api/scan/', Scan.as_view()),
-    path ('api/setup', Setup.as_view()),
+    path ('api/setup/', Setup.as_view()),
     path ('api/setup_registration/', SetupUserRegistration.as_view()),
     path ('api/registration/',UserRegistration.as_view()),
     path ('api/login/',Login.as_view()),
