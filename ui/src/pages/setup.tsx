@@ -7,21 +7,21 @@ import { useState } from "react";
 import { AuthService } from "@/services/AuthService";
 import Link from "next/link";
 
+export const textAnimationProps = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+} as const;
+
+export const formAnimationProps = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+} as const;
+
 export default function Page() {
   const [currentStep, setCurrentStep] = useState(0);
   const [registrationKey, setRegistrationKey] = useState("");
-
-  const textAnimationProps = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
-  } as const;
-
-  const formAnimationProps = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
-  } as const;
 
   const steps = [
     {

@@ -107,7 +107,7 @@ function ScanResultProject({ project }: { project: Project }) {
 
           <table className="">
             <tbody>
-              <tr className=" w-full flex items-center whitespace-nowrap">
+              <tr className=" flex w-full items-center whitespace-nowrap">
                 {project.dockerImage && (
                   <td className="flex w-full items-center gap-2 px-2 text-sm text-white-48">
                     <IconDocker className="mt-1 w-6 text-white-48" />
@@ -144,6 +144,11 @@ function ScanResultProject({ project }: { project: Project }) {
                         <td className="flex-1 font-medium text-white-56">
                           {result.label}
                         </td>
+                        {result.purl && (
+                          <td className="flex-1 text-xs font-medium text-white-48">
+                            {result.purl}
+                          </td>
+                        )}
                       </tr>
                     ))}
                   </tbody>
