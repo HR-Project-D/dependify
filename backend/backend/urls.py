@@ -24,7 +24,7 @@ from playground.views import Login
 from playground.views import Logout
 from playground.views import User
 from playground.views import IsSetup
-
+from playground.views import Generate_datasource
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -36,4 +36,5 @@ urlpatterns = [
     path ('api/logout/',Logout.as_view()),
     path ('api/user/',User.as_view()),
     path ('api/is_setup/',IsSetup.as_view()),
+    path ('api/generate_datasource/',Generate_datasource.as_view()),
 ]
