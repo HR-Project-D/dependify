@@ -28,7 +28,7 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
                 if type == 'CycloneDX':
                     components = data['components']
                     df = pd.json_normalize(components)
-                    cols = ['name', 'version']
+                    cols = ['name', 'version', 'purl']
                     df = df[cols]
                     df = df.rename(
                         columns={'name': 'label', 'id': 'license_id', 'url': 'reference_url'})
@@ -36,7 +36,13 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
                     packages = data['packages']
                     df = pd.json_normalize(packages)
                     cols = ['name', 'versionInfo']
+                    externalRefs = pd.json_normalize(packages, record_path='externalRefs')
+                    # get all where referenceType is 'PACKAGE-MANAGER'
+                    purl = externalRefs[externalRefs['referenceType'] == 'purl']
+                    purl = purl.reset_index(drop=True)
                     df = df[cols]
+                    # add the reference url from purl to df
+                    df['purl'] = purl['referenceLocator']
                     df = df.rename(
                         columns={'name': 'label', 'versionInfo': 'version'})
                 else:
@@ -57,7 +63,7 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
                         dockerVersion = v['dockerImage'].split(':')[1]
                     temp = {'name': projectName, 'version': dockerVersion, 'dockerImage': v['dockerImage'],
                             'sbomFile': v['sbomFile'],
-                            'results': [{'label': v['label'], 'version': v['version']} for v in
+                            'results': [{'label': v['label'], 'version': v['version'], 'purl': v['purl']} for v in
                                         results.values()]}
                     output.append(temp)
 
