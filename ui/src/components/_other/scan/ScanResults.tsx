@@ -7,9 +7,26 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Button } from "@/components/input/Button";
 import { Project } from "@/types/scan";
 import Body from "@/components/text/Body";
-import BodyBase from "@/components/text/BodyBase";
-import Tooltip from "@/components/status_info/Tooltip";
 import Subtitle from "@/components/text/Subtitle";
+import { CSVLink } from "react-csv";
+
+function convertResponseToTable(response: APIResponseScan) {
+  let table = [];
+  for (let project of response.data) {
+    for (let result of project.results) {
+      table.push({
+        "Project Name": project.name,
+        "Project Version": project.version,
+        "Docker Image": project.dockerImage,
+        "SBOM File": project.sbomFile,
+        "Package Name": result.label,
+        "Package Version": result.version,
+        "Package URL": result.purl,
+      });
+    }
+  }
+  return table;
+}
 
 type ScanResultsProps = {
   results: APIResponseScan;
@@ -19,9 +36,6 @@ type ScanResultsProps = {
 
 function ScanResults({ results, open, setOpen }: ScanResultsProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  // console.log(" RESULTS ")
-  // console.log( results);
 
   return (
     <Dialog.Root
@@ -57,14 +71,24 @@ function ScanResults({ results, open, setOpen }: ScanResultsProps) {
               >
                 <header className="sticky top-0 z-[20] flex w-full justify-between border-b border-white-8 bg-gray-0 pb-4 pt-8">
                   <Subtitle className="">Search Results</Subtitle>
-                  <Button
-                    className="h-fit"
-                    onClick={() => setOpen(false)}
-                    size="icon"
-                    intent="noBG"
-                  >
-                    <IconX className="w-5" />
-                  </Button>
+                  <div className="flex items-center gap-3">
+                    <CSVLink
+                      data={convertResponseToTable(results)}
+                      filename={"scan-results.csv"}
+                    >
+                      <Button size="compact" intent="mauve">
+                        Download CSV
+                      </Button>
+                    </CSVLink>
+                    <Button
+                      className="h-fit"
+                      onClick={() => setOpen(false)}
+                      size="icon"
+                      intent="noBG"
+                    >
+                      <IconX className="w-5" />
+                    </Button>
+                  </div>
                 </header>
 
                 <section className="no-scrollbar flex flex-col">

@@ -90,7 +90,7 @@ export function GridItem({
   };
 }) {
   return (
-    <li className="flex h-full flex-col justify-between gap-16 rounded-lg bg-gray-1 p-8">
+    <li className="flex h-full flex-col justify-between gap-16 p-6 rounded-lg bg-gray-1">
       <div>
         <img
           className="mb-6 aspect-[4/2] rounded-lg object-cover object-center drop-shadow"
