@@ -52,7 +52,7 @@ COPY ./backend/requirements.txt ./
 # Copy the Django source code
 COPY ./backend .
 
-
+RUN apt-get update && apt-get install -y git
 
 RUN pip3 install -r requirements.txt
 
