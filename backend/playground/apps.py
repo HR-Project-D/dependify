@@ -1,5 +1,6 @@
 import os
 
+import git
 from django.apps import AppConfig
 
 
@@ -24,14 +25,18 @@ class PlaygroundConfig(AppConfig):
                                        env={'GIT_SSH_COMMAND': f'ssh -i data/keys/{name}_private_key.pem'})
             except:
                 # TODO: fetch from remote if repo already exists
-                bare_repo = Repo.init(repo_path)
-                origin = bare_repo.remote(name='origin')
-                if origin.exists():
-                    bare_repo.delete_remote('origin')
-                origin = bare_repo.create_remote('origin', repo_url)
-                with bare_repo.git.custom_environment(GIT_SSH_COMMAND=f'ssh -i data/keys/{name}_private_key.pem'):
-                    origin.fetch()
-                    origin.pull()
+                bare_repo = Repo(repo_path)
+                origin = bare_repo.remote('origin')
+
+                assert origin.exists()
+                origin.fetch()
+                # origin = await bare_repo.remote(name='origin')
+                # if origin.exists():
+                #     bare_repo.delete_remote('origin')
+                # origin = bare_repo.create_remote('origin', repo_url)
+                # with bare_repo.git.custom_environment(GIT_SSH_COMMAND=f'ssh -i data/keys/{name}_private_key.pem'):
+                #     origin.fetch()
+                #     origin.pull()
 
 
         def fetch_datasource():
