@@ -29,9 +29,15 @@ class PlaygroundConfig(AppConfig):
                 origin = bare_repo.remote('origin')
 
                 assert origin.exists()
-                ssh_cmd = f'ssh -i data/keys/{name}_private_key.pem'
-                with bare_repo.git.custom_environment(GIT_SSH_COMMAND=ssh_cmd):
-                    origin.fetch()
+                origin.fetch()
+                origin.pull()
+                # origin = await bare_repo.remote(name='origin')
+                # if origin.exists():
+                #     bare_repo.delete_remote('origin')
+                # origin = bare_repo.create_remote('origin', repo_url)
+                # with bare_repo.git.custom_environment(GIT_SSH_COMMAND=f'ssh -i data/keys/{name}_private_key.pem'):
+                #     origin.fetch()
+                #     origin.pull()
 
         for datasource in DataSource.objects.all():
             clone_datasource(datasource.name)

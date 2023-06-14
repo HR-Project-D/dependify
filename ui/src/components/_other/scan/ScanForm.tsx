@@ -56,18 +56,15 @@ function ScanForm({ setSearchResults, handleSubmit }: Props) {
   }
 
   useEffect(() => {
-    window.addEventListener("importQuery", (event: CustomEventInit<Query>) => {
+    function handleImportQuery(event: CustomEventInit<Query>) {
       importQuery(event.detail as Query);
-    });
+    }
+
+    window.addEventListener("importQuery", handleImportQuery);
 
     return () => {
-      window.removeEventListener(
-        "importQuery",
-        (event: CustomEventInit<Query>) => {
-          importQuery(event.detail as Query);
-        }
-      );
-    };
+      window.removeEventListener("importQuery", handleImportQuery);
+    }
   }, []);
 
   return (
