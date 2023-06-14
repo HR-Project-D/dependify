@@ -30,6 +30,7 @@ class PlaygroundConfig(AppConfig):
 
                 assert origin.exists()
                 origin.fetch()
+                origin.pull()
                 # origin = await bare_repo.remote(name='origin')
                 # if origin.exists():
                 #     bare_repo.delete_remote('origin')
