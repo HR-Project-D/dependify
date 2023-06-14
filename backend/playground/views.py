@@ -1,5 +1,5 @@
-import paramiko
 import os
+import subprocess
 from git import Repo
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -18,6 +18,15 @@ import ast
 
 class Scan(APIView):
     def get(self, request):
+        datasources = DataSource.objects.all()
+        for datasource in datasources:
+            repo_path = f'./data/sboms/{datasource.name}'
+            absolute_key_path = os.path.abspath(f'./data/keys/{datasource.name}_private_key')
+            absolute_key_path = absolute_key_path.replace('\\', '/')
+            subprocess.run(['git', 'config', '--global', 'core.sshCommand',
+                            f'ssh -i {absolute_key_path} -F /dev/null'])
+            subprocess.run(['git', 'pull'], cwd=repo_path)
+
         name = request.GET.get('name', '')
         version = request.GET.get('version', "['']")
         exactMatch = request.GET.get('exactMatch', '')
@@ -181,26 +190,45 @@ class Generate_datasource(APIView):
         description = request_data['description']
         url = request_data['url']
 
-
-        key = paramiko.RSAKey.generate(bits=2048)
-        public_key = key.get_base64()
+        if DataSource.objects.filter(url=url).exists():
+            return Response({'error': 'A datasource with this url already exists.'},
+                            status=status.HTTP_400_BAD_REQUEST)
 
         keys_dir = "data/keys"
 
         os.makedirs(keys_dir, exist_ok=True)
 
-        filename = f"{name}_private_key.pem"
+        subprocess.run(
+            ['ssh-keygen', '-t', 'rsa', '-b', '4096', '-f', f'{keys_dir}/{name}_private_key', '-q', '-N', ''])
 
-        private_key_file_path = os.path.join(keys_dir, filename)
-
-        key.write_private_key_file(private_key_file_path)
+        with open(f'{keys_dir}/{name}_private_key.pub', 'r') as f:
+            public_key = f.read()
 
         datasource = DataSource.objects.create(name=name, description=description,
                                                url=url, key=public_key)
         datasource.save()
-        repo_path = f'./data/sboms/{name}'
-        repo = Repo.clone_from(url, repo_path,
-                               env={'GIT_SSH_COMMAND': f'ssh -i data/keys/{name}_private_key.pem'})
 
-        return Response({'message': 'Datasource created successfully.','public_key':public_key})
+        return Response({'message': 'Datasource created successfully.', 'public_key': public_key})
+
+class Confirm_datasource(APIView):
+    def post(self, request):
+        request_data = request.data
+        name = request_data['name']
+        datasource = DataSource.objects.get(name=name)
+        absolute_key_path = os.path.abspath(f'./data/keys/{name}_private_key')
+        absolute_key_path = absolute_key_path.replace('\\', '/')
+        if datasource is not None:
+            repo_url = datasource.url
+            repo_path = f'./data/sboms/{name}'
+            if not os.path.exists(repo_path):
+                subprocess.run(['git', 'config', '--global', 'core.sshCommand',
+                                f'ssh -i {absolute_key_path} -F /dev/null'])
+                subprocess.run(['git', 'clone', repo_url, repo_path])
+                return Response({'message': 'Datasource confirmed successfully.'})
+            else:
+                return Response({'message': 'Datasource already exists.'})
+
+        else:
+            return Response({'message': 'Datasource does not exist.'})
+
 
