@@ -16,9 +16,9 @@ class PlaygroundConfig(AppConfig):
 
         def clone_datasource(name):
             repo_path = f'./data/sboms/{name}'
-            datasource = DataSource.objects.get(name=name)
-            repo_url = datasource.url
-            key = datasource.key
+            current_datasource = DataSource.objects.get(name=name)
+            repo_url = current_datasource.url
+            key = current_datasource.key
             private_key = paramiko.RSAKey.from_private_key_file(f"data/keys/{name}_private_key.pem")
             try:
                 repo = Repo.clone_from(repo_url, repo_path,
@@ -29,17 +29,9 @@ class PlaygroundConfig(AppConfig):
                 origin = bare_repo.remote('origin')
 
                 assert origin.exists()
-                origin.fetch()
-                # origin = await bare_repo.remote(name='origin')
-                # if origin.exists():
-                #     bare_repo.delete_remote('origin')
-                # origin = bare_repo.create_remote('origin', repo_url)
-                # with bare_repo.git.custom_environment(GIT_SSH_COMMAND=f'ssh -i data/keys/{name}_private_key.pem'):
-                #     origin.fetch()
-                #     origin.pull()
+                ssh_cmd = f'ssh -i data/keys/{name}_private_key.pem'
+                with bare_repo.git.custom_environment(GIT_SSH_COMMAND=ssh_cmd):
+                    origin.fetch()
 
-
-        def fetch_datasource():
-            pass
-
-        clone_datasource('pw-demo-sboms')
+        for datasource in DataSource.objects.all():
+            clone_datasource(datasource.name)

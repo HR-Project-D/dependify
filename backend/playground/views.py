@@ -198,6 +198,9 @@ class Generate_datasource(APIView):
         datasource = DataSource.objects.create(name=name, description=description,
                                                url=url, key=public_key)
         datasource.save()
+        repo_path = f'./data/sboms/{name}'
+        repo = Repo.clone_from(url, repo_path,
+                               env={'GIT_SSH_COMMAND': f'ssh -i data/keys/{name}_private_key.pem'})
 
         return Response({'message': 'Datasource created successfully.','public_key':public_key})
 
