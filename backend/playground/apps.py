@@ -39,5 +39,5 @@ class PlaygroundConfig(AppConfig):
                 #     origin.fetch()
                 #     origin.pull()
 
-        for datasource in DataSource.objects.all():
-            clone_datasource(datasource.name)
+        # for datasource in DataSource.objects.all():
+        #     clone_datasource(datasource.name)
