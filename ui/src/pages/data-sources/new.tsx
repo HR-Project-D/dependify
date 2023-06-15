@@ -190,11 +190,27 @@ export default function Page() {
                           <TextField
                             id="url"
                             name="url"
+                            validate={(value: string) => {
+                              if (value === "") {
+                                return "URL is required";
+                              }
+
+                              // SSH github url regex (cant start wit hhhtps)
+                              // Should be in the following format: git@github.com:Frojd/Wagtail-Pipit.git
+                              if (
+                                !/^(git@github\.com:[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+\.git)$/.test(value)
+
+                              ) {
+                                return "URL must be a valid GitHub SSH URL";
+                              }
+                            }}
+
                             style="iconless"
                             type="text"
-                            placeholder="URL"
+                            placeholder="GitHub SSH URL"
                           />
                         </Tooltip>
+                        <TextFieldError name="url" />
                       </div>
                       <div className="flex w-full gap-4">
                         <Button
