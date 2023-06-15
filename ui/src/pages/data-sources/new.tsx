@@ -30,7 +30,7 @@ export default function Page() {
             <TitleLarge className="mb-2">Add a new data source</TitleLarge>
             <BodyBase className="text-white-56">
               Add a new data source by filling in the form below and clicking
-              the "Add" button. After confirming the data source you will need
+              the &quot;Add&quot; button. After confirming the data source you will need
               to add the SSH key that is shown to your GitHub repository as a
               deploy key.
             </BodyBase>
