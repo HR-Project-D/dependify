@@ -190,6 +190,10 @@ class Generate_datasource(APIView):
         description = request_data['description']
         url = request_data['url']
 
+        if DataSource.objects.filter(name=name).exists():
+            return Response({'error': 'A datasource with this name already exists.'},
+                            status=status.HTTP_400_BAD_REQUEST)
+
         if DataSource.objects.filter(url=url).exists():
             return Response({'error': 'A datasource with this url already exists.'},
                             status=status.HTTP_400_BAD_REQUEST)
