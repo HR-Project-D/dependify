@@ -1,8 +1,6 @@
 
 *.pyc
-*.pyc
-*.pyc
 backend/.idea
-*.pyc
-*.pyc
 backend/data/sboms
+backend/data/db.sqlite3
+backend/data/keys
