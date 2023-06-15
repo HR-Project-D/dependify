@@ -5,11 +5,14 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login, logout, authenticate
+from django.core import serializers
 from playground.models import UserManager
 from playground.models import RegistrationKey
 from playground.models import newDataSource as DataSource
 import functions.scan as func
 import ast
+import json
+import shutil
 
 
 # Create your views here.
@@ -230,7 +233,8 @@ class Confirm_datasource(APIView):
             if not os.path.exists(repo_path):
                 subprocess.run(['git', 'config', '--global', 'core.sshCommand',
                                 f'ssh -i {absolute_key_path} -F /dev/null'])
-                subprocess.run(['git', 'clone', repo_url, repo_path])
+                subprocess.run(['git', 'clone', repo_url, repo_path]) 
+                #verander datum
                 return Response({'message': 'Datasource confirmed successfully.'})
             else:
                 return Response({'error': 'Datasource already exist.'}, status=status.HTTP_400_BAD_REQUEST)
@@ -238,4 +242,33 @@ class Confirm_datasource(APIView):
         else:
             return Response({'error': 'Datasource does not exist.'}, status=status.HTTP_400_BAD_REQUEST)
 
+class Get_datasource(APIView):
+    def get(self, request):
+        datasources = DataSource.objects.all()
+        json_string = serializers.serialize('json', datasources)
 
+        json_data = json.loads(json_string)
+
+        return Response({'data':json_data}, status=status.HTTP_200_OK)
+
+#delete
+class Del_datasource(APIView):
+    def post(self, request):
+        request_data = request.data
+        name = request_data['name']
+        datasource = DataSource.objects.filter(name=name)
+
+        if len(datasource) != 0:
+            if os.path.exists(f'./data/keys/{name}_private_key'):
+                os.remove(f'./data/keys/{name}_private_key')
+            if os.path.exists(f'./data/keys/{name}_private_key.pub'):
+                os.remove(f'./data/keys/{name}_private_key.pub')
+
+            if os.path.exists(f'./data/sboms/{name}'):
+                shutil.rmtree(f'./data/sboms/{name}')
+            datasource.delete()
+            return Response({'message': 'Datasource deleted succesfully'})
+        else:
+            return Response({'error': 'Datasource does not exist.'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        

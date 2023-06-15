@@ -26,6 +26,8 @@ from playground.views import User
 from playground.views import IsSetup
 from playground.views import Generate_datasource
 from playground.views import Confirm_datasource
+from playground.views import Get_datasource
+from playground.views import Del_datasource
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -39,5 +41,7 @@ urlpatterns = [
     path ('api/is_setup/',IsSetup.as_view()),
     path ('api/generate_datasource/',Generate_datasource.as_view()),
     path ('api/confirm_datasource/',Confirm_datasource.as_view()),
+    path ('api/get_datasource/',Get_datasource.as_view()),
+    path ('api/del_datasource/',Del_datasource.as_view()),
 
 ]
