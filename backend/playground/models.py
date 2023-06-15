@@ -39,8 +39,10 @@ class RegistrationKey(models.Model):
         return self.key
 
 
-class DataSource(models.Model):
+class newDataSource(models.Model):
     name = models.CharField(max_length=30)
     description = models.CharField(max_length=30)
     url = models.CharField(max_length=30)
     key = models.TextField()
+    status = models.BooleanField(default=False)
+    lastSync = models.DateTimeField(auto_now=True)

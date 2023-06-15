@@ -1,6 +1,6 @@
 from git import Repo
 import paramiko
-from playground.models import DataSource
+from playground.models import newDataSource as DataSource
 from django.apps import AppConfig
 
 class FunctionsConfig(AppConfig):

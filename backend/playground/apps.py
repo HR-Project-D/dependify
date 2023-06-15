@@ -10,7 +10,7 @@ class PlaygroundConfig(AppConfig):
     def ready(self):
         import os
         import subprocess
-        from playground.models import DataSource
+        from playground.models import newDataSource as DataSource
 
         def clone_datasource(name):
 

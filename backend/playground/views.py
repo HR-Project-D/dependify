@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth import login, logout, authenticate
 from playground.models import UserManager
 from playground.models import RegistrationKey
-from playground.models import DataSource
+from playground.models import newDataSource as DataSource
 import functions.scan as func
 import ast
 
