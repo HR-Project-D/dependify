@@ -1,6 +1,6 @@
 import os
 import json
-
+import glob
 import numpy as np
 import pandas as pd
 import functions.version as version_parser
@@ -10,10 +10,12 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
     # output = {'label': source, 'name': source.lower(), 'type': source.lower(), 'results': []}
     output = []
     print("Searching for dependencies in SBOMs")
-    path = './functions/sboms'
-    for file in os.listdir(path):
+    path = './data/sboms'
+    # search for each file in the folder and subfolders
+
+    for file in glob.glob(path + '/**/*.json', recursive=True):
         if file.endswith(".json"):
-            with open(path + '/' + file, encoding="utf-8") as json_file:
+            with open(file, encoding="utf-8") as json_file:
                 data = json.load(json_file)
                 try:
                     type = data['bomFormat']

@@ -9,17 +9,65 @@ import { Formik, Form } from "formik";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { useState } from "react";
 import { formAnimationProps } from "../setup";
+import Tooltip from "@/components/status_info/Tooltip";
+import { DataSourceService } from "@/services/DataSourceService";
+import { useRouter } from "next/router";
 
 export default function Page() {
   const [step, setStep] = useState<"configure" | "add-key" | "clone">(
     "configure"
   );
   const [SSHKey, setSSHKey] = useState("");
+  const [name, setName] = useState("");
+
+  const router = useRouter();
 
   async function handleAddDataSource(values: { label: string; url: string }) {
-    // TODO: Add data source
+    try {
+      const res = await DataSourceService.generateDataSource({
+        name: values.label,
+        description: "",
+        url: values.url,
+      });
 
-    setStep("add-key");
+      if (res.error) {
+        alert(res.error);
+        return;
+      }
+
+      setSSHKey(res.public_key);
+      setName(values.label);
+
+      setStep("add-key");
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async function handleConfirmDataSource() {
+    try {
+      const res = await DataSourceService.confirmDataSource({
+        name,
+      });
+
+      if (res.message !== "Datasource confirmed successfully.") {
+        alert(res.message);
+        return;
+      }
+
+      if(window.confirm("Data source added successfully!")) {
+        setStep("clone");
+      }
+
+      router.push("/data-sources");
+
+
+      // alert("Data source added successfully!");
+
+      setStep("clone");
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
@@ -45,7 +93,11 @@ export default function Page() {
                   <div className="flex h-1.5 w-1.5 items-center justify-center rounded-full bg-white"></div>
                   <div
                     className={`flex h-12 w-px items-center justify-center rounded-full transition-colors duration-300
-                  ${step === "add-key" || step === "clone" ? "bg-white" : "bg-white-16"}
+                  ${
+                    step === "add-key" || step === "clone"
+                      ? "bg-white"
+                      : "bg-white-16"
+                  }
                   `}
                   ></div>
                 </div>
@@ -55,12 +107,18 @@ export default function Page() {
                 <div className="flex flex-col items-center">
                   <div
                     className={`flex h-1.5 w-1.5 items-center justify-center rounded-full transition-colors duration-300
-                    ${step === "add-key" || step === "clone" ? "bg-white" : "bg-white-16"}
+                    ${
+                      step === "add-key" || step === "clone"
+                        ? "bg-white"
+                        : "bg-white-16"
+                    }
                   `}
                   ></div>
-                  <div className={`flex h-12 w-px items-center justify-center rounded-full
+                  <div
+                    className={`flex h-12 w-px items-center justify-center rounded-full
                   ${step === "clone" ? "bg-white" : "bg-white-16"}
-                  `}></div>
+                  `}
+                  ></div>
                 </div>
                 <span className="-mt-2">Add deploy key</span>
               </div>
@@ -128,13 +186,15 @@ export default function Page() {
                           placeholder="Label"
                         />
                         <TextFieldError name="label" />
-                        <TextField
-                          id="uri"
-                          name="uri"
-                          style="iconless"
-                          type="text"
-                          placeholder="URI"
-                        />
+                        <Tooltip text="Get the SSH URL from your GitHub repository by clicking the green 'Code' button and copying the URL. (Ex. git@github.com:HR-Project-D/dependify.git)">
+                          <TextField
+                            id="url"
+                            name="url"
+                            style="iconless"
+                            type="text"
+                            placeholder="URL"
+                          />
+                        </Tooltip>
                       </div>
                       <div className="flex w-full gap-4">
                         <Button
@@ -165,18 +225,35 @@ export default function Page() {
                         Add the following SSH key to your GitHub repository as a
                         deploy key.
                       </BodyLarge>
-                      <BodyBase>SHA256: </BodyBase>
+                      <BodyBase className="text-white-56 break-all">
+                        {SSHKey && SSHKey}
+                      </BodyBase>
                     </div>
                   </div>
 
-                  <Button
-                    className="z-20"
-                    fullWidth
-                    onClick={() => setStep("clone")}
-                    intent="white"
-                  >
-                    Continue
-                  </Button>
+                  <div className="flex gap-4">
+                    <Button
+                      className="z-20"
+                      fullWidth
+                      onClick={() => {
+                        navigator.clipboard.writeText(SSHKey);
+                      }}
+                      intent="mauve"
+                    >
+                      Copy
+                    </Button>
+
+                    <Button
+                      className="z-20"
+                      fullWidth
+                      onClick={() => {
+                        handleConfirmDataSource();
+                      }}
+                      intent="white"
+                    >
+                      I have added the key
+                    </Button>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

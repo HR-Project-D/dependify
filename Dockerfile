@@ -56,8 +56,6 @@ RUN apt-get update && apt-get install -y openssh-client
 
 RUN apt-get update && apt-get install -y git
 
-RUN ssh-keygen -o -t rsa
-
 RUN pip3 install -r requirements.txt
 
 VOLUME /app/data
