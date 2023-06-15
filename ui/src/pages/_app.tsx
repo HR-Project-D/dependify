@@ -5,9 +5,8 @@ import type { AppProps } from "next/app";
 
 import { UserContext, initialUserState, userReducer } from "@/state/User";
 import { UIContext, initialUIState, UIReducer } from "@/state/UI";
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import { ThemeProvider } from "next-themes";
-import { AuthService } from "@/services/AuthService";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {

@@ -6,7 +6,6 @@ import {
   IconGithub,
   IconGitlab,
   IconPlus,
-  IconPower,
   IconRefresh,
   IconWarning,
 } from "@/components/_other/Icons";
@@ -21,7 +20,6 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { Button } from "@/components/input/Button";
 import { TextField } from "@/components/input/TextField";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { MagicCardWrapper } from "@/components/motion/MagicCard";
 import { capitalize, getDateDifferenceText } from "@/utils/formatting";
 import Tooltip from "@/components/status_info/Tooltip";
