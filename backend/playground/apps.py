@@ -1,6 +1,5 @@
 import os
 
-import git
 from django.apps import AppConfig
 
 
@@ -14,6 +13,9 @@ class PlaygroundConfig(AppConfig):
         from playground.models import DataSource
 
         def clone_datasource(name):
+
+            if not os.path.exists('./data/sboms'):
+                os.makedirs('./data/sboms', exist_ok=True)
 
             repo_path = f'./data/sboms/{name}'
             current_datasource = DataSource.objects.get(name=name)

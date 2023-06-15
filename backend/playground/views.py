@@ -1,6 +1,5 @@
 import os
 import subprocess
-from git import Repo
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -190,6 +189,10 @@ class Generate_datasource(APIView):
         description = request_data['description']
         url = request_data['url']
 
+        if DataSource.objects.filter(name=name).exists():
+            return Response({'error': 'A datasource with this name already exists.'},
+                            status=status.HTTP_400_BAD_REQUEST)
+
         if DataSource.objects.filter(url=url).exists():
             return Response({'error': 'A datasource with this url already exists.'},
                             status=status.HTTP_400_BAD_REQUEST)
@@ -197,6 +200,10 @@ class Generate_datasource(APIView):
         keys_dir = "data/keys"
 
         os.makedirs(keys_dir, exist_ok=True)
+
+        if os.path.exists(f'{keys_dir}/{name}_private_key'):
+            return Response({'error': 'Keys already exist.'},
+                            status=status.HTTP_400_BAD_REQUEST)
 
         subprocess.run(
             ['ssh-keygen', '-t', 'rsa', '-b', '4096', '-f', f'{keys_dir}/{name}_private_key', '-q', '-N', ''])
@@ -226,9 +233,9 @@ class Confirm_datasource(APIView):
                 subprocess.run(['git', 'clone', repo_url, repo_path])
                 return Response({'message': 'Datasource confirmed successfully.'})
             else:
-                return Response({'message': 'Datasource already exists.'})
+                return Response({'error': 'Datasource already exist.'}, status=status.HTTP_400_BAD_REQUEST)
 
         else:
-            return Response({'message': 'Datasource does not exist.'})
+            return Response({'error': 'Datasource does not exist.'}, status=status.HTTP_400_BAD_REQUEST)
 
 
