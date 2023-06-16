@@ -252,6 +252,10 @@ class Get_datasource(APIView):
 
         for item in json_data:
             fields = item['fields']
+            # if the field is called status, rename it to error
+            if 'status' in fields:
+                fields['error'] = fields['status']
+                del fields['status']
             data_list.append(fields)
 
         response_data = {'data': data_list}
