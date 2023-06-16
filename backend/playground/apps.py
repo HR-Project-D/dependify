@@ -1,5 +1,4 @@
 import os
-import shlex
 
 from django.apps import AppConfig
 
@@ -26,11 +25,13 @@ class PlaygroundConfig(AppConfig):
 
 
             if not os.path.exists(repo_path):
-                subprocess.run(shlex.split(f'git config --global core.sshCommand "ssh -i \'{absolute_key_path}\' -F /dev/null"'))
-                subprocess.run(shlex.split(f'git clone \'{repo_url}\' \'{repo_path}\''))
+                subprocess.run(['git', 'config', '--global', 'core.sshCommand',
+                                f'ssh -i {absolute_key_path}  -F /dev/null'])
+                subprocess.run(['git', 'clone', repo_url, repo_path])
             else:
-                subprocess.run(shlex.split(f'git config --global core.sshCommand "ssh -i \'{absolute_key_path}\' -F /dev/null"'), cwd=repo_path)
-                subprocess.run(shlex.split('git pull'), cwd=repo_path)
+                subprocess.run(['git', 'config', '--global', 'core.sshCommand',
+                                f'ssh -i {absolute_key_path} -F /dev/null'], cwd=repo_path)
+                subprocess.run(['git', 'pull'], cwd=repo_path)
 
 
 
