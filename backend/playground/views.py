@@ -245,11 +245,17 @@ class Confirm_datasource(APIView):
 class Get_datasource(APIView):
     def get(self, request):
         datasources = DataSource.objects.all()
-        json_string = serializers.serialize('json', datasources)
+        serialized_data = serializers.serialize('json', datasources)
 
-        json_data = json.loads(json_string)
+        json_data = json.loads(serialized_data)
+        data_list = []
 
-        return Response({'data':json_data}, status=status.HTTP_200_OK)
+        for item in json_data:
+            fields = item['fields']
+            data_list.append(fields)
+
+        response_data = {'data': data_list}
+        return Response(response_data, status=status.HTTP_200_OK)
 
 #delete
 class Del_datasource(APIView):

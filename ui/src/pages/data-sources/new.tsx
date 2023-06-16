@@ -19,6 +19,7 @@ export default function Page() {
   );
   const [SSHKey, setSSHKey] = useState("");
   const [name, setName] = useState("");
+  const [confirming, setConfirming] = useState(false);
 
   const router = useRouter();
 
@@ -262,11 +263,14 @@ export default function Page() {
                     <Button
                       className="z-20"
                       fullWidth
-                      onClick={() => {
+                      disabled={confirming}
+                      onClick={async () => {
+                        setConfirming(true);
                         handleConfirmDataSource();
                       }}
                       intent="white"
                     >
+                      {confirming && <IconSpinner className="w-4" />}
                       I have added the key
                     </Button>
                   </div>
