@@ -19,11 +19,13 @@ export default function Page() {
   );
   const [SSHKey, setSSHKey] = useState("");
   const [name, setName] = useState("");
+  const [adding, setAdding] = useState(false);
   const [confirming, setConfirming] = useState(false);
 
   const router = useRouter();
 
   async function handleAddDataSource(values: { label: string; url: string }) {
+    setAdding(true);
     try {
       const res = await DataSourceService.generateDataSource({
         name: values.label,
@@ -43,6 +45,7 @@ export default function Page() {
     } catch (e) {
       console.log(e);
     }
+    setAdding(false);
   }
 
   async function handleConfirmDataSource() {
@@ -215,12 +218,12 @@ export default function Page() {
                       </div>
                       <div className="flex w-full gap-4">
                         <Button
-                          disabled={isSubmitting || isValidating}
+                          disabled={isSubmitting || isValidating || adding || !values.label || !values.url}
                           intent="white"
                           fullWidth
                           type="submit"
                         >
-                          {(isSubmitting || isValidating) && (
+                          {(isSubmitting || isValidating || adding) && (
                             <IconSpinner className="w-4" />
                           )}
                           Continue

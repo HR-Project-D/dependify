@@ -1,3 +1,5 @@
+import { DataSource } from "../data-source";
+
 export type APIResponseGenerateDataSource = {
   message?: string;
   error?: string;
@@ -6,4 +8,13 @@ export type APIResponseGenerateDataSource = {
 
 export type APIResponseConfirmDataSource = {
   message: string;
+};
+
+export type APIResponseGetDataSources = {
+  data: Array<DataSource>;
+};
+
+export type APIResponseDeleteDataSource = {
+  message?: string;
+  error?: string;
 };

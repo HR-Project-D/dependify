@@ -1,6 +1,8 @@
 import {
   APIResponseConfirmDataSource,
+  APIResponseDeleteDataSource,
   APIResponseGenerateDataSource,
+  APIResponseGetDataSources,
 } from "@/types/api/api-data-source";
 import { getApiUrl } from "@/utils/api";
 import { getCookie } from "@/utils/cookies";
@@ -72,7 +74,48 @@ async function confirmDataSource({
   return json;
 }
 
+async function getDataSources(): Promise<APIResponseGetDataSources> {
+  const URL = API_URL + "get_datasource/";
+
+  const response = await fetch(URL, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": getCookie("csrftoken") || "",
+    },
+    credentials: "include",
+  });
+
+  const json = await response.json();
+  return json;
+}
+
+async function deleteDataSource({
+  name,
+}: {
+  name: string;
+}): Promise<APIResponseDeleteDataSource> {
+  const URL = API_URL + "del_datasource/";
+
+  const response = await fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": getCookie("csrftoken") || "",
+    },
+    credentials: "include",
+    body: JSON.stringify({
+      name,
+    }),
+  });
+
+  const json = await response.json();
+  return json;
+}
+
 export const DataSourceService = {
   generateDataSource,
   confirmDataSource,
+  getDataSources,
+  deleteDataSource,
 };
