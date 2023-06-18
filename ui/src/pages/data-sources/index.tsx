@@ -6,202 +6,26 @@ import {
   IconGithub,
   IconGitlab,
   IconPlus,
-  IconPower,
   IconRefresh,
   IconWarning,
+  IconX,
 } from "@/components/_other/Icons";
-import {
-  DataSource,
-  DataSourceStatus,
-  DataSourceType,
-} from "@/types/data-source";
+import { DataSource } from "@/types/data-source";
 import BodyBase from "@/components/text/BodyBase";
 import TitleLarge from "@/components/text/TitleLarge";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Button } from "@/components/input/Button";
 import { TextField } from "@/components/input/TextField";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { MagicCardWrapper } from "@/components/motion/MagicCard";
 import { capitalize, getDateDifferenceText } from "@/utils/formatting";
 import Tooltip from "@/components/status_info/Tooltip";
 import withAuth from "@/components/_other/auth/WithAuth";
 import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
-
-const fakeDataSources: Array<DataSource> = [
-  {
-    id: "1",
-    name: "Example Repository 1",
-    label: "Repository 1",
-    type: "github",
-    status: "connected",
-    uri: "https://github.com/example/repository1",
-    enabled: true,
-    labels: ["label1", "label2"],
-    lastSync: "2023-05-30",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "2",
-    name: "Example Repository 2",
-    label: "Repository 2",
-    type: "github",
-    status: "connected",
-    uri: "https://gitlab.com/example/repository2",
-    enabled: false,
-    labels: ["label3"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "Connection timeout",
-  },
-  {
-    id: "3",
-    name: "Example Repository 3",
-    label: "Repository 3",
-    type: "github",
-    status: "error",
-    uri: "https://bitbucket.org/example/repository3",
-    enabled: true,
-    labels: ["label4", "label5"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "Unable to connect to data source",
-  },
-  {
-    id: "4",
-    name: "Example Repository 4",
-    label: "Repository 4",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "5",
-    name: "Example Repository 5",
-    label: "Repository 5",
-    type: "github",
-    status: "connected",
-    uri: "https://github.com/example/repository5",
-    enabled: true,
-    labels: ["label1", "label2"],
-    lastSync: "2023-05-30",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "6",
-    name: "Example Repository 6",
-    label: "Repository 6",
-    type: "github",
-    status: "connected",
-    uri: "https://gitlab.com/example/repository2",
-    enabled: false,
-    labels: ["label3"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "Connection timeout",
-  },
-  {
-    id: "7",
-    name: "Example Repository 7",
-    label: "Repository 7",
-    type: "github",
-    status: "error",
-    uri: "https://bitbucket.org/example/repository3",
-    enabled: true,
-    labels: ["label4", "label5"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "Unable to connect to data source",
-  },
-  {
-    id: "8",
-    name: "Example Repository 8",
-    label: "Repository 8",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "9",
-    name: "Example Repository 9",
-    label: "Repository 9",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "10",
-    name: "Example Repository 10",
-    label: "Repository 10",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "11",
-    name: "Example Repository 11",
-    label: "Repository 11",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "12",
-    name: "Example Repository 12",
-    label: "Repository 12",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-  {
-    id: "13",
-    name: "Example Repository 13",
-    label: "Repository 13",
-    type: "github",
-    status: "connected",
-    uri: "https",
-    enabled: true,
-    labels: ["label6"],
-    lastSync: "2023-05-31T13:32:19+00:00",
-    lastSyncStatus: "synced",
-    lastSyncError: "",
-  },
-];
+import { DataSourceService } from "@/services/DataSourceService";
 
 function Page() {
-  const [dataSources, setDataSources] = useState<DataSource[]>(fakeDataSources);
+  const [dataSources, setDataSources] = useState<DataSource[]>([]);
   const [filteredDataSources, setFilteredDataSources] =
     useState<DataSource[]>();
   const [query, setQuery] = useState("");
@@ -216,13 +40,35 @@ function Page() {
     setFilteredDataSources(filteredDataSources);
   }
 
+  async function handleGetDataSources() {
+    try {
+      const res = await DataSourceService.getDataSources();
+      setDataSources(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function handleDeleteDataSource(name: string) {
+    try {
+      await DataSourceService.deleteDataSource({ name });
+      handleGetDataSources();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   useEffect(() => {
     handleFilterDataSources(query);
   }, [query]);
 
   useEffect(() => {
-    setFilteredDataSources(dataSources);
+    handleGetDataSources();
   }, []);
+
+  useEffect(() => {
+    setFilteredDataSources(dataSources);
+  }, [dataSources]);
 
   return (
     <Layout className="">
@@ -260,13 +106,13 @@ function Page() {
             <MagicCardWrapper className="-ml-2 grid w-full grid-cols-3 gap-5">
               {filteredDataSources.map((dataSource) => (
                 <DataSource
-                  key={dataSource.id}
-                  status={dataSource.status}
-                  label={dataSource.label}
-                  type={dataSource.type}
+                  key={dataSource.key}
+                  name={dataSource.name}
+                  url={dataSource.url}
                   lastSync={dataSource.lastSync}
-                  lastSyncError={dataSource.lastSyncError}
-                  enabled={dataSource.enabled}
+                  error={dataSource.error}
+                  description={dataSource.description}
+                  onDelete={() => handleDeleteDataSource(dataSource.name)}
                 />
               ))}
             </MagicCardWrapper>
@@ -278,59 +124,50 @@ function Page() {
 }
 
 function DataSource({
-  label,
-  status,
-  type,
+  name,
+  url,
+  key,
   lastSync,
-  lastSyncError,
-  enabled,
-}: {
-  label: string;
-  status: DataSourceStatus;
-  type: DataSourceType;
-  lastSync: string | undefined;
-  lastSyncError?: string;
-  enabled: boolean;
-}) {
-  const iconClassName = "w-6 ml-0.5 text-white";
-
-  const icon = {
-    github: <IconGithub className={iconClassName} />,
-    gitlab: <IconGitlab />,
-    s3: <IconGithub />,
-    local: <IconDependify className={iconClassName} />,
-  } as const;
-
-  const getIcon = icon[type];
-
+  error,
+  onDelete,
+}: DataSource & { onDelete: () => void }) {
   return (
     <li className="group flex w-full cursor-pointer flex-col items-start justify-between gap-8 rounded-lg bg-gray-DARK p-6 transition-all duration-200 hover:bg-gray-1">
-      <Tooltip
-        text={
-          status === "connected"
-            ? "No problems found"
-            : lastSyncError || "There is a problem with this data source"
-        }
-        className={`absolute right-4 top-4 flex gap-1.5 rounded-md px-3 py-1 text-xs transition-colors duration-200
+      <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center gap-3">
+          <IconGithub className="ml-0.5 w-6 text-white" />
+          <BodyBase className="flex items-center gap-3 font-medium text-white">
+            {name}
+            <Tooltip
+              text={
+                !error
+                  ? "No problems found"
+                  : "There is a problem with this data source"
+              }
+              className={`flex gap-1.5 rounded-md p-1.5 text-xs transition-colors duration-200
                 ${
-                  status === "connected"
+                  !error
                     ? "bg-gray-2 text-white-48 group-hover:bg-gray-3"
                     : "bg-red-1 text-red-10 group-hover:bg-red-2"
                 }
                 `}
-      >
-        {status === "connected" ? (
-          <IconCheck className="w-3" />
-        ) : (
-          <IconWarning className="w-3" />
-        )}
-        {capitalize(status)}
-      </Tooltip>
-      <div className="flex w-full items-center gap-3">
-        <IconGithub className={iconClassName} />
-        <BodyBase className="font-medium text-white">{label}</BodyBase>
+            >
+              {!error ? (
+                <IconCheck className="w-3" />
+              ) : (
+                <IconWarning className="w-3" />
+              )}
+              {capitalize(status)}
+            </Tooltip>
+          </BodyBase>
+        </div>
+        <Tooltip text="Delete data source">
+          <Button onClick={onDelete} size="icon" intent="transparent">
+            <IconX className="w-4" />
+          </Button>
+        </Tooltip>
       </div>
-      <div className="flex items-center w-full justify-between gap-5">
+      <div className="flex w-full items-center justify-between gap-5">
         <span className="flex items-center gap-1.5 text-white-48">
           <Tooltip text="Last update">
             <IconRefresh className="w-4" />
@@ -345,14 +182,6 @@ function DataSource({
             )}
           </span>
         </span>
-        {/* <span className="flex items-center gap-1.5 text-white-48">
-          <Tooltip text="Enabled/disabled">
-            <IconPower className="w-4" />
-          </Tooltip>
-          <span className="text-sm">
-            {enabled ? <span>Enabled</span> : <span>Disabled</span>}
-          </span>
-        </span> */}
       </div>
     </li>
   );

@@ -52,9 +52,8 @@ interface TextFieldErrorProps extends ErrorMessageProps {}
 
 export function TextFieldError({ ...props }: TextFieldErrorProps) {
   return (
-    <ErrorMessage
-      {...props}
-      render={(msg) => <div className="text-sm text-red-11">{msg}</div>}
-    />
+    <span className="text-sm -mt-2 text-red-11">
+      <ErrorMessage {...props} />
+    </span>
   );
 }

@@ -10,9 +10,10 @@ import withAuth from "@/components/_other/auth/WithAuth";
 import { MagicCardWrapper } from "@/components/motion/MagicCard";
 import ComponentWrapper from "@/components/_other/auth/ComponentWrapper";
 import { useSession } from "@/utils/session";
+import { useRouter } from "next/router";
 
 function Page() {
-  //const session = useSession();
+  const router = useRouter();
 
   return (
     <Layout>
@@ -38,19 +39,23 @@ function Page() {
           <GridItem
             title="Connect your data sources"
             description="Data sources are the places where your SBOM's are stored. You can add multiple repositories."
-            icon={<IconGithub />}
+            image="/images/dashboard-datasources.png"
             action={{
               text: "Add source",
-              onClick: () => {},
+              onClick: () => {
+                router.push("/data-sources");
+              },
             }}
           />
           <GridItem
             title="Scan your data sources"
             description="You can scan your data sources to find out if you are using certain dependencies."
-            icon={<IconGithub />}
+            image="/images/dashboard-scan.png"
             action={{
               text: "Scan",
-              onClick: () => {},
+              onClick: () => {
+                router.push("/scans");
+              },
             }}
           />
           {/* <GridItem
@@ -73,23 +78,23 @@ export default ComponentWrapper(withAuth(Page));
 export function GridItem({
   title,
   description,
-  icon,
+  image,
   action,
 }: {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  image: string;
   action: {
     text: string;
     onClick: () => void;
   };
 }) {
   return (
-    <li className="flex h-full flex-col justify-between gap-16 rounded-lg bg-gray-1 p-8">
+    <li className="flex h-full flex-col justify-between gap-16 p-6 rounded-lg bg-gray-1">
       <div>
         <img
           className="mb-6 aspect-[4/2] rounded-lg object-cover object-center drop-shadow"
-          src="/images/dashboard-scan.png"
+          src={image}
           width={1600}
           height={1200}
         />

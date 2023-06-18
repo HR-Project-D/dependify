@@ -38,3 +38,11 @@ class RegistrationKey(models.Model):
     def __str__(self):
         return self.key
 
+
+class newDataSource(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.CharField(max_length=30)
+    url = models.CharField(max_length=30)
+    key = models.TextField()
+    status = models.BooleanField(default=False)
+    lastSync = models.DateTimeField(auto_now=True)

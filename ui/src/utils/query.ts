@@ -47,8 +47,6 @@ export function addRecentQuery(query: Query) {
     localStorage.getItem("dependify-recentQueries") || "[]"
   );
 
-  // only keep the last 10 queries
-
   if (recentQueries.length > 9) {
     recentQueries.pop();
   }
@@ -58,6 +56,7 @@ export function addRecentQuery(query: Query) {
     "dependify-recentQueries",
     JSON.stringify(recentQueries)
   );
+  
   window.dispatchEvent(new Event("storage"));
 }
 

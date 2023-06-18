@@ -16,10 +16,6 @@ const navItems = [
     title: "Data Sources",
     href: "/data-sources",
   },
-  // {
-  //   title: "Alerts",
-  //   href: "/alerts",
-  // },
 ];
 
 type NavItemType = (typeof navItems)[0];
