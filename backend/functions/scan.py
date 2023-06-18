@@ -1,6 +1,7 @@
 import os
 import json
 import glob
+import math
 import numpy as np
 import pandas as pd
 import functions.version as version_parser
@@ -17,24 +18,25 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
         if file.endswith(".json"):
             with open(file, encoding="utf-8") as json_file:
                 data = json.load(json_file)
+                data_type = ''
                 try:
-                    type = data['bomFormat']
+                    data_type = data['bomFormat']
                     image = data['metadata']['component']['name']
                 except:
                     1 + 1
                 try:
-                    type = data['spdxVersion']
+                    data_type = data['spdxVersion']
                     image = data['name']
                 except:
                     1 + 1
-                if type == 'CycloneDX':
+                if data_type == 'CycloneDX':
                     components = data['components']
                     df = pd.json_normalize(components)
                     cols = ['name', 'version', 'purl']
                     df = df[cols]
                     df = df.rename(
                         columns={'name': 'label', 'id': 'license_id', 'url': 'reference_url'})
-                elif str(type).find('SPDX') != -1:
+                elif str(data_type).find('SPDX') != -1:
                     packages = data['packages']
                     df = pd.json_normalize(packages)
                     cols = ['name', 'versionInfo']
@@ -59,6 +61,12 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
                 if not df.empty:
                     results = df.to_dict(orient='index')
                     for v in results.values():
+                        try:
+                            if math.isnan(v['purl']):
+                                v['purl'] = "[!] page url not found"
+                        except:
+                            pass
+                    for v in results.values():
                         v['sbomFile'] = file
                         v['dockerImage'] = image
                         projectName = v['dockerImage'].split(':')[0]
@@ -68,7 +76,7 @@ def find_dependencies_in_sboms(name: str, version: [str], exactMatch: bool) -> o
                             'results': [{'label': v['label'], 'version': v['version'], 'purl': v['purl']} for v in
                                         results.values()]}
                     output.append(temp)
-
+    #print(json.dumps(output, indent=2))
     return output
 
 
