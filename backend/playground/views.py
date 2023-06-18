@@ -13,17 +13,19 @@ import functions.scan as func
 import ast
 import json
 import shutil
+from datetime import datetime
 
 
 # Create your views here.
-
+def toUrl(text):
+    return text.replace(" ", "_")
 
 class Scan(APIView):
     def get(self, request):
         datasources = DataSource.objects.all()
         for datasource in datasources:
             repo_path = f'./data/sboms/{datasource.name}'
-            absolute_key_path = os.path.abspath(f'./data/keys/{datasource.name}_private_key')
+            absolute_key_path = os.path.abspath(f'./data/keys/{toUrl(datasource.name)}_private_key')
             absolute_key_path = absolute_key_path.replace('\\', '/')
             subprocess.run(['git', 'config', '--global', 'core.sshCommand',
                             f'ssh -i {absolute_key_path} -F /dev/null'])
@@ -204,14 +206,14 @@ class Generate_datasource(APIView):
 
         os.makedirs(keys_dir, exist_ok=True)
 
-        if os.path.exists(f'{keys_dir}/{name}_private_key'):
+        if os.path.exists(f'{keys_dir}/{toUrl(name)}_private_key'):
             return Response({'error': 'Keys already exist.'},
                             status=status.HTTP_400_BAD_REQUEST)
 
         subprocess.run(
-            ['ssh-keygen', '-t', 'rsa', '-b', '4096', '-f', f'{keys_dir}/{name}_private_key', '-q', '-N', ''])
+            ['ssh-keygen', '-t', 'rsa', '-b', '4096', '-f', f'{keys_dir}/{toUrl(name)}_private_key', '-q', '-N', ''])
 
-        with open(f'{keys_dir}/{name}_private_key.pub', 'r') as f:
+        with open(f'{keys_dir}/{toUrl(name)}_private_key.pub', 'r') as f:
             public_key = f.read()
 
         datasource = DataSource.objects.create(name=name, description=description,
@@ -225,8 +227,9 @@ class Confirm_datasource(APIView):
         request_data = request.data
         name = request_data['name']
         datasource = DataSource.objects.get(name=name)
-        absolute_key_path = os.path.abspath(f'./data/keys/{name}_private_key')
+        absolute_key_path = os.path.abspath(f'./data/keys/{toUrl(name)}_private_key')
         absolute_key_path = absolute_key_path.replace('\\', '/')
+        print(absolute_key_path)
         if datasource is not None:
             repo_url = datasource.url
             repo_path = f'./data/sboms/{name}'
@@ -234,7 +237,9 @@ class Confirm_datasource(APIView):
                 subprocess.run(['git', 'config', '--global', 'core.sshCommand',
                                 f'ssh -i {absolute_key_path} -F /dev/null'])
                 subprocess.run(['git', 'clone', repo_url, repo_path]) 
-                #verander datum
+
+                datasource.lastSync = datetime.now()
+                datasource.save()
                 return Response({'message': 'Datasource confirmed successfully.'})
             else:
                 return Response({'error': 'Datasource already exist.'}, status=status.HTTP_400_BAD_REQUEST)
@@ -261,7 +266,6 @@ class Get_datasource(APIView):
         response_data = {'data': data_list}
         return Response(response_data, status=status.HTTP_200_OK)
 
-#delete
 class Del_datasource(APIView):
     def post(self, request):
         request_data = request.data
@@ -269,10 +273,10 @@ class Del_datasource(APIView):
         datasource = DataSource.objects.filter(name=name)
 
         if len(datasource) != 0:
-            if os.path.exists(f'./data/keys/{name}_private_key'):
-                os.remove(f'./data/keys/{name}_private_key')
-            if os.path.exists(f'./data/keys/{name}_private_key.pub'):
-                os.remove(f'./data/keys/{name}_private_key.pub')
+            if os.path.exists(f'./data/keys/{toUrl(name)}_private_key'):
+                os.remove(f'./data/keys/{toUrl(name)}_private_key')
+            if os.path.exists(f'./data/keys/{toUrl(name)}_private_key.pub'):
+                os.remove(f'./data/keys/{toUrl(name)}_private_key.pub')
 
             if os.path.exists(f'./data/sboms/{name}'):
                 shutil.rmtree(f'./data/sboms/{name}')

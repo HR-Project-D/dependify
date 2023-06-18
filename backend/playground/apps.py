@@ -2,6 +2,8 @@ import os
 
 from django.apps import AppConfig
 
+def toUrl(text):
+    return text.replace(" ", "_")
 
 class PlaygroundConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
@@ -20,7 +22,7 @@ class PlaygroundConfig(AppConfig):
             repo_path = f'./data/sboms/{name}'
             current_datasource = DataSource.objects.get(name=name)
             repo_url = current_datasource.url
-            absolute_key_path = os.path.abspath(f'./data/keys/{name}_private_key')
+            absolute_key_path = os.path.abspath(f'./data/keys/{toUrl(name)}_private_key')
             absolute_key_path = absolute_key_path.replace('\\', '/')
 
 
