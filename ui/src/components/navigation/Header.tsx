@@ -84,13 +84,13 @@ function NavDropdown() {
           </Dropdown.Item>
 
           <Dropdown.Separator />
-
+{/* 
           <Dropdown.Item onClick={() => router.push("/settings")}>
             <span className="flex items-center gap-3">
               <IconSettings className="w-4 text-white-48" />
               Settings
             </span>
-          </Dropdown.Item>
+          </Dropdown.Item> */}
           <Dropdown.Item onClick={handleLogout}>
             <span className="flex items-center gap-3">
               <IconLogout className="w-4 text-white-48" />

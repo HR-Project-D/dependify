@@ -7,3 +7,7 @@
 README.md
 .dockerignore
 .git
+
+/backend/data/setup_key
+/backend/data/keys*
+/backend/data/sboms*

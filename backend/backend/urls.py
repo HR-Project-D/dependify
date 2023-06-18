@@ -23,15 +23,25 @@ from playground.views import UserRegistration
 from playground.views import Login
 from playground.views import Logout
 from playground.views import User
-
+from playground.views import IsSetup
+from playground.views import Generate_datasource
+from playground.views import Confirm_datasource
+from playground.views import Get_datasource
+from playground.views import Del_datasource
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path ('api/scan/', Scan.as_view()),
-    path ('api/setup', Setup.as_view()),
+    path ('api/setup/', Setup.as_view()),
     path ('api/setup_registration/', SetupUserRegistration.as_view()),
     path ('api/registration/',UserRegistration.as_view()),
     path ('api/login/',Login.as_view()),
     path ('api/logout/',Logout.as_view()),
     path ('api/user/',User.as_view()),
+    path ('api/is_setup/',IsSetup.as_view()),
+    path ('api/generate_datasource/',Generate_datasource.as_view()),
+    path ('api/confirm_datasource/',Confirm_datasource.as_view()),
+    path ('api/get_datasource/',Get_datasource.as_view()),
+    path ('api/del_datasource/',Del_datasource.as_view()),
+
 ]

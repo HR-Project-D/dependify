@@ -52,7 +52,9 @@ COPY ./backend/requirements.txt ./
 # Copy the Django source code
 COPY ./backend .
 
+RUN apt-get update && apt-get install -y openssh-client
 
+RUN apt-get update && apt-get install -y git
 
 RUN pip3 install -r requirements.txt
 
@@ -66,6 +68,8 @@ ENV PORT 3000
 COPY start_up.sh ./start_up.sh
 
 RUN chmod +x ./start_up.sh
+
+RUN python manage.py flush --no-input
 
 
 # Start the Django server

@@ -12,9 +12,22 @@ class Version:
       self.revision = 0
     else:
       txt = mayor_.split('.')
-      self.mayor = int(self.pruned(txt[0]))
-      self.minor = int(self.pruned(txt[1]))
-      self.revision = int(self.pruned(txt[2]))
+      if len(txt) >= 3:
+        self.mayor = int(self.pruned(txt[0]))
+        self.minor = int(self.pruned(txt[1]))
+        self.revision = int(self.pruned(txt[2]))
+      elif len(txt) == 2:
+        self.mayor = int(self.pruned(txt[0]))
+        self.minor = int(self.pruned(txt[1]))
+        self.revision = 0
+      elif len(txt) == 1:
+        self.mayor = int(self.pruned(txt[0]))
+        self.minor = 0
+        self.revision = 0
+      else:
+        self.mayor = 0
+        self.minor = 0
+        self.revision = 0
 
   def pruned(self, txt):
     for character in list(string.ascii_letters + string.punctuation):

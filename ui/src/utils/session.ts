@@ -120,7 +120,7 @@ export function useSession() {
     console.log(UserState.attemptedFetch);
 
     if (UserState.attemptedFetch && !isAuthenticated) {
-      router.push("/login"); // Redirect to login page if not authenticated
+      router.push("/login");
     }
   }, [UserState.attemptedFetch, isAuthenticated, router]);
 
