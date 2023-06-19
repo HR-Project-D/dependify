@@ -68,8 +68,6 @@ COPY start_up.sh ./start_up.sh
 RUN chmod +x ./start_up.sh
 
 RUN python manage.py flush --no-input
-RUN python manage.py migrate --no-input
-
 
 # Start the Django server
 #CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000" ,";","npm", "run", "start"]
