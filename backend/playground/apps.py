@@ -37,6 +37,8 @@ class PlaygroundConfig(AppConfig):
 
 
 
-
-        for datasource in DataSource.objects.all():
-            clone_datasource(datasource.name)
+        try:
+            for datasource in DataSource.objects.all():
+                clone_datasource(datasource.name)
+        except:
+            print("No data sources found")
