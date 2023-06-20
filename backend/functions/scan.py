@@ -114,7 +114,7 @@ def check_versions(dataframe, versions):
                 version_filters.append(
                     [version_parser.Version(x) < version_parser.Version(v) for x in dataframe['version']])
             else:
-                version_filters.append(dataframe['version'].str.contains(version, case=False))
+                version_filters.append(dataframe['version'].str.contains(version, na=False, case=False))
         return dataframe[np.logical_or.reduce(version_filters)]
     else:
         if versions.__contains__('-'):
