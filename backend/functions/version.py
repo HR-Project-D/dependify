@@ -21,9 +21,7 @@ class Version:
       self.mayor = 0
       self.minor = 0
       self.revision = 0
-      print("Warning: NaN value found")
     else:
-      print(mayor_)
       txt = mayor_.split('.')
       if len(txt) >= 3:
         self.mayor = int(self.pruned(txt[0], "last"))
@@ -41,7 +39,6 @@ class Version:
         self.mayor = 0
         self.minor = 0
         self.revision = 0
-      print(self.mayor, self.minor, self.revision)
 
   def pruned(self, txt, pos="first"):
     for character in list(string.ascii_letters + string.punctuation + ' '):
