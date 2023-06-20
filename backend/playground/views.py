@@ -28,7 +28,7 @@ class Scan(APIView):
             absolute_key_path = os.path.abspath(f'./data/keys/{toUrl(datasource.name)}_private_key')
             absolute_key_path = absolute_key_path.replace('\\', '/')
             subprocess.run(['git', 'config', '--global', 'core.sshCommand',
-                            f'ssh -i {absolute_key_path} -F /dev/null'])
+                            f'ssh -i {absolute_key_path} -o StrictHostKeyChecking=no'])
             subprocess.run(['git', 'pull'], cwd=repo_path)
 
         name = request.GET.get('name', '')
@@ -235,7 +235,7 @@ class Confirm_datasource(APIView):
             repo_path = f'./data/sboms/{name}'
             if not os.path.exists(repo_path):
                 subprocess.run(['git', 'config', '--global', 'core.sshCommand',
-                                f'ssh -i {absolute_key_path} -F /dev/null'])
+                                f'ssh -i {absolute_key_path} -o StrictHostKeyChecking=no'])
                 subprocess.run(['git', 'clone', repo_url, repo_path]) 
 
                 datasource.lastSync = datetime.now()
