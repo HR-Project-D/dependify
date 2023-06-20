@@ -28,11 +28,11 @@ class PlaygroundConfig(AppConfig):
 
             if not os.path.exists(repo_path):
                 subprocess.run(['git', 'config', '--global', 'core.sshCommand',
-                                f'ssh -i {absolute_key_path}  -F /dev/null'])
+                                f'ssh -i {absolute_key_path}  -o StrictHostKeyChecking=no'])
                 subprocess.run(['git', 'clone', repo_url, repo_path])
             else:
                 subprocess.run(['git', 'config', '--global', 'core.sshCommand',
-                                f'ssh -i {absolute_key_path} -F /dev/null'], cwd=repo_path)
+                                f'ssh -i {absolute_key_path} -o StrictHostKeyChecking=no'], cwd=repo_path)
                 subprocess.run(['git', 'pull'], cwd=repo_path)
 
 
