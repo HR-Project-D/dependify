@@ -9,7 +9,7 @@ export interface LayoutProps
 
 function Layout({ className, children, ...props }: LayoutProps) {
   return (
-    <div className={`flex min-h-screen w-full flex-col`} {...props}>
+    <div className={`flex  min-h-screen w-full flex-col`} {...props}>
       
       <div className="w-full bg-gray-DARK z-50 sticky top-0">
         <Header />
@@ -23,7 +23,7 @@ function Layout({ className, children, ...props }: LayoutProps) {
           // initial={{ opacity: 0, y: 20 }}
           // animate={{ opacity: 1, y: 0 }}
           // transition={{ type: "spring", damping: 20, stiffness: 100 }}
-          className={`flex w-full py-16 px-12 flex-col items-center ${className}`}
+          className={`flex invert w-full py-16 px-12 flex-col items-center ${className}`}
         >
           {children}
         </motion.main>

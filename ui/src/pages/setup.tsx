@@ -90,7 +90,7 @@ export default function Page() {
   }
 
   return (
-    <div className="dark flex min-h-screen w-full  flex-col items-center justify-center gap-16 bg-gray-DARK p-4">
+    <div className="dark invert flex min-h-screen w-full  flex-col items-center justify-center gap-16 bg-gray-DARK p-4">
       <MotionConfig
         transition={{
           type: "spring",
