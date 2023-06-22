@@ -31,7 +31,6 @@ To run Dependify, make sure you have the following prerequisites installed on yo
 6. Click the scan button or press Enter to initiate the search.
 7. Dependify will process your query and display the results based on the SBOMs obtained from the data sources.
 8. Explore the search results to find the relevant SBOMs or Docker images that match your criteria.
-9. Click on a specific project to view detailed information and further analyze its contents.
 
 ## Contributions
 Contributions to Dependify are welcome! If you find any issues or would like to suggest improvements, please submit them to the GitHub repository of the project: [link to repository].
