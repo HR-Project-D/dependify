@@ -51,7 +51,7 @@ function Page() {
   }, [UserState.isAuthenticated]);
 
   return (
-    <div className="flex invert min-h-screen w-full flex-col items-center justify-center p-8">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center p-8">
       <div className="z-10 flex w-full max-w-7xl items-center justify-center">
         <div className="flex w-full max-w-md flex-col items-center gap-16 rounded-lg p-8 pt-20">
           <header className="flex w-full flex-col items-center gap-8">
