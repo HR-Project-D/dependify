@@ -20,7 +20,7 @@ To run Dependify, make sure you have the following prerequisites installed on yo
 `docker pull the0danktor/dependify:latest`
 3. Once the image is downloaded, you can start the Dependify container by executing the following command:
 `docker run -p 8000:8000 -p 3000:3000 -v /yourPath/to/dataStorage:/app/data the0danktor/dependify:latest`
-4. After executing the command, Dependify will be up and running on your local machine. You can access it by opening a web browser and navigating to `http://localhost:8000`.
+4. After executing the command, Dependify will be up and running on your local machine. You can access it by opening a web browser and navigating to `http://localhost:3000`.
 
 ## Usage
 1. Open your web browser and navigate to the Dependify application using the URL: `http://localhost:3000`.
